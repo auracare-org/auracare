@@ -39,7 +39,6 @@
 		rel="stylesheet"
 	/>
 </svelte:head>
-<h1 class="text-center">Hello World</h1>
 
 <div class="min-h-screen bg-white">
 	{@render children?.()}
