@@ -27,7 +27,7 @@
 </script>
 
 <svelte:head>
-	<title>Auracle - AI Triage for Primary Care</title>
+	<title>Auracare - AI Triage for Primary Care</title>
 	<meta
 		name="description"
 		content="AI triage + diagnostics for primary care. Assess, document, and route patients in minutes — aligned to NICE pathways and built for Pharmacy First."
