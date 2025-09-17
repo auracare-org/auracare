@@ -1,8 +1,9 @@
-# Auracare 
+# Auracare
 
-# Pages 
+# Pages
 
 ## Main
+
 AI triage + diagnostics for primary care.
 Assess, document, and route patients in minutes — aligned to NICE pathways and built for Pharmacy First.⁠
 ⁠​
@@ -15,7 +16,9 @@ Seamless Pharmacy First workflows
 Built with UK clinicians for UK workflows⁠
 ⁠​
 [Start a pilot] [Download 1‑pager]
-## About 
+
+## About
+
 About Auracare
 Our mission
 We’re building AI‑enabled triage tools and smart diagnostics to help pharmacies and GP practices manage minor illnesses safely and fast, freeing up clinicians for complex care.⁠
@@ -55,9 +58,11 @@ Interested in piloting Auracare or partnering on research? Reach out to discuss 
 ⁠​
 
 ## Brand Guidelines
+
 Create a brand guidelines dashboard leaving it blank
 
-## Memebrs 
+## Memebrs
+
 # Hinlun Chen
 
 [Linus Alpsten](https://www.notion.so/Linus-Alpsten-1feeb3c2267a8121999dd8c25fd079ee?pvs=21)

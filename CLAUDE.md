@@ -5,6 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 ### Core Development
+
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
@@ -14,6 +15,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run check:watch` - Type-check in watch mode
 
 ### Database Management
+
 - `npm run db:push` - Push schema changes to database
 - `npm run db:generate` - Generate migrations
 - `npm run db:migrate` - Run migrations
@@ -24,6 +26,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a SvelteKit application with server-side authentication and PostgreSQL database using Drizzle ORM.
 
 ### Tech Stack
+
 - **Framework**: SvelteKit with Svelte 5
 - **Database**: PostgreSQL (Neon) with Drizzle ORM
 - **Deployment**: Vercel adapter
@@ -59,4 +62,5 @@ Note: The auth.ts file references `table.user.username` but the schema only defi
 ### Environment Setup
 
 Required environment variables:
+
 - `DATABASE_URL`: PostgreSQL connection string (see .env.example)

@@ -27,15 +27,15 @@
 </script>
 
 <svelte:head>
-	<title>Auracare - AI Triage for Primary Care</title>
+	<title>Auracle - AI Triage for Primary Care</title>
 	<meta
 		name="description"
 		content="AI triage + diagnostics for primary care. Assess, document, and route patients in minutes — aligned to NICE pathways and built for Pharmacy First."
 	/>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
 		rel="stylesheet"
 	/>
 </svelte:head>

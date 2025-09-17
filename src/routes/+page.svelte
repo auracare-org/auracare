@@ -23,9 +23,9 @@
 <!-- Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-header border-b border-neutral-200">
 	<div class="container">
-		<div class="flex items-center justify-between h-16">
+		<div class="flex items-center justify-between h-24">
 			<div class="flex items-center">
-				<span class="text-2xl font-bold text-gradient">Auracare</span>
+				<img src="/Logo_Files/SVG/Logo-1.svg" alt="Auracle" class="h-50 w-auto" />
 			</div>
 
 			<!-- Desktop Navigation -->
@@ -78,7 +78,7 @@
 </nav>
 
 <!-- Hero Section -->
-<section id="home" class="section pt-32 gradient-bg">
+<section id="home" class="section pt-40 gradient-bg">
 	<div class="container">
 		<div class="text-center max-w-4xl mx-auto">
 			<h1 class="fade-in mb-6">
@@ -147,7 +147,7 @@
 <section id="about" class="section section-alt">
 	<div class="container">
 		<div class="text-center mb-16">
-			<h2 class="fade-in mb-6">About Auracare</h2>
+			<h2 class="fade-in mb-6">About Auracle</h2>
 			<p class="fade-in animation-delay-200 text-xl text-neutral-600 max-w-3xl mx-auto">
 				We're building AI-enabled triage tools and smart diagnostics to help pharmacies and GP
 				practices manage minor illnesses safely and fast, freeing up clinicians for complex care.
@@ -158,7 +158,7 @@
 			<div class="slide-in-left">
 				<h3 class="text-3xl font-semibold mb-6">What we do</h3>
 				<p class="text-lg text-neutral-600 mb-6">
-					Auracare combines an AI triage platform with an easy-to-use hardware kit so community
+					Auracle combines an AI triage platform with an easy-to-use hardware kit so community
 					clinicians can assess, document, and route patients in minutes — aligned to NICE-based
 					pathways and tailored to Pharmacy First workflows.
 				</p>
@@ -297,12 +297,12 @@
 		<div class="text-center max-w-3xl mx-auto">
 			<h2 class="fade-in mb-6">Get in touch</h2>
 			<p class="fade-in animation-delay-200 text-xl text-neutral-600 mb-8">
-				Interested in piloting Auracare or partnering on research? Reach out to discuss trials,
+				Interested in piloting Auracle or partnering on research? Reach out to discuss trials,
 				integrations, and clinical validation.
 			</p>
 			<div class="fade-in animation-delay-400 flex flex-col sm:flex-row gap-4 justify-center">
-				<a href="mailto:hello@auracare.com" class="btn btn-primary btn-lg">Start a Pilot</a>
-				<a href="mailto:hello@auracare.com" class="btn btn-secondary btn-lg">Download 1-pager</a>
+				<a href="mailto:hello@buyauracle.com" class="btn btn-primary btn-lg">Start a Pilot</a>
+				<a href="mailto:hello@buyauracle.com" class="btn btn-secondary btn-lg">Download 1-pager</a>
 			</div>
 		</div>
 	</div>
@@ -313,7 +313,11 @@
 	<div class="container">
 		<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 			<div class="col-span-1 md:col-span-2">
-				<span class="text-2xl font-bold text-gradient mb-4 block">Auracare</span>
+				<img
+					src="/Logo_Files/SVG/Logo-1.svg"
+					alt="Auracle"
+					class="h-8 w-auto mb-4 brightness-0 invert"
+				/>
 				<p class="text-neutral-400 mb-4 max-w-md">
 					AI-enabled triage tools and smart diagnostics for safer, faster primary care.
 				</p>
@@ -343,7 +347,7 @@
 		</div>
 
 		<div class="border-t border-neutral-800 mt-8 pt-8 text-center text-neutral-400">
-			<p>&copy; 2025 Auracare. All rights reserved.</p>
+			<p>&copy; 2025 Auracle. All rights reserved.</p>
 		</div>
 	</div>
 </footer>
