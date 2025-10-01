@@ -5,8 +5,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 ### Core Development
+
 - `yarn dev` - Start development server
-- `yarn build` - Build for production  
+- `yarn build` - Build for production
 - `yarn preview` - Preview production build
 - `yarn format` - Format code with Prettier
 - `yarn lint` - Check code formatting with Prettier
@@ -18,6 +19,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a SvelteKit application for Auracare - an AI triage and diagnostics platform for primary care. The application is deployed to Vercel and uses a modern web stack optimized for performance.
 
 ### Tech Stack
+
 - **Framework**: SvelteKit 2.22+ with Svelte 5 (using runes and modern Svelte syntax)
 - **Deployment**: Vercel adapter (@sveltejs/adapter-vercel)
 - **Type Safety**: TypeScript with strict mode enabled
@@ -25,6 +27,7 @@ This is a SvelteKit application for Auracare - an AI triage and diagnostics plat
 - **Build Tool**: Vite 7+
 
 ### Project Structure
+
 - `/src/routes/` - SvelteKit routes (file-based routing)
   - `+page.svelte` - Landing page with all sections (hero, about, team, contact)
   - `+layout.svelte` - Root layout with global styles and animations
@@ -40,11 +43,13 @@ This is a SvelteKit application for Auracare - an AI triage and diagnostics plat
 ### Key Implementation Details
 
 #### Svelte 5 Features
+
 - Uses `$state()` for reactive state management
 - Uses `$props()` for component properties
 - Uses `@render` directive for rendering children
 
 #### Styling Approach
+
 - Custom Tailwind CSS theme with healthcare-focused color palette
 - Custom utility classes defined with `@utility` directive
 - Responsive design with mobile-first approach
@@ -52,6 +57,7 @@ This is a SvelteKit application for Auracare - an AI triage and diagnostics plat
 - Custom components: btn, card, feature-card, team-card
 
 #### Animation System
+
 - Intersection Observer for scroll-triggered animations
 - CSS animation classes: fade-in, slide-in-left, slide-in-right
 - Animation delays for staggered effects
@@ -59,10 +65,12 @@ This is a SvelteKit application for Auracare - an AI triage and diagnostics plat
 ### Type Checking and Linting
 
 Always run these commands before committing:
+
 - `yarn check` - Ensures TypeScript types are correct
 - `yarn lint` - Ensures code formatting is consistent
 
 The project uses:
+
 - TypeScript strict mode for maximum type safety
 - Prettier for consistent code formatting
 - svelte-check for Svelte-specific type checking
