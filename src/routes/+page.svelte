@@ -179,23 +179,12 @@
 				</ul>
 			</div>
 			<div class="slide-in-right">
-				<div class="card p-8">
-					<h4 class="text-2xl font-semibold mb-4 healthcare-accent">Why now?</h4>
-					<p class="text-neutral-600 mb-6">
-						Minor ailments account for a large share of GP appointments. With the NHS expanding
-						Pharmacy First, pharmacies need simple triage, clear documentation, and safe hand-offs
-						to handle increased demand at scale.
-					</p>
-					<div class="grid grid-cols-2 gap-4">
-						<div class="text-center healthcare-bg p-4 rounded-lg">
-							<div class="stat-number">30%</div>
-							<div class="stat-label">of GP visits</div>
-						</div>
-						<div class="text-center healthcare-bg p-4 rounded-lg">
-							<div class="stat-number">95%</div>
-							<div class="stat-label">accuracy rate</div>
-						</div>
-					</div>
+				<div class="product-image-container">
+					<img 
+						src="/Image.jpg" 
+						alt="Auracare medical diagnostic hardware - AI-powered triage devices including otoscope and diagnostic tools for primary care providers"
+						class="product-image"
+					/>
 				</div>
 			</div>
 		</div>
@@ -315,6 +304,19 @@
 			<p class="fade-in animation-delay-200 text-xl text-neutral-600 max-w-3xl mx-auto">
 				Minor ailments account for a large share of GP appointments. With the NHS expanding Pharmacy First, pharmacies need simple triage, clear documentation, and safe hand-offs to handle increased demand at scale.
 			</p>
+		</div>
+		
+		<div class="flex justify-center">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-md">
+				<div class="text-center healthcare-bg p-6 rounded-lg fade-in animation-delay-400">
+					<div class="stat-number">30%</div>
+					<div class="stat-label">of GP visits</div>
+				</div>
+				<div class="text-center healthcare-bg p-6 rounded-lg fade-in animation-delay-600">
+					<div class="stat-number">95%</div>
+					<div class="stat-label">accuracy rate</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>

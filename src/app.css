@@ -378,6 +378,28 @@
 	padding: 2rem;
 }
 
+/* Product Image Styles */
+@utility product-image-container {
+	background: white;
+	border-radius: 1rem;
+	box-shadow: 0 10px 25px -3px rgb(0 0 0 / 0.1);
+	border: 1px solid theme(colors.neutral.100);
+	padding: 2rem;
+	transition: all 0.3s ease;
+	&:hover {
+		box-shadow: 0 20px 40px -3px rgb(0 0 0 / 0.15);
+		transform: translateY(-4px);
+	}
+}
+
+@utility product-image {
+	width: 100%;
+	height: auto;
+	border-radius: 0.5rem;
+	object-fit: contain;
+	max-height: 400px;
+}
+
 /* Hero Section Styles */
 @utility hero-section {
 	min-height: 100vh;
