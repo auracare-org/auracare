@@ -5,62 +5,64 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 ### Core Development
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run format` - Format code with Prettier
-- `npm run lint` - Check code formatting
-- `npm run check` - Type-check with svelte-check
-- `npm run check:watch` - Type-check in watch mode
-
-### Database Management
-
-- `npm run db:push` - Push schema changes to database
-- `npm run db:generate` - Generate migrations
-- `npm run db:migrate` - Run migrations
-- `npm run db:studio` - Open Drizzle Studio for database management
+- `yarn dev` - Start development server
+- `yarn build` - Build for production  
+- `yarn preview` - Preview production build
+- `yarn format` - Format code with Prettier
+- `yarn lint` - Check code formatting with Prettier
+- `yarn check` - Type-check with svelte-check (runs svelte-kit sync first)
+- `yarn check:watch` - Type-check in watch mode
 
 ## Architecture Overview
 
-This is a SvelteKit application with server-side authentication and PostgreSQL database using Drizzle ORM.
+This is a SvelteKit application for Auracare - an AI triage and diagnostics platform for primary care. The application is deployed to Vercel and uses a modern web stack optimized for performance.
 
 ### Tech Stack
+- **Framework**: SvelteKit 2.22+ with Svelte 5 (using runes and modern Svelte syntax)
+- **Deployment**: Vercel adapter (@sveltejs/adapter-vercel)
+- **Type Safety**: TypeScript with strict mode enabled
+- **Styling**: Tailwind CSS v4 with custom theme utilities and PostCSS
+- **Build Tool**: Vite 7+
 
-- **Framework**: SvelteKit with Svelte 5
-- **Database**: PostgreSQL (Neon) with Drizzle ORM
-- **Deployment**: Vercel adapter
-- **Type Safety**: TypeScript with strict mode
-- **Authentication**: Custom session-based auth using cookies
+### Project Structure
+- `/src/routes/` - SvelteKit routes (file-based routing)
+  - `+page.svelte` - Landing page with all sections (hero, about, team, contact)
+  - `+layout.svelte` - Root layout with global styles and animations
+- `/src/lib/` - Shared library code and assets
+  - `/assets/` - SVG and other assets
+- `/src/app.d.ts` - Global TypeScript type definitions
+- `/src/app.css` - Global styles with Tailwind CSS and custom utilities
+- `/src/app.html` - HTML template
+- `/static/` - Static assets served directly
+  - Brand assets in multiple formats (SVG, PNG, WebP)
+  - favicon files
 
-### Key Architectural Components
+### Key Implementation Details
 
-1. **Database Layer** (`src/lib/server/db/`)
-   - `schema.ts`: Drizzle schema definitions for users and sessions
-   - `index.ts`: Database connection using Neon serverless driver
-   - Environment variable `DATABASE_URL` required
+#### Svelte 5 Features
+- Uses `$state()` for reactive state management
+- Uses `$props()` for component properties
+- Uses `@render` directive for rendering children
 
-2. **Authentication System** (`src/lib/server/auth.ts`)
-   - Session-based authentication with 30-day expiry
-   - SHA256 hashed session tokens stored as cookies
-   - Automatic session renewal within 15 days of expiry
-   - Session validation in server hooks
+#### Styling Approach
+- Custom Tailwind CSS theme with healthcare-focused color palette
+- Custom utility classes defined with `@utility` directive
+- Responsive design with mobile-first approach
+- Animation utilities for fade-in and slide-in effects
+- Custom components: btn, card, feature-card, team-card
 
-3. **Server Hooks** (`src/hooks.server.ts`)
-   - Validates session tokens on every request
-   - Populates `event.locals` with user and session data
-   - Handles cookie management for sessions
+#### Animation System
+- Intersection Observer for scroll-triggered animations
+- CSS animation classes: fade-in, slide-in-left, slide-in-right
+- Animation delays for staggered effects
 
-4. **Type Definitions** (`src/app.d.ts`)
-   - Global App namespace configuration
-   - Locals interface for user/session data available in all server-side code
+### Type Checking and Linting
 
-### Database Schema Issues
+Always run these commands before committing:
+- `yarn check` - Ensures TypeScript types are correct
+- `yarn lint` - Ensures code formatting is consistent
 
-Note: The auth.ts file references `table.user.username` but the schema only defines `id` and `age` fields. This needs to be fixed before authentication can work properly.
-
-### Environment Setup
-
-Required environment variables:
-
-- `DATABASE_URL`: PostgreSQL connection string (see .env.example)
+The project uses:
+- TypeScript strict mode for maximum type safety
+- Prettier for consistent code formatting
+- svelte-check for Svelte-specific type checking
