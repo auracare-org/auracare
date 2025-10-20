@@ -14,8 +14,7 @@
 		{ name: 'Ayza Zainal', role: 'Freelance UI/UX Designer', status: 'Freelance' },
 		{ name: 'Lu', role: 'Hardware Engineering Lead', status: 'Full-time (Goodl)' },
 		{ name: 'Mini Han Wang', role: 'Medical Data Science Advisor', status: 'Advisor' },
-		{ name: 'Julius Chu', role: 'Marketing Advisor', status: 'Advisor' },
-		{ name: 'Leela Venkatesan', role: 'Head of Medical Compliance', status: 'Inactive' }
+		{ name: 'Julius Chu', role: 'Marketing Advisor', status: 'Advisor' }
 	];
 
 	let expandedUseCase = $state(null);
@@ -130,7 +129,14 @@
 								stroke-linecap="round"
 								stroke-linejoin="round"
 								stroke-width="2"
-								d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.5a2.5 2.5 0 000-5H9m0 0v12m6-12v12M9 5H6.5a2.5 2.5 0 000 5H9"
+								d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+							/>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M3 13h2l1-3 2 6 2-3 1 2h10"
+								opacity="0.6"
 							/>
 						</svg>
 					</div>
@@ -291,36 +297,55 @@
 			</p>
 		</div>
 
-		<div class="max-w-4xl mx-auto">
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-				<div class="roadmap-item fade-in">
-					<div class="roadmap-quarter">Q4 2025</div>
-					<h4 class="text-lg font-semibold mb-3 text-indigo-600">Limited pilot testing</h4>
-					<p class="text-neutral-600 text-sm">Limited pilot testing in the UK</p>
-				</div>
+		<div class="max-w-6xl mx-auto">
+			<!-- Timeline Container -->
+			<div class="timeline-container relative py-8">
+				<!-- Timeline Line -->
+				<div class="timeline-line absolute top-1/2 left-0 right-0 h-1 bg-indigo-200 -translate-y-1/2 hidden lg:block"></div>
 
-				<div class="roadmap-item fade-in animation-delay-200">
-					<div class="roadmap-quarter">Q1 2026</div>
-					<h4 class="text-lg font-semibold mb-3 text-indigo-600">Expand pilots</h4>
-					<p class="text-neutral-600 text-sm">
-						Expand pilots to pharmacy groups and partner clinics; collect validation data
-					</p>
-				</div>
+				<!-- Timeline Items -->
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 relative">
+					<div class="timeline-item fade-in">
+						<div class="timeline-dot"></div>
+						<div class="roadmap-card">
+							<div class="roadmap-quarter">Q4 2025</div>
+							<h4 class="text-lg font-semibold mb-3 text-indigo-600">Limited pilot testing</h4>
+							<p class="text-neutral-600 text-sm">Limited pilot testing in the UK</p>
+						</div>
+					</div>
 
-				<div class="roadmap-item fade-in animation-delay-400">
-					<div class="roadmap-quarter">Q2 2026</div>
-					<h4 class="text-lg font-semibold mb-3 text-indigo-600">Clinical validation</h4>
-					<p class="text-neutral-600 text-sm">
-						Publish first clinical validation results; pre-production
-					</p>
-				</div>
+					<div class="timeline-item fade-in animation-delay-200">
+						<div class="timeline-dot"></div>
+						<div class="roadmap-card">
+							<div class="roadmap-quarter">Q1 2026</div>
+							<h4 class="text-lg font-semibold mb-3 text-indigo-600">Expand pilots</h4>
+							<p class="text-neutral-600 text-sm">
+								Expand pilots to pharmacy groups and partner clinics; collect validation data
+							</p>
+						</div>
+					</div>
 
-				<div class="roadmap-item fade-in animation-delay-600">
-					<div class="roadmap-quarter">Q3 2026</div>
-					<h4 class="text-lg font-semibold mb-3 text-indigo-600">General release</h4>
-					<p class="text-neutral-600 text-sm">
-						Receive Class IIa medical device and FDA clearance, general release
-					</p>
+					<div class="timeline-item fade-in animation-delay-400">
+						<div class="timeline-dot"></div>
+						<div class="roadmap-card">
+							<div class="roadmap-quarter">Q2 2026</div>
+							<h4 class="text-lg font-semibold mb-3 text-indigo-600">Clinical validation</h4>
+							<p class="text-neutral-600 text-sm">
+								Publish first clinical validation results; pre-production
+							</p>
+						</div>
+					</div>
+
+					<div class="timeline-item fade-in animation-delay-600">
+						<div class="timeline-dot"></div>
+						<div class="roadmap-card">
+							<div class="roadmap-quarter">Q3 2026</div>
+							<h4 class="text-lg font-semibold mb-3 text-indigo-600">General release</h4>
+							<p class="text-neutral-600 text-sm">
+								Receive Class IIa medical device and FDA clearance, general release
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -340,14 +365,20 @@
 		</div>
 
 		<div class="flex justify-center">
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-md">
-				<div class="text-center healthcare-bg p-6 rounded-lg fade-in animation-delay-400">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl">
+				<div class="text-center healthcare-bg p-8 rounded-lg fade-in animation-delay-400">
 					<div class="stat-number">30%</div>
-					<div class="stat-label">of GP visits</div>
+					<div class="stat-label font-semibold">of GP visits covered</div>
+					<p class="text-sm text-neutral-500 mt-2">
+						GP appointments that can be handled with Auracare
+					</p>
 				</div>
-				<div class="text-center healthcare-bg p-6 rounded-lg fade-in animation-delay-600">
+				<div class="text-center healthcare-bg p-8 rounded-lg fade-in animation-delay-600">
 					<div class="stat-number">95%</div>
-					<div class="stat-label">accuracy rate</div>
+					<div class="stat-label font-semibold">accuracy rate</div>
+					<p class="text-sm text-neutral-500 mt-2">
+						Diagnostic accuracy in clinical validation
+					</p>
 				</div>
 			</div>
 		</div>

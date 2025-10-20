@@ -250,6 +250,14 @@
 	padding: 0 1rem;
 }
 
+@utility nav-header {
+	background: rgba(129, 140, 248, 0.6);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	transition: all 0.3s ease;
+}
+
 @utility nav-link {
 	color: theme(colors.neutral.600);
 	transition: color 0.2s;
@@ -319,7 +327,46 @@
 	-webkit-backdrop-filter: blur(10px);
 }
 
-@utility roadmap-item {
+@utility timeline-container {
+	position: relative;
+	padding: 2rem 0;
+}
+
+@utility timeline-line {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: linear-gradient(to right, #c7d2fe, #a5b4fc, #818cf8);
+	transform: translateY(-50%);
+	z-index: 1;
+}
+
+@utility timeline-item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 2;
+}
+
+@utility timeline-dot {
+	width: 1.5rem;
+	height: 1.5rem;
+	background: white;
+	border: 4px solid #6366f1;
+	border-radius: 50%;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+	z-index: 3;
+	position: relative;
+	@media (max-width: 1023px) {
+		display: none;
+	}
+}
+
+@utility roadmap-card {
 	background: white;
 	border-radius: 0.75rem;
 	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
@@ -328,21 +375,24 @@
 	padding: 1.5rem;
 	text-align: center;
 	position: relative;
+	width: 100%;
 	&:hover {
 		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 		transform: translateY(-4px);
+		border-color: #6366f1;
 	}
 }
 
 @utility roadmap-quarter {
-	background: theme(colors.neutral.100);
-	color: theme(colors.neutral.700);
+	background: linear-gradient(135deg, #6366f1, #818cf8);
+	color: white;
 	font-weight: 600;
 	font-size: 0.875rem;
 	padding: 0.5rem 1rem;
 	border-radius: 1rem;
 	margin-bottom: 1rem;
 	display: inline-block;
+	box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
 }
 
 @utility use-case-card {
@@ -416,12 +466,12 @@
 }
 
 @utility hero-bg-pattern {
-	background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+	background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
 	opacity: 1;
 }
 
 @utility hero-gradient-overlay {
-	background: linear-gradient(135deg, rgba(79, 70, 229, 0.95) 0%, rgba(124, 58, 237, 0.9) 100%);
+	background: linear-gradient(135deg, rgba(129, 140, 248, 0.85) 0%, rgba(167, 139, 250, 0.8) 100%);
 	backdrop-filter: blur(1px);
 }
 

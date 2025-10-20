@@ -107,6 +107,37 @@
 	</script>
 </svelte:head>
 
+<!-- Navigation Header -->
+<header class="fixed top-0 left-0 right-0 z-50 nav-header">
+	<nav class="container py-4">
+		<div class="flex items-center justify-between">
+			<!-- Logo -->
+			<a href="#home" class="flex items-center">
+				<img
+					src="/SVG/Asset 5.svg"
+					alt="Auracare"
+					class="h-8 w-auto brightness-0 invert"
+				/>
+			</a>
+
+			<!-- Desktop Navigation -->
+			<div class="hidden md:flex items-center gap-8">
+				<a href="#home" class="nav-link text-white hover:text-white/80">Home</a>
+				<a href="#what-is" class="nav-link text-white hover:text-white/80">For Pharmacists</a>
+				<a href="#mission" class="nav-link text-white hover:text-white/80">About</a>
+				<a href="#contact" class="nav-link text-white hover:text-white/80">Work with us</a>
+			</div>
+
+			<!-- Mobile Menu Button -->
+			<button class="md:hidden text-white" aria-label="Menu">
+				<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+				</svg>
+			</button>
+		</div>
+	</nav>
+</header>
+
 <div class="min-h-screen bg-white">
 	{@render children?.()}
 </div>
