@@ -19,7 +19,9 @@
 
 		// Observe all elements with animation classes
 		document
-			.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .slide-in-up')
+			.querySelectorAll(
+				'.fade-in, .slide-in-left, .slide-in-right, .slide-in-up, .timeline-line'
+			)
 			.forEach((el) => {
 				observer.observe(el);
 			});
@@ -116,7 +118,7 @@
 				<img
 					src="/SVG/Asset 5.svg"
 					alt="Auracare"
-					class="h-8 w-auto brightness-0 invert"
+					class="h-5 md:h-6 w-auto brightness-0 invert"
 				/>
 			</a>
 

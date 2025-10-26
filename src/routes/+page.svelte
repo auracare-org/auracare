@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+    import { onMount } from 'svelte';
+    import { slide, fade } from 'svelte/transition';
 
 	const teamMembers = [
 		{ name: 'Hinlun Chen', role: 'Founder, CEO & CFO', status: 'Full-time' },
@@ -306,42 +307,38 @@
 				<!-- Timeline Items -->
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 relative">
 					<div class="timeline-item fade-in">
-						<div class="timeline-dot"></div>
 						<div class="roadmap-card">
 							<div class="roadmap-quarter">Q4 2025</div>
-							<h4 class="text-lg font-semibold mb-3 text-indigo-600">Limited pilot testing</h4>
-							<p class="text-neutral-600 text-sm">Limited pilot testing in the UK</p>
+							<h4 class="roadmap-title text-lg font-semibold text-indigo-600">Limited pilot testing</h4>
+							<p class="roadmap-body text-neutral-600 text-sm">Limited pilot testing in the UK</p>
 						</div>
 					</div>
 
 					<div class="timeline-item fade-in animation-delay-200">
-						<div class="timeline-dot"></div>
 						<div class="roadmap-card">
 							<div class="roadmap-quarter">Q1 2026</div>
-							<h4 class="text-lg font-semibold mb-3 text-indigo-600">Expand pilots</h4>
-							<p class="text-neutral-600 text-sm">
+							<h4 class="roadmap-title text-lg font-semibold text-indigo-600">Expand pilots</h4>
+							<p class="roadmap-body text-neutral-600 text-sm">
 								Expand pilots to pharmacy groups and partner clinics; collect validation data
 							</p>
 						</div>
 					</div>
 
 					<div class="timeline-item fade-in animation-delay-400">
-						<div class="timeline-dot"></div>
 						<div class="roadmap-card">
 							<div class="roadmap-quarter">Q2 2026</div>
-							<h4 class="text-lg font-semibold mb-3 text-indigo-600">Clinical validation</h4>
-							<p class="text-neutral-600 text-sm">
+							<h4 class="roadmap-title text-lg font-semibold text-indigo-600">Clinical validation</h4>
+							<p class="roadmap-body text-neutral-600 text-sm">
 								Publish first clinical validation results; pre-production
 							</p>
 						</div>
 					</div>
 
 					<div class="timeline-item fade-in animation-delay-600">
-						<div class="timeline-dot"></div>
 						<div class="roadmap-card">
 							<div class="roadmap-quarter">Q3 2026</div>
-							<h4 class="text-lg font-semibold mb-3 text-indigo-600">General release</h4>
-							<p class="text-neutral-600 text-sm">
+							<h4 class="roadmap-title text-lg font-semibold text-indigo-600">General release</h4>
+							<p class="roadmap-body text-neutral-600 text-sm">
 								Receive Class IIa medical device and FDA clearance, general release
 							</p>
 						</div>
@@ -397,11 +394,13 @@
 
 		<div class="max-w-4xl mx-auto space-y-4">
 			{#each useCases as useCase, index}
-				<div class="use-case-card fade-in" style="animation-delay: {index * 100}ms">
-					<button
-						class="w-full text-left p-6 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg"
-						onclick={() => toggleUseCase(useCase.id)}
-					>
+                <div class="use-case-card fade-in" style="animation-delay: {index * 100}ms">
+                    <button
+                        class="use-case-trigger w-full text-left p-6 rounded-lg focus:outline-none"
+                        aria-expanded={expandedUseCase === useCase.id}
+                        aria-controls={`usecase-${useCase.id}`}
+                        onclick={() => toggleUseCase(useCase.id)}
+                    >
 						<div class="flex items-center justify-between">
 							<div>
 								<h3 class="text-xl font-semibold mb-2 text-neutral-900">{useCase.title}</h3>
@@ -426,12 +425,12 @@
 						</div>
 					</button>
 
-					{#if expandedUseCase === useCase.id}
-						<div class="px-6 pb-6 text-neutral-600 leading-relaxed">
-							<p>{useCase.content}</p>
-						</div>
-					{/if}
-				</div>
+                    {#if expandedUseCase === useCase.id}
+                        <div id={`usecase-${useCase.id}`} class="use-case-content px-6 pb-6 text-neutral-600 leading-relaxed" transition:slide={{ duration: 180 }}>
+                            <p>{useCase.content}</p>
+                        </div>
+                    {/if}
+                </div>
 			{/each}
 		</div>
 	</div>
@@ -612,8 +611,16 @@
 				discuss trials, integrations, and clinical validation.
 			</p>
 			<div class="fade-in animation-delay-400 flex flex-col sm:flex-row gap-4 justify-center">
-				<a href="mailto:hello@auracare.com" class="btn btn-primary btn-lg">Request a demo</a>
-				<a href="mailto:hello@auracare.com" class="btn btn-secondary btn-lg">Work with us</a>
+				<a
+					href="mailto:hello@auracare.com?subject=Auracare%20Demo%20Request&body=Hello%2C%20I%20was%20browsing%20your%20website%20and%20am%20interested%20in%20a%20demo.%20Could%20you%20share%20next%20steps%3F%0A%0AName%3A%0AOrganization%3A%0ARole%3A%0APreferred%20time%2Ftimezone%3A"
+					class="btn btn-primary btn-lg"
+					>Request a demo</a
+				>
+				<a
+					href="mailto:hello@auracare.com?subject=Work%20with%20Auracare&body=Hello%2C%20I%20was%20browsing%20your%20website%20and%20am%20interested%20in%20working%20together.%20Could%20we%20set%20up%20a%20chat%3F%0A%0AName%3A%0AOrganization%3A%0ARole%3A%0ATopic%20of%20interest%3A"
+					class="btn btn-secondary btn-lg"
+					>Work with us</a
+				>
 			</div>
 		</div>
 	</div>
@@ -684,8 +691,16 @@
 					<!-- CTA Section -->
 					<div class="flex-1">
 						<div class="space-y-4 mb-6">
-							<a href="mailto:hello@auracare.com" class="btn btn-primary w-full">Request a demo</a>
-							<a href="mailto:hello@auracare.com" class="btn btn-secondary w-full">Work with us</a>
+							<a
+								href="mailto:hello@auracare.com?subject=Auracare%20Demo%20Request&body=Hello%2C%20I%20was%20browsing%20your%20website%20and%20am%20interested%20in%20a%20demo.%20Could%20you%20share%20next%20steps%3F%0A%0AName%3A%0AOrganization%3A%0ARole%3A%0APreferred%20time%2Ftimezone%3A"
+								class="btn btn-primary w-full"
+								>Request a demo</a
+							>
+							<a
+								href="mailto:hello@auracare.com?subject=Work%20with%20Auracare&body=Hello%2C%20I%20was%20browsing%20your%20website%20and%20am%20interested%20in%20working%20together.%20Could%20we%20set%20up%20a%20chat%3F%0A%0AName%3A%0AOrganization%3A%0ARole%3A%0ATopic%20of%20interest%3A"
+								class="btn btn-secondary w-full"
+								>Work with us</a
+							>
 						</div>
 						<div class="text-sm text-neutral-400">
 							<p class="mb-2"><strong class="text-neutral-300">Contact:</strong></p>

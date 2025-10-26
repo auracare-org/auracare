@@ -339,8 +339,16 @@
 	right: 0;
 	height: 2px;
 	background: linear-gradient(to right, #c7d2fe, #a5b4fc, #818cf8);
-	transform: translateY(-50%);
+	/* animate reveal left -> right */
+	transform: translateY(-50%) scaleX(0);
+	transform-origin: left;
+	opacity: 0;
+	transition: transform 1s ease-out, opacity 0.6s ease-out;
 	z-index: 1;
+	&.visible {
+		transform: translateY(-50%) scaleX(1);
+		opacity: 1;
+	}
 }
 
 @utility timeline-item {
@@ -352,18 +360,7 @@
 }
 
 @utility timeline-dot {
-	width: 1.5rem;
-	height: 1.5rem;
-	background: white;
-	border: 4px solid #6366f1;
-	border-radius: 50%;
-	margin-bottom: 2rem;
-	box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
-	z-index: 3;
-	position: relative;
-	@media (max-width: 1023px) {
-		display: none;
-	}
+	display: none;
 }
 
 @utility roadmap-card {
@@ -376,6 +373,17 @@
 	text-align: center;
 	position: relative;
 	width: 100%;
+	/* uniform vertical positions using grid rows */
+	--roadmap-quarter-h: 40px; /* pill row height */
+	--roadmap-title-h: 44px;  /* title row height */
+	display: grid;
+	grid-template-rows: var(--roadmap-quarter-h) var(--roadmap-title-h) 1fr;
+	row-gap: 0.75rem;
+	justify-items: center;
+	align-content: start;
+	@media (min-width: 768px) {
+		height: 240px; /* equal card height on md+ */
+	}
 	&:hover {
 		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 		transform: translateY(-4px);
@@ -388,22 +396,55 @@
 	color: white;
 	font-weight: 600;
 	font-size: 0.875rem;
-	padding: 0.5rem 1rem;
 	border-radius: 1rem;
-	margin-bottom: 1rem;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: var(--roadmap-quarter-h);
+	padding: 0 1rem; /* horizontal only */
+	margin: 0; /* spacing handled by grid gap */
 	box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
 }
 
+/* Title and body alignment helpers for uniform start positions */
+@utility roadmap-title {
+	margin: 0; /* remove default/utility margins */
+	line-height: 1.25;
+	align-self: start; /* ensure title starts at row top */
+	justify-self: center;
+	display: block;
+}
+
+@utility roadmap-body {
+	margin: 0; /* ensure body starts at its row top */
+}
+
 @utility use-case-card {
-	background: white;
-	border-radius: 0.75rem;
-	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-	transition: all 0.3s;
-	border: 1px solid theme(colors.neutral.100);
-	&:hover {
-		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-	}
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    transition: all 0.3s;
+    border: 1px solid theme(colors.neutral.100);
+    &:hover {
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+}
+
+@utility use-case-trigger {
+    /* remove any default focus rings/borders */
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent;
+    transition: background 0.2s ease;
+    &:hover {
+        background: rgba(0, 0, 0, 0.02);
+    }
+    &:focus-visible {
+        /* subtle, non-purple focus style for accessibility */
+        box-shadow: 0 0 0 2px rgba(0,0,0,0.08) inset !important;
+        border-radius: 0.5rem;
+    }
 }
 
 @utility trust-card {
@@ -502,14 +543,13 @@
 }
 
 @utility hero-btn-secondary {
-	background: transparent;
+	background: rgba(255, 255, 255, 0.10);
 	color: white;
-	border: 2px solid white;
+	border: none !important;
 	backdrop-filter: blur(10px);
 	font-weight: 500;
 	&:hover {
-		background: rgba(255, 255, 255, 0.1);
-		border-color: white;
+		background: rgba(255, 255, 255, 0.18);
 		transform: translateY(-4px);
 		box-shadow: 0 10px 20px -5px rgb(0 0 0 / 0.2);
 	}
