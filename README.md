@@ -1,38 +1,38 @@
-# sv
+# Auracare website (SvelteKit + Yarn)
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Marketing site for Auracare built with SvelteKit 2, Svelte 5, Vite 7 and Tailwind CSS 4.
 
-## Creating a project
+## Prerequisites
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Node: 22.12.0 is pinned via `.nvmrc` (engines also allow `^20.19` or `>=24`).
+- Package manager: Yarn Classic (v1). The repo is standardized on Yarn and includes a `yarn.lock`.
 
-```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Setup
 
 ```sh
-npm run dev
+# Use the pinned Node version
+nvm use    # or: fnm use
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# Install dependencies without modifying yarn.lock
+yarn install --frozen-lockfile
 ```
 
-## Building
-
-To create a production version of your app:
+## Develop
 
 ```sh
-npm run build
+yarn dev
+# or open a browser automatically
+yarn dev --open
 ```
 
-You can preview the production build with `npm run preview`.
+## Build and preview
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```sh
+yarn build
+yarn preview
+```
+
+## Notes
+
+- Deploys target Vercel using `@sveltejs/adapter-vercel`.
+- If you use a different Node manager, ensure it respects `.nvmrc` (e.g., `fnm env --use-on-cd`).

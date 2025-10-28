@@ -9,7 +9,7 @@
 		{ name: 'Linus Alpsten', role: 'Head of Partnerships and Research', status: 'Full-time' },
 		{
 			name: 'Ahnaf Kabir',
-			role: 'Full Stack Developer & Head of Cybersecurity and IT',
+			role: 'VP, Engineering',
 			status: 'Part-time'
 		},
 		{ name: 'Ayza Zainal', role: 'Freelance UI/UX Designer', status: 'Freelance' },
