@@ -6,22 +6,22 @@
 
 	const reasons = [
 		{
-			title: 'Healthcare systems are stretched',
+			title: 'Healthcare Systems are Stretched',
 			description:
 				'Healthcare providers are facing unprecedented challenges: staff shortages, rising costs, and increasing patient volume.'
 		},
 		{
-			title: 'Community providers are stepping up',
+			title: 'Community Providers are Stepping Up',
 			description:
 				'New initiatives, like Pharmacy First in the England, empower non-doctors to handle more cases.'
 		},
 		{
-			title: 'Patient expectations have shifted',
+			title: 'Patient Expectations Have Shifted',
 			description:
 				'People are tired of waiting months for healthcare. They need fast, efficient and local attention.'
 		},
 		{
-			title: 'Technology is ready',
+			title: 'Technology is Ready',
 			description:
 				'Advances in AI, low-cost imaging hardware, and digitisation of clinical pathways make safe and scalable triage possible today.'
 		}

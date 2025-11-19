@@ -58,7 +58,16 @@
 			stroke-width="4"
 		/>
 
-		<!-- Animated glowing dot -->
+		<!-- Pulsing circular border for main dot -->
+		<circle class="pulse-ring" r="20" fill="none" stroke="rgba(255, 255, 255, 0.6)" stroke-width="2">
+			<animateMotion
+				dur="8s"
+				repeatCount="indefinite"
+				path="M 0,250 Q 100,180 200,250 T 400,250 T 600,250 T 800,250"
+			/>
+		</circle>
+
+		<!-- Main dot -->
 		<circle class="wave-dot" r="8" fill="white" filter="url(#glow)">
 			<animateMotion
 				dur="8s"
@@ -67,7 +76,16 @@
 			/>
 		</circle>
 
-		<!-- Secondary smaller dot for depth -->
+		<!-- Pulsing circular border for secondary dot -->
+		<circle class="pulse-ring-2" r="16" fill="none" stroke="rgba(200, 220, 255, 0.5)" stroke-width="2">
+			<animateMotion
+				dur="6s"
+				repeatCount="indefinite"
+				path="M 0,270 Q 100,200 200,270 T 400,270 T 600,270 T 800,270"
+			/>
+		</circle>
+
+		<!-- Secondary dot -->
 		<circle class="wave-dot-2" r="6" fill="rgba(200, 220, 255, 0.9)" filter="url(#glow)">
 			<animateMotion
 				dur="6s"
@@ -79,6 +97,7 @@
 </div>
 
 <style>
+
 	/* Vertical bobbing animation - like a buoy floating on ocean waves */
 	@keyframes wave-bob {
 		0%,
@@ -103,6 +122,29 @@
 		}
 	}
 
+	/* Pulsing ring animation - expands and fades */
+	@keyframes pulse-ring {
+		0% {
+			r: 12;
+			opacity: 0.8;
+		}
+		100% {
+			r: 28;
+			opacity: 0;
+		}
+	}
+
+	@keyframes pulse-ring-2 {
+		0% {
+			r: 10;
+			opacity: 0.7;
+		}
+		100% {
+			r: 24;
+			opacity: 0;
+		}
+	}
+
 	.sine-wave-1 {
 		animation: wave-bob 4s ease-in-out infinite;
 	}
@@ -124,5 +166,14 @@
 	.wave-dot-2 {
 		animation: pulse-glow 1.5s ease-in-out infinite;
 		animation-delay: 0.3s;
+	}
+
+	.pulse-ring {
+		animation: pulse-ring 2s ease-out infinite;
+	}
+
+	.pulse-ring-2 {
+		animation: pulse-ring-2 1.8s ease-out infinite;
+		animation-delay: 0.2s;
 	}
 </style>
