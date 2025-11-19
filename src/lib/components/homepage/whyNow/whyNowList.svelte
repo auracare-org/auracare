@@ -24,7 +24,7 @@
 		<h3 class="text-2xl font-bold mb-3 text-white">
 			{title}
 		</h3>
-		<p class="text-base text-white opacity-80 leading-6">
+		<p class="text-base text-white opacity-80 leading-8">
 			{description}
 		</p>
 	</div>

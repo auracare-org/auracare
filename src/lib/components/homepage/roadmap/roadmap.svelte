@@ -38,7 +38,7 @@
 		</div>
 
 		<div class="buttons">
-			<a href="/about#our-story" class="btn btn-secondary">Hear our journey</a>
+			<a href="/about#our-story" class="btn btn-secondary">Our Story</a>
 			<a href="mailto:hinlun@auracare.org.uk?subject=Join%20Pilot%20Program" class="btn btn-primary"
 				>Join our pilot program</a
 			>

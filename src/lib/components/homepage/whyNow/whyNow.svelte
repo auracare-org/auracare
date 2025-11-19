@@ -42,8 +42,8 @@
 			</p>
 		</div>
 
-		<!-- All 4 cards in one row -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+		<!-- 2x2 grid -->
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 			{#each reasons as reason, index}
 				<WhyNowList title={reason.title} description={reason.description} iconIndex={index} />
 			{/each}

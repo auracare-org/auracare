@@ -39,14 +39,6 @@ export const teamMembers: TeamMember[] = [
     linkedin: 'https://www.linkedin.com/in/ahnaf-kabir/'
   },
   {
-    name: 'Ayza Zainal',
-    role: 'Freelance UI/UX Designer'
-  },
-  {
-    name: 'Lu',
-    role: 'Hardware Engineering Lead'
-  },
-  {
     name: 'Mini Han Wang',
     img: '/minhanwang.jpg',
     role: 'Medical Data Science Advisor',
@@ -55,7 +47,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Julius Chu',
     img: '/juliuschu.jpg',
-    role: 'Marketing Advisor',
+    role: 'Product & Marketing Advisor',
     linkedin: 'https://www.linkedin.com/in/juliuschu/'
   },
   {
@@ -63,6 +55,14 @@ export const teamMembers: TeamMember[] = [
     img: '/DarynaNykyforiv.jpg',
     role: 'Partnerships',
     linkedin: 'https://www.linkedin.com/in/daryna-nykyforiv-55b352364/'
+  },
+  {
+    name: 'Ayza Zainal',
+    role: 'Freelance UI/UX Designer'
+  },
+  {
+    name: 'Lu',
+    role: 'Hardware Engineering Lead'
   }
 ];
 

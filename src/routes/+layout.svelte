@@ -214,11 +214,7 @@
 			</div>
 
 			<!-- Mobile Menu Button -->
-			<button
-				class="md:hidden text-neutral-900"
-				aria-label="Menu"
-				onclick={toggleMobileMenu}
-			>
+			<button class="md:hidden text-neutral-900" aria-label="Menu" onclick={toggleMobileMenu}>
 				{#if mobileMenuOpen}
 					<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						<path
@@ -375,7 +371,7 @@
 
 		<!-- Bottom -->
 		<div class="border-t border-white/20 pt-6 flex flex-wrap justify-between gap-4 text-sm">
-			<p class="text-white/60">&copy; {new Date().getFullYear()} Auracare.</p>
+			<p class="text-white/60">&copy; {new Date().getFullYear()} Auracarehealth LTD</p>
 			<div class="flex gap-4 text-white">
 				<!--  
 				<a href="/privacy" class="hover:opacity-80 transition-opacity">Privacy policy</a>
@@ -383,8 +379,8 @@
 				<a href="/#contact" class="hover:opacity-80 transition-opacity">Contact information</a>
 			</div>
 		</div>
-		</div>
-	</footer>
+	</div>
+</footer>
 
 <style>
 	.footer-gradient {

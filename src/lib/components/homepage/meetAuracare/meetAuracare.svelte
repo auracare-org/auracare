@@ -9,12 +9,13 @@
 
 	const features = [
 		{
-			title: 'Automated clinical assessments',
-			description: 'We automatically record and document consults using PGD pathways. No paperwork!',
+			title: 'Automated Clinical Assessments',
+			description:
+				'We automatically record and document consults using PGD pathways. No paperwork!',
 			icon: IconClipboardCheck
 		},
 		{
-			title: 'End-to-end workflow integration',
+			title: 'End-to-End Workflow Integration',
 			description:
 				'Notes, prescriptions, referrals and NHS submissions generated and sent in one seamless flow.',
 			icon: IconGitMerge
