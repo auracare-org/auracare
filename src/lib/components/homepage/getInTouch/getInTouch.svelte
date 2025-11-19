@@ -11,11 +11,15 @@
 	function handleSubmit(event: Event) {
 		event.preventDefault();
 
-		const subject = `Contact Form: Message from ${name}`;
-		const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+	const subject = `Contact Form: Message from ${name}`;
+	const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
 
-		window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${body}`;
+	const mailtoUrl = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${body}`;
+	const navigationAllowed = window.location.href = mailtoUrl;
+	if (!navigationAllowed) {
+		alert("Looks like you don't have an email client configured. Please email hinlin@auracare.org.uk directly.");
 	}
+}
 </script>
 
 <section id="contact" class="section">
