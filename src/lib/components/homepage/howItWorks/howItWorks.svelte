@@ -23,7 +23,7 @@
 	];
 </script>
 
-<section id="howitworks" class="section section-alt">
+<section id="howitworks" class="section">
 	<div class="container">
 		<div class="text-center mb-12 slide-in-up">
 			<h2

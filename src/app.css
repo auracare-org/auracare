@@ -68,17 +68,41 @@
 	/* Typography */
 	--font-family-heading: 'DM Sans', system-ui, sans-serif;
 	--font-family-sans: 'Poppins', system-ui, sans-serif;
+
+	/* Shadows */
+	--shadow-glass-glow: 0 20px 45px rgba(47, 78, 192, 0.25), 0 0 25px rgba(101, 126, 255, 0.4);
+	--shadow-glass-glow-strong: 0 30px 65px rgba(47, 78, 192, 0.35), 0 0 35px rgba(121, 146, 255, 0.5);
 }
 
 /* Base Styles */
 @layer base {
 	html {
 		scroll-behavior: smooth;
+		height: 100%;
+		background: #f5f8ff;
 	}
 
-	body {
-		font-family: var(--font-family-sans);
-		@apply antialiased;
+    body {
+        font-family: var(--font-family-sans);
+        @apply antialiased;
+        min-height: 100%;
+        overflow-x: hidden;
+        background: linear-gradient(180deg, #f5f8ff 0%, #e6ecff 60%, #eef1ff 100%);
+        position: relative;
+        color: var(--color-text-body-primary);
+    }
+
+	body::before {
+		content: '';
+		position: fixed;
+		inset: -20% -10% auto -10%;
+		height: 160vh;
+		background:
+			radial-gradient(circle at 15% 35%, rgba(255, 255, 255, 0.75), transparent 55%),
+			radial-gradient(circle at 85% 15%, rgba(165, 178, 255, 0.5), transparent 45%),
+			radial-gradient(circle at 50% 80%, rgba(95, 120, 255, 0.3), transparent 50%);
+		z-index: -1;
+		pointer-events: none;
 	}
 
 	h1,
@@ -93,32 +117,32 @@
 	}
 
 	h1 {
-		font-size: 48px;
+		font-size: 36px;
 		line-height: 1.16;
 		@apply font-bold;
 	}
 
 	h2 {
-		font-size: 64px;
+		font-size: 52px;
 		line-height: 1.25;
 		@apply font-bold;
 	}
 
 	h3 {
-		font-size: 30px;
+		font-size: 18px;
 		line-height: 1.2;
 		@apply font-bold;
 	}
 
 	h4 {
-		font-size: 24px;
+		font-size: 12px;
 		line-height: 1.33;
 		@apply font-bold;
 	}
 
 	p {
 		font-family: var(--font-family-sans);
-		font-size: 18px;
+		font-size: 12px;
 		font-weight: 500;
 		line-height: 1.56;
 		@apply text-neutral-600;
@@ -275,6 +299,8 @@
 
 @utility section {
 	padding: var(--spacing-section-xl) 0;
+	position: relative;
+	z-index: 1;
 }
 
 @utility section-alt {
@@ -341,10 +367,20 @@
 	padding: var(--spacing-xl);
 	min-height: 240px;
 	transition: all 0.3s;
-	box-shadow: 0 4px 6px -1px rgba(47, 78, 192, 0.2);
+	box-shadow: var(--shadow-glass-glow);
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	position: relative;
+	overflow: hidden;
 	&:hover {
-		box-shadow: 0 10px 15px -3px rgba(47, 78, 192, 0.3);
+		box-shadow: var(--shadow-glass-glow-strong);
 		transform: translateY(-4px);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.25), transparent 45%);
+		pointer-events: none;
 	}
 }
 
@@ -637,6 +673,19 @@
 
 @utility hero-subtitle {
 	color: #f3f4f6;
+}
+
+/* Decorative bubble/particle helpers for hero & section backgrounds */
+.bubble {
+	position: absolute;
+	width: var(--bubble-size, 220px);
+	height: var(--bubble-size, 220px);
+	border-radius: 999px;
+	background: radial-gradient(circle at 30% 30%, var(--bubble-color, rgba(255, 255, 255, 0.8)), rgba(255, 255, 255, 0));
+	opacity: var(--bubble-opacity, 0.5);
+	filter: blur(var(--bubble-blur, 0));
+	pointer-events: none;
+	mix-blend-mode: var(--bubble-blend, normal);
 }
 
 @utility hero-description {

@@ -6,6 +6,7 @@
 		IconSchool,
 		IconAmbulance
 	} from '@tabler/icons-svelte';
+	import { slide } from 'svelte/transition';
 	import list from './text.json';
 
 	const title = 'Use cases';
@@ -25,7 +26,7 @@
 	};
 </script>
 
-<section class="use-cases-section">
+<section class="section use-cases-section">
 	<div class="container">
 		<div class="grid md:grid-cols-12 gap-8 items-start">
 			<!-- Left Column: Title & Description -->
@@ -33,7 +34,7 @@
 				<h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
 					{title}
 				</h2>
-				<p class="text-lg text-white opacity-80">
+				<p class="text-xl text-white opacity-80">
 					{subTitle}
 				</p>
 			</div>
@@ -55,7 +56,7 @@
 								<h3 class="text-xl font-bold mb-1 text-white">
 									{item.title}
 								</h3>
-								<p class="text-sm text-white opacity-80">
+								<p class="text-base text-white opacity-80">
 									{item.subtitle}
 								</p>
 							</div>
@@ -67,7 +68,7 @@
 						</button>
 
 						{#if openIndex === index}
-							<div class="px-6 pb-6 pt-2">
+							<div class="px-6 pb-6 pt-2 use-case-content" transition:slide={{ duration: 300 }}>
 								<p class="mb-4 text-white font-medium">
 									{item.text}
 								</p>
@@ -89,26 +90,30 @@
 </section>
 
 <style>
-	.use-cases-section {
-		background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-600) 100%);
-		padding: var(--spacing-section-xl) 0;
-		position: relative;
-		overflow: hidden;
-	}
+    .use-cases-section {
+        background: linear-gradient(135deg, #3b63f0 0%, #1f4abc 100%);
+        color: white;
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
 
-	.use-case-glass-card {
+ 	.use-case-glass-card {
 		background: rgba(255, 255, 255, 0.1);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		border-radius: var(--radius-md);
 		border: 1px solid rgba(255, 255, 255, 0.2);
 		transition: all 0.3s ease;
-		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+		box-shadow: var(--shadow-glass-glow);
+		overflow: hidden;
 	}
 
 	.use-case-glass-card:hover {
 		background: rgba(255, 255, 255, 0.15);
-		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+		box-shadow: var(--shadow-glass-glow-strong);
 	}
 
 	.use-case-icon {
@@ -120,6 +125,7 @@
 		justify-content: center;
 		color: white;
 		flex-shrink: 0;
+		box-shadow: var(--shadow-glass-glow);
 	}
 
 	.use-case-trigger {
@@ -133,5 +139,18 @@
 		outline: 2px solid rgba(255, 255, 255, 0.5);
 		outline-offset: 2px;
 		border-radius: var(--radius-md);
+	}
+
+	.use-case-content {
+		font-size: 1.125rem;
+		line-height: 1.75;
+	}
+
+	.use-case-content p {
+		font-size: 1.125rem;
+	}
+
+	.use-case-content li span {
+		font-size: 1.125rem;
 	}
 </style>

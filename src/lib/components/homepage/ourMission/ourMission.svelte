@@ -2,19 +2,19 @@
 	import ourMissionImg from './ourMission.png';
 </script>
 
-<section class="section" style="background: linear-gradient(135deg, #4c6ef5 0%, #5b7cfa 100%);">
+<section class="section mission-section">
 	<div class="container">
 		<div class="grid md:grid-cols-2 gap-12 items-center">
 			<!-- Left side: Illustration -->
-			<div class="slide-in-left flex items-center justify-center">
-				<img src={ourMissionImg} alt="Healthcare worker" class="w-full" style="max-width: 600px;" />
+			<div class="slide-in-left flex items-center justify-center illustration-shell">
+				<img src={ourMissionImg} alt="Healthcare worker" class="w-full illustration" />
 			</div>
 
 			<!-- Right side: Text content -->
 			<div class="slide-in-right">
 				<h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: white;">Our mission</h2>
 
-				<div class="space-y-6 text-lg">
+				<div class="space-y-6 mission-text">
 					<p style="color: white;">
 						Auracare's mission is to help healthcare workers and systems where they are needed. We
 						deliver
@@ -38,3 +38,43 @@
 		</div>
 	</div>
 </section>
+
+
+<style>
+	.mission-section {
+		position: relative;
+		background: linear-gradient(135deg, #3a5de6 0%, #4d6ff7 35%, #6280ff 100%);
+		color: white;
+		width: 100vw;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+	}
+
+	.mission-text {
+		font-size: 1.25rem;
+		line-height: 1.75;
+	}
+
+	.mission-text p {
+		font-size: 1.25rem;
+	}
+
+	.illustration-shell {
+		position: relative;
+	}
+
+	.illustration-shell::after {
+		content: '';
+		position: absolute;
+		inset: 12%;
+		border-radius: 100%;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+	}
+
+	.illustration {
+		max-width: 560px;
+		filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.2));
+	}
+</style>

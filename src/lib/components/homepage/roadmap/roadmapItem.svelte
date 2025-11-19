@@ -43,7 +43,7 @@
 		gap: 1rem;
 		min-height: 280px;
 		box-shadow:
-			0 8px 32px 0 rgba(99, 102, 241, 0.2),
+			var(--shadow-glass-glow),
 			0 0 0 1px rgba(255, 255, 255, 0.1) inset;
 		transition: all 0.3s ease;
 		backdrop-filter: blur(4px);
@@ -52,7 +52,7 @@
 
 	.roadmap-item:hover {
 		box-shadow:
-			0 12px 40px 0 rgba(99, 102, 241, 0.3),
+			var(--shadow-glass-glow-strong),
 			0 0 0 1px rgba(255, 255, 255, 0.2) inset;
 		transform: translateY(-4px);
 	}
@@ -67,11 +67,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		box-shadow: 0 4px 16px 0 rgba(255, 255, 255, 0.1);
+		box-shadow: var(--shadow-glass-glow);
 	}
 
 	.quarter {
-		font-size: 1rem;
+		font-size: 1.125rem;
 		font-weight: 600;
 		margin: 0;
 		color: white;
@@ -79,7 +79,7 @@
 	}
 
 	h3 {
-		font-size: 1.5rem;
+		font-size: 1.75rem;
 		font-weight: 700;
 		margin: 0;
 		line-height: 1.3;
@@ -87,10 +87,10 @@
 	}
 
 	.description {
-		font-size: 1rem;
+		font-size: 1.125rem;
 		margin: 0;
 		color: white;
 		opacity: 0.95;
-		line-height: 1.5;
+		line-height: 1.6;
 	}
 </style>

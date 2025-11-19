@@ -1,6 +1,11 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
+	import { afterNavigate } from '$app/navigation';
+	import { dev } from '$app/environment';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+
+	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
 	let { children } = $props();
 
@@ -17,14 +22,23 @@
 			{ threshold: 0.1 }
 		);
 
-		// Observe all elements with animation classes
-		document
-			.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .slide-in-up, .timeline-line')
-			.forEach((el) => {
-				observer.observe(el);
-			});
+		const observeElements = () => {
+			document
+				.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .slide-in-up, .timeline-line')
+				.forEach((el) => observer.observe(el));
+		};
 
-		return () => observer.disconnect();
+		// Observe initial elements
+		observeElements();
+
+		// Re-observe after client-side navigations so new sections animate correctly
+		afterNavigate(() => {
+			observeElements();
+		});
+
+		return () => {
+			observer.disconnect();
+		};
 	});
 </script>
 
@@ -203,9 +217,9 @@
 	</nav>
 </header>
 
-<div class="min-h-screen bg-white">
+<main class="site-content">
 	{@render children?.()}
-</div>
+</main>
 
 <!-- Footer -->
 <footer class="footer-gradient py-12">
@@ -276,13 +290,14 @@
 		<div class="border-t border-white/20 pt-6 flex flex-wrap justify-between gap-4 text-sm">
 			<p class="text-white/60">&copy; {new Date().getFullYear()} Auracare.</p>
 			<div class="flex gap-4 text-white">
+				<!--  
 				<a href="/privacy" class="hover:opacity-80 transition-opacity">Privacy policy</a>
-				<a href="/terms" class="hover:opacity-80 transition-opacity">Terms of service</a>
+				<a href="/terms" class="hover:opacity-80 transition-opacity">Terms of service</a> -->
 				<a href="/#contact" class="hover:opacity-80 transition-opacity">Contact information</a>
 			</div>
 		</div>
-	</div>
-</footer>
+		</div>
+	</footer>
 
 <style>
 	.footer-gradient {

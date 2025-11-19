@@ -33,7 +33,7 @@
 				</p>
 			</div>
 
-			<form class="card p-8 slide-in-up" onsubmit={handleSubmit}>
+			<form class="card contact-card p-8 slide-in-up" onsubmit={handleSubmit}>
 				<div class="space-y-6">
 					<div>
 						<label
@@ -92,9 +92,41 @@
 						></textarea>
 					</div>
 
-					<button type="submit" class="btn btn-primary btn-lg w-full"> Send Message </button>
+					<button type="submit" class="btn btn-primary btn-lg w-full contact-submit">
+						Send Message
+					</button>
 				</div>
 			</form>
 		</div>
 	</div>
 </section>
+
+<style>
+	.contact-card {
+		background: rgba(255, 255, 255, 0.95);
+		box-shadow: 0 40px 70px rgba(15, 23, 42, 0.15);
+		border: 1px solid rgba(79, 111, 237, 0.1);
+		backdrop-filter: blur(6px);
+	}
+
+	input,
+	textarea {
+		background: rgba(255, 255, 255, 0.85);
+		border-radius: 14px;
+		border: 1px solid rgba(148, 163, 184, 0.4);
+		box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.08);
+	}
+
+	input:focus,
+	textarea:focus {
+		outline: none;
+		border-color: #4f6fed;
+		box-shadow: 0 0 0 3px rgba(79, 111, 237, 0.2);
+	}
+
+	.contact-submit {
+		border-radius: 14px;
+		box-shadow: 0 25px 45px rgba(79, 111, 237, 0.35);
+		border: none;
+	}
+</style>

@@ -21,7 +21,7 @@
 			>
 				Roadmap
 			</h2>
-			<p class="text-lg" style="color: var(--color-text-body-secondary);">
+			<p class="text-xl roadmap-subtitle" style="color: var(--color-text-body-secondary);">
 				Our plan to transform primary care
 			</p>
 		</div>
@@ -47,6 +47,11 @@
 </section>
 
 <style>
+	.roadmap-subtitle {
+		font-size: 1.25rem;
+		line-height: 1.75;
+	}
+
 	.roadmap-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -75,25 +80,29 @@
 		text-decoration: none;
 		transition: all 0.2s;
 		display: inline-block;
+		box-shadow: 0 18px 35px rgba(15, 23, 42, 0.1);
+		border: 1px solid transparent;
 	}
 
 	.btn-primary {
-		background-color: var(--color-bg-button-primary);
+		background: linear-gradient(120deg, #4f6fed, #6e7dff);
 		color: white;
 	}
 
 	.btn-primary:hover {
-		background-color: var(--color-primary-700);
+		background: linear-gradient(120deg, #4b66e0, #6573ff);
 		transform: translateY(-2px);
 	}
 
 	.btn-secondary {
-		background-color: var(--color-bg-button-secondary);
+		background-color: rgba(255, 255, 255, 0.85);
 		color: var(--color-text-button-secondary);
+		border-color: rgba(79, 111, 237, 0.2);
+		backdrop-filter: blur(10px);
 	}
 
 	.btn-secondary:hover {
-		background-color: #c5cce8;
+		background-color: rgba(255, 255, 255, 0.95);
 		transform: translateY(-2px);
 	}
 </style>
