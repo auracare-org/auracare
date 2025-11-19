@@ -13,7 +13,7 @@
 		{
 			title: 'Triage Report',
 			description:
-				'Our software analyzes the inputs, flags conditions, suggests treatment steps, and generates a patient report summarising the entire consultation and triage reasoning.'
+				'Our software analyzes the inputs, flags conditions, suggests treatment steps, and generates a patient report summarising the entire consultation with triage reasoning.'
 		},
 		{
 			title: 'Clinical Handoff',

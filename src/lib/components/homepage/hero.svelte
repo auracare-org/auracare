@@ -25,7 +25,7 @@
 		<div class="text-center slide-in-up">
 			<div class="hero-badge">
 				<span class="hero-badge__dot"></span>
-				Digitally enhanced pharmacy-first care
+				Digitally enhanced primary care
 			</div>
 
 			<h1 class="mx-auto mb-8 hero-title">

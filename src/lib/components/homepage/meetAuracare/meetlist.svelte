@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { IconFileText } from '@tabler/icons-svelte';
+	import type { ComponentType } from 'svelte';
 
-	let { title, description }: { title: string; description: string } = $props();
+	let { title, description, icon }: { title: string; description: string; icon: ComponentType } = $props();
 </script>
 
 <div class="meet-card">
 	<!-- Icon container with stronger glassmorphism -->
 	<div class="icon-container">
-		<IconFileText size={24} stroke={1.5} style="color: white;" />
+		<svelte:component this={icon} size={24} stroke={1.5} style="color: white;" />
 	</div>
 
 	<!-- Content -->

@@ -2,6 +2,7 @@
 	import Meetlist from './meetlist.svelte';
 	import SineWave from './meetAuracarePulse.svelte';
 	import auracareLogoWhite from './whiteAuracare.svg';
+	import { IconClipboardCheck, IconGitMerge, IconBrain } from '@tabler/icons-svelte';
 
 	const subText =
 		'Our digitally enhanced triage tools help primary care providers diagnose without the need for an on-site doctor.';
@@ -9,17 +10,20 @@
 	const features = [
 		{
 			title: 'Automated clinical assessments',
-			description: 'We automatically record and document consults using PGD pathways. No paperwork!'
+			description: 'We automatically record and document consults using PGD pathways. No paperwork!',
+			icon: IconClipboardCheck
 		},
 		{
 			title: 'End-to-end workflow integration',
 			description:
-				'Notes, prescriptions, referrals and NHS submissions generated and sent in one seamless flow.'
+				'Notes, prescriptions, referrals and NHS submissions generated and sent in one seamless flow.',
+			icon: IconGitMerge
 		},
 		{
 			title: 'AI Assisted Consultations',
 			description:
-				'Our AI models help care workers diagnose visual conditions faster and more accurately, with a full audit trail.'
+				'Our AI models help care workers diagnose visual conditions faster and more accurately, with a full audit trail.',
+			icon: IconBrain
 		}
 	];
 </script>
@@ -37,7 +41,7 @@
 			</div>
 			<div class="grid gap-5 slide-in-right">
 				{#each features as feature}
-					<Meetlist title={feature.title} description={feature.description} />
+					<Meetlist title={feature.title} description={feature.description} icon={feature.icon} />
 				{/each}
 			</div>
 		</div>
@@ -61,8 +65,8 @@
 		content: '';
 		position: absolute;
 		inset: 0;
-		background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.25), transparent 45%);
-		opacity: 0.8;
+		background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15), transparent 45%);
+		opacity: 0.6;
 		pointer-events: none;
 		z-index: 0;
 	}
