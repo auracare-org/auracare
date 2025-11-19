@@ -75,7 +75,7 @@
 								<ul class="space-y-3">
 									{#each item.list as listItem}
 										<li class="flex items-start gap-3">
-											<span class="text-white opacity-60 mt-1">•</span>
+											<span class="text-white opacity-60">•</span>
 											<span class="text-white opacity-90">{listItem}</span>
 										</li>
 									{/each}
@@ -90,17 +90,17 @@
 </section>
 
 <style>
-    .use-cases-section {
-        background: linear-gradient(135deg, #3b63f0 0%, #1f4abc 100%);
-        color: white;
-        width: 100vw;
-        left: 50%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-    }
+	.use-cases-section {
+		background: linear-gradient(135deg, #3b63f0 0%, #1f4abc 100%);
+		color: white;
+		width: 100vw;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+	}
 
- 	.use-case-glass-card {
+	.use-case-glass-card {
 		background: rgba(255, 255, 255, 0.1);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);

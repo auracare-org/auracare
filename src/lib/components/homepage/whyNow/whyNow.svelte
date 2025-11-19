@@ -1,9 +1,8 @@
 <script lang="ts">
 	import WhyNowList from './whyNowList.svelte';
-	import WhyNowSub from './whyNowSub.svelte';
 
 	const title = 'Why now?';
-	const subtitle = 'Healthcare needs to change, and it is!';
+	const subtitle = 'Healthcare needs to change';
 
 	const reasons = [
 		{
@@ -14,12 +13,17 @@
 		{
 			title: 'Community providers are stepping up',
 			description:
-				'New initiatives like Pharmacy First in the England and similar schemes Scotland, Canada and Germany empower non-doctors to handle more cases.'
+				'New initiatives, like Pharmacy First in the England, empower non-doctors to handle more cases.'
 		},
 		{
 			title: 'Patient expectations have shifted',
 			description:
-				'People are tired of waiting months for health care. They need fast, efficient and local attention.'
+				'People are tired of waiting months for healthcare. They need fast, efficient and local attention.'
+		},
+		{
+			title: 'Technology is ready',
+			description:
+				'Advances in AI, low-cost imaging hardware, and digitisation of clinical pathways make safe and scalable triage possible today.'
 		}
 	];
 </script>
@@ -38,15 +42,11 @@
 			</p>
 		</div>
 
-		<div class="flex flex-col gap-6">
-			<!-- Top row: 3 cards -->
-			<div class="grid md:grid-cols-3 gap-6">
-				{#each reasons as reason, index}
-					<WhyNowList title={reason.title} description={reason.description} iconIndex={index} />
-				{/each}
-			</div>
-			<!-- Bottom row: 1 full-width card -->
-			<WhyNowSub />
+		<!-- All 4 cards in one row -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+			{#each reasons as reason, index}
+				<WhyNowList title={reason.title} description={reason.description} iconIndex={index} />
+			{/each}
 		</div>
 	</div>
 </section>

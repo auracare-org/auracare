@@ -1,7 +1,13 @@
 <script lang="ts">
 	import { IconUsers, IconBrain, IconLockOpen, IconGift } from '@tabler/icons-svelte';
 
-	let { title, description, icon }: { title: string; description: string; icon: string } = $props();
+	let { title, description, icon, linkText, link }: {
+		title: string;
+		description: string;
+		icon: string;
+		linkText?: string;
+		link?: string;
+	} = $props();
 
 	const iconMap = {
 		IconUsers,
@@ -18,7 +24,12 @@
 		<IconComponent size={48} stroke={1.5} />
 	</div>
 	<h3>{title}</h3>
-	<p>{description}</p>
+	<p>
+		{description}
+		{#if link && linkText}
+			<a href={link} target="_blank" rel="noopener noreferrer" class="workflow-link">{linkText}</a>.
+		{/if}
+	</p>
 </div>
 
 <style>
@@ -69,5 +80,19 @@
 		margin: 0;
 		max-width: 280px;
 		line-height: 1.5;
+	}
+
+	.workflow-link {
+		color: #4f6fed;
+		font-weight: 600;
+		text-decoration: underline;
+		text-decoration-color: rgba(79, 111, 237, 0.3);
+		text-underline-offset: 2px;
+		transition: all 0.2s ease;
+	}
+
+	.workflow-link:hover {
+		color: #2640a7;
+		text-decoration-color: #2640a7;
 	}
 </style>

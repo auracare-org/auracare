@@ -6,7 +6,8 @@
 	const icons = [
 		'https://www.figma.com/api/mcp/asset/9786fb28-8650-4d75-b16f-7033079a6382', // Healthcare systems
 		'https://www.figma.com/api/mcp/asset/b669b811-0580-453b-a3e3-162733a03450', // Community providers
-		'https://www.figma.com/api/mcp/asset/90917c0c-bc7b-4efd-bea3-a6baad400a96' // Patient expectations
+		'https://www.figma.com/api/mcp/asset/90917c0c-bc7b-4efd-bea3-a6baad400a96', // Patient expectations
+		'https://www.figma.com/api/mcp/asset/c6ad310a-2176-40de-b074-a320a6d55f89' // Technology is ready
 	];
 </script>
 

@@ -6,6 +6,8 @@
 		title: string;
 		description: string;
 		icon: string;
+		linkText?: string;
+		link?: string;
 	}
 
 	const items: WorkflowItem[] = workflowData;
@@ -24,7 +26,13 @@
 
 		<div class="workflow-grid">
 			{#each items as item}
-				<WorkFlowItem title={item.title} description={item.description} icon={item.icon} />
+				<WorkFlowItem
+					title={item.title}
+					description={item.description}
+					icon={item.icon}
+					linkText={item.linkText}
+					link={item.link}
+				/>
 			{/each}
 		</div>
 	</div>

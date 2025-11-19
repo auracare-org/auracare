@@ -6,9 +6,9 @@
 		"text": "With Auracare, pharmacists can:",
 		"list": [
 			"Diagnose and triage patients in their community",
-			"Provide immediate over the counter treatments",
-			"Escalate case to appropriate healthcare professionals",
-			"Assist in de-colgging the NHS"
+			"Provide immediate over-the-counter treatments",
+			"Escalate cases to appropriate healthcare professionals",
+			"Reduce NHS waiting time"
 		]
 	},
 	{
@@ -41,7 +41,7 @@
 		"list": [
 			"Provide frontline, on-site triage for common conditions",
 			"Generate patient-friendly reports instantly",
-			"Increase triage speed"
+			"Increase triage speeds"
 		]
 	}
 ]
