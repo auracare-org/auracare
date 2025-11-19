@@ -19,11 +19,19 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="relative overflow-hidden bg-gradient-to-b from-white to-neutral-50 pt-28 pb-10">
+<section class="page-hero pt-28 pb-12">
+	<span
+		class="bubble"
+		style="--bubble-size: 420px; --bubble-color: rgba(111, 134, 255, 0.2); top: -120px; right: -80px;"
+	></span>
+	<span
+		class="bubble"
+		style="--bubble-size: 280px; --bubble-color: rgba(255, 255, 255, 0.7); bottom: -140px; left: 5%;"
+	></span>
 	<div class="container">
 		<div class="text-center max-w-4xl mx-auto space-y-4">
 			<div
-				class="inline-flex items-center gap-2 rounded-full bg-primary-50 px-4 py-2 text-sm font-semibold text-primary-600"
+				class="inline-flex items-center gap-2 rounded-full bg-white/70 border border-white/60 px-4 py-2 text-sm font-semibold text-primary-600 shadow-lg shadow-primary-100/60"
 			>
 				<span class="w-2 h-2 rounded-full bg-primary-500"></span>
 				We're growing the team
@@ -38,9 +46,9 @@
 </section>
 
 <!-- Departments Section -->
-<section class="section" style="background: #fafafa;">
+<section class="section">
 	<div class="container">
-		<div class="max-w-5xl mx-auto">
+		<div class="section-surface">
 			<div class="grid auto-rows-fr gap-4 md:grid-cols-2">
 				{#each departments as dept, index}
 					<div class="fade-in h-full" style="animation-delay: {index * 100}ms">
@@ -53,11 +61,11 @@
 </section>
 
 <!-- CTA Section -->
-<section class="section" style="background: white;">
+<section class="section">
 	<div class="container">
-		<div class="text-center max-w-3xl mx-auto">
-			<h2 class="fade-in mb-6" style="color: #1f2937;">Ready to make an impact?</h2>
-			<p class="fade-in animation-delay-200 text-lg mb-8" style="color: #6b7280;">
+		<div class="section-surface section-surface--blue text-center max-w-3xl mx-auto">
+			<h2 class="fade-in mb-6">Ready to make an impact?</h2>
+			<p class="fade-in animation-delay-200 text-lg mb-8" style="color: rgba(255, 255, 255, 0.85);">
 				Whether you're interested in full-time roles, part-time contributions, or advisory
 				positions, we'd love to hear from you.
 			</p>

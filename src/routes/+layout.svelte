@@ -4,10 +4,20 @@
 	import { afterNavigate } from '$app/navigation';
 	import { dev } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import { slide } from 'svelte/transition';
 
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
 	let { children } = $props();
+	let mobileMenuOpen = $state(false);
+
+	function toggleMobileMenu() {
+		mobileMenuOpen = !mobileMenuOpen;
+	}
+
+	function closeMobileMenu() {
+		mobileMenuOpen = false;
+	}
 
 	onMount(() => {
 		// Intersection Observer for animations
@@ -34,6 +44,7 @@
 		// Re-observe after client-side navigations so new sections animate correctly
 		afterNavigate(() => {
 			observeElements();
+			closeMobileMenu();
 		});
 
 		return () => {
@@ -203,17 +214,93 @@
 			</div>
 
 			<!-- Mobile Menu Button -->
-			<button class="md:hidden text-neutral-900" aria-label="Menu">
-				<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M4 6h16M4 12h16M4 18h16"
-					/>
-				</svg>
+			<button
+				class="md:hidden text-neutral-900"
+				aria-label="Menu"
+				onclick={toggleMobileMenu}
+			>
+				{#if mobileMenuOpen}
+					<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M6 18L18 6M6 6l12 12"
+						/>
+					</svg>
+				{:else}
+					<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h16M4 18h16"
+						/>
+					</svg>
+				{/if}
 			</button>
 		</div>
+
+		<!-- Mobile Menu Dropdown -->
+		{#if mobileMenuOpen}
+			<div class="md:hidden mt-4" transition:slide={{ duration: 300 }}>
+				<div class="flex flex-col gap-3 py-4 border-t border-neutral-200">
+					<a
+						href="/#howitworks"
+						class="text-neutral-900 hover:text-primary-600 transition-colors text-sm font-medium py-2"
+						onclick={closeMobileMenu}
+					>
+						Features
+					</a>
+					<a
+						href="/about#team"
+						class="text-neutral-900 hover:text-primary-600 transition-colors text-sm font-medium py-2"
+						onclick={closeMobileMenu}
+					>
+						Our Team
+					</a>
+					<a
+						href="/about#journey"
+						class="text-neutral-900 hover:text-primary-600 transition-colors text-sm font-medium py-2"
+						onclick={closeMobileMenu}
+					>
+						Our Journey
+					</a>
+					<a
+						href="/about#values"
+						class="text-neutral-900 hover:text-primary-600 transition-colors text-sm font-medium py-2"
+						onclick={closeMobileMenu}
+					>
+						Our Values
+					</a>
+					<a
+						href="/join-us"
+						class="text-neutral-900 hover:text-primary-600 transition-colors text-sm font-medium py-2"
+						onclick={closeMobileMenu}
+					>
+						Join our mission
+					</a>
+					<div class="flex flex-col gap-2 mt-2 pt-3 border-t border-neutral-200">
+						<a
+							href="/#contact"
+							class="btn py-2 px-4 text-sm text-center"
+							style="background: #e0e7ff; color: #4f6fed; border-radius: 8px; font-weight: 600;"
+							onclick={closeMobileMenu}
+						>
+							Contact Us
+						</a>
+						<a
+							href="https://pathways.auracarehealth.com/"
+							class="btn py-2 px-4 text-sm text-center"
+							style="background: #4f6fed; color: white; border-radius: 8px; font-weight: 600;"
+							onclick={closeMobileMenu}
+						>
+							Try for free
+						</a>
+					</div>
+				</div>
+			</div>
+		{/if}
 	</nav>
 </header>
 

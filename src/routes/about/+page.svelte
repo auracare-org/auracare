@@ -11,17 +11,19 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<section
-	class="relative overflow-hidden"
-	style="background: white; padding-top: 10rem; padding-bottom: 4rem;"
->
+<section class="page-hero" style="padding-top: 9rem; padding-bottom: 4rem;">
+	<span
+		class="bubble"
+		style="--bubble-size: 400px; --bubble-color: rgba(111, 134, 255, 0.25); top: -120px; right: -80px;"
+	></span>
+	<span
+		class="bubble"
+		style="--bubble-size: 260px; --bubble-color: rgba(255, 255, 255, 0.7); bottom: -120px; left: 10%;"
+	></span>
 	<div class="container">
 		<div class="text-center max-w-4xl mx-auto">
 			<h1 class="fade-in mb-6" style="color: #1f2937;">About Auracare</h1>
-			<p
-				class="fade-in animation-delay-200 text-xl max-w-3xl mx-auto"
-				style="color: #6b7280; line-height: 1.75;"
-			>
+			<p class="fade-in animation-delay-200 text-xl max-w-3xl mx-auto" style="color: #6b7280;">
 				We're building the future of primary care through AI-powered triage and diagnostics, making
 				quality healthcare accessible in community spaces.
 			</p>
@@ -30,11 +32,12 @@
 </section>
 
 <!-- Team Section -->
-<section id="team" class="section" style="background: #fafafa;">
+<section id="team" class="section">
 	<div class="container">
-		<div class="text-center mb-16">
+		<div class="section-surface">
+		<div class="text-center mb-12">
 			<h2 class="fade-in mb-6" style="color: #1f2937;">Our team</h2>
-			<p class="fade-in animation-delay-200 text-xl text-neutral-600 max-w-3xl mx-auto">
+			<p class="fade-in animation-delay-200 text-lg text-neutral-600 max-w-3xl mx-auto">
 				Meet the team building the future of healthcare triage
 			</p>
 		</div>
@@ -98,12 +101,14 @@
 				</div>
 			{/each}
 		</div>
+		</div>
 	</div>
 </section>
 
 <!-- Our Journey Section -->
-<section id="journey" class="section" style="background: white;">
+<section id="journey" class="section">
 	<div class="container">
+		<div class="section-surface">
 		<div class="max-w-4xl mx-auto">
 			<h2 class="fade-in mb-8 text-center" style="color: #1f2937;">Our journey</h2>
 			<p
@@ -167,13 +172,15 @@
 				</div>
 			</div>
 		</div>
+		</div>
 	</div>
 </section>
 
 <!-- Our Values Section -->
-<section id="values" class="section" style="background: #fafafa;">
+<section id="values" class="section">
 	<div class="container">
-		<div class="text-center mb-16">
+		<div class="section-surface">
+		<div class="text-center mb-12">
 			<h2 class="fade-in mb-6" style="color: #1f2937;">Our values</h2>
 			<p class="fade-in animation-delay-200 text-lg max-w-3xl mx-auto" style="color: #6b7280;">
 				The principles that guide everything we build
@@ -282,6 +289,7 @@
 					Working hand-in-hand with healthcare partners to validate, test, and improve
 				</p>
 			</div>
+		</div>
 		</div>
 	</div>
 </section>
