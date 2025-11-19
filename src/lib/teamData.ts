@@ -29,7 +29,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Linus Alpsten',
     img: '/linusalpsten.jpg',
-    role: 'Head of Partnerships and Research',
+    role: 'Head of Partnerships & Research',
     linkedin: 'https://www.linkedin.com/in/linus-alpsten-665b551b0/'
   },
   {
@@ -53,12 +53,14 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'Daryna Nykyforiv',
     img: '/DarynaNykyforiv.jpg',
-    role: 'Partnerships',
+    role: 'Partnerships Intern',
     linkedin: 'https://www.linkedin.com/in/daryna-nykyforiv-55b352364/'
   },
   {
     name: 'Ayza Zainal',
-    role: 'Freelance UI/UX Designer'
+    img: '/AyzaZainal.jpg',
+    role: 'Freelance UI/UX Designer',
+    linkedin: 'https://www.linkedin.com/in/ayzazainal/'
   },
   {
     name: 'Lu',
