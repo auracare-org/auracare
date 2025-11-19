@@ -1,0 +1,137 @@
+<script lang="ts">
+	import {
+		IconChevronDown,
+		IconPill,
+		IconStethoscope,
+		IconSchool,
+		IconAmbulance
+	} from '@tabler/icons-svelte';
+	import list from './text.json';
+
+	const title = 'Use cases';
+	const subTitle = "Auracare's triage system can be applied in any community care setting.";
+
+	let openIndex = $state<number>(0);
+
+	function toggle(index: number) {
+		openIndex = openIndex === index ? -1 : index;
+	}
+
+	const iconMap = {
+		IconPill,
+		IconStethoscope,
+		IconSchool,
+		IconAmbulance
+	};
+</script>
+
+<section class="use-cases-section">
+	<div class="container">
+		<div class="grid md:grid-cols-12 gap-8 items-start">
+			<!-- Left Column: Title & Description -->
+			<div class="md:col-span-4 slide-in-up">
+				<h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+					{title}
+				</h2>
+				<p class="text-lg text-white opacity-80">
+					{subTitle}
+				</p>
+			</div>
+
+			<!-- Right Column: Accordion Items -->
+			<div class="md:col-span-8 space-y-4">
+				{#each list as item, index}
+					{@const IconComponent = iconMap[item.icon as keyof typeof iconMap]}
+					<div class="use-case-glass-card">
+						<button
+							class="use-case-trigger w-full text-left p-6 flex items-center gap-4"
+							onclick={() => toggle(index)}
+							aria-expanded={openIndex === index}
+						>
+							<div class="use-case-icon">
+								<IconComponent size={24} stroke={2} />
+							</div>
+							<div class="flex-1">
+								<h3 class="text-xl font-bold mb-1 text-white">
+									{item.title}
+								</h3>
+								<p class="text-sm text-white opacity-80">
+									{item.subtitle}
+								</p>
+							</div>
+							<IconChevronDown
+								size={24}
+								class="flex-shrink-0 transition-transform duration-200 text-white"
+								style="transform: rotate({openIndex === index ? 180 : 0}deg);"
+							/>
+						</button>
+
+						{#if openIndex === index}
+							<div class="px-6 pb-6 pt-2">
+								<p class="mb-4 text-white font-medium">
+									{item.text}
+								</p>
+								<ul class="space-y-3">
+									{#each item.list as listItem}
+										<li class="flex items-start gap-3">
+											<span class="text-white opacity-60 mt-1">•</span>
+											<span class="text-white opacity-90">{listItem}</span>
+										</li>
+									{/each}
+								</ul>
+							</div>
+						{/if}
+					</div>
+				{/each}
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.use-cases-section {
+		background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-600) 100%);
+		padding: var(--spacing-section-xl) 0;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.use-case-glass-card {
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		border-radius: var(--radius-md);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		transition: all 0.3s ease;
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+	}
+
+	.use-case-glass-card:hover {
+		background: rgba(255, 255, 255, 0.15);
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+	}
+
+	.use-case-icon {
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 12px;
+		padding: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+		flex-shrink: 0;
+	}
+
+	.use-case-trigger {
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		outline: none;
+	}
+
+	.use-case-trigger:focus-visible {
+		outline: 2px solid rgba(255, 255, 255, 0.5);
+		outline-offset: 2px;
+		border-radius: var(--radius-md);
+	}
+</style>

@@ -3,7 +3,7 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
-    "packageManager": "yarn@1.22.22",
+	"packageManager": "yarn@1.22.22",
 	"engines": {
 		"node": "^20.19 || ^22.12 || >=24"
 	},
@@ -32,6 +32,7 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
+		"@tabler/icons-svelte": "^3.35.0",
 		"@tailwindcss/postcss": "^4.1.13"
 	}
 }

@@ -19,9 +19,7 @@
 
 		// Observe all elements with animation classes
 		document
-			.querySelectorAll(
-				'.fade-in, .slide-in-left, .slide-in-right, .slide-in-up, .timeline-line'
-			)
+			.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .slide-in-up, .timeline-line')
 			.forEach((el) => {
 				observer.observe(el);
 			});
@@ -75,7 +73,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap"
 		rel="stylesheet"
 	/>
 
@@ -101,7 +99,7 @@
 			},
 			"contactPoint": {
 				"@type": "ContactPoint",
-				"email": "hello@auracare.com",
+				"email": "hinlin@auracare.com",
 				"contactType": "Customer Service"
 			},
 			"sameAs": ["https://github.com/auracare-org/auracare"]
@@ -110,30 +108,95 @@
 </svelte:head>
 
 <!-- Navigation Header -->
-<header class="fixed top-0 left-0 right-0 z-50 nav-header">
+<header
+	class="fixed top-0 left-0 right-0 z-50"
+	style="background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); border-bottom: 1px solid #e5e7eb;"
+>
 	<nav class="container py-4">
 		<div class="flex items-center justify-between">
-			<!-- Logo -->
-			<a href="#home" class="flex items-center">
-				<img
-					src="/SVG/Asset 5.svg"
-					alt="Auracare"
-					class="h-5 md:h-6 w-auto brightness-0 invert"
-				/>
-			</a>
+			<div class="flex items-center gap-8">
+				<!-- Logo -->
+				<a href="/" class="flex items-center">
+					<img src="/SVG/Asset 5.svg" alt="Auracare" class="h-5 md:h-6 w-auto" />
+				</a>
 
-			<!-- Desktop Navigation -->
-			<div class="hidden md:flex items-center gap-8">
-				<a href="#home" class="nav-link text-white hover:text-white/80">Home</a>
-				<a href="#what-is" class="nav-link text-white hover:text-white/80">For Pharmacists</a>
-				<a href="#mission" class="nav-link text-white hover:text-white/80">About</a>
-				<a href="#contact" class="nav-link text-white hover:text-white/80">Work with us</a>
+				<!-- Desktop Navigation -->
+				<div class="hidden md:flex items-center gap-6">
+					<a
+						href="/#howitworks"
+						class="text-neutral-900 hover:text-primary-600 transition-colors text-sm font-medium"
+						>Features</a
+					>
+
+					<!-- About Us Dropdown -->
+					<div class="relative group">
+						<button
+							class="text-neutral-900 hover:text-primary-600 transition-colors text-sm font-medium flex items-center gap-1"
+						>
+							About us
+							<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						<div
+							class="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-neutral-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+						>
+							<a
+								href="/about#team"
+								class="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-primary-600 transition-colors first:rounded-t-lg"
+								>Our Team</a
+							>
+							<a
+								href="/about#journey"
+								class="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-primary-600 transition-colors"
+								>Our Journey</a
+							>
+							<a
+								href="/about#values"
+								class="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-primary-600 transition-colors last:rounded-b-lg"
+								>Our Values</a
+							>
+						</div>
+					</div>
+
+					<a
+						href="/join-us"
+						class="text-neutral-900 hover:text-primary-600 transition-colors text-sm font-medium"
+						>Join our mission</a
+					>
+				</div>
+			</div>
+
+			<!-- CTA Buttons -->
+			<div class="hidden md:flex items-center gap-3">
+				<a
+					href="/#contact"
+					class="btn py-2 px-4 text-sm"
+					style="background: #e0e7ff; color: #4f6fed; border-radius: 8px; font-weight: 600;"
+					>Contact Us</a
+				>
+				<a
+					href="https://pathways.auracarehealth.com/"
+					class="btn py-2 px-4 text-sm"
+					style="background: #4f6fed; color: white; border-radius: 8px; font-weight: 600;"
+					>Try for free</a
+				>
 			</div>
 
 			<!-- Mobile Menu Button -->
-			<button class="md:hidden text-white" aria-label="Menu">
+			<button class="md:hidden text-neutral-900" aria-label="Menu">
 				<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M4 6h16M4 12h16M4 18h16"
+					/>
 				</svg>
 			</button>
 		</div>
@@ -143,3 +206,86 @@
 <div class="min-h-screen bg-white">
 	{@render children?.()}
 </div>
+
+<!-- Footer -->
+<footer class="footer-gradient py-12">
+	<div class="container">
+		<div class="grid md:grid-cols-2 gap-8 mb-8">
+			<!-- Left: Logo and Links -->
+			<div>
+				<img src="/SVG/Asset 5.svg" alt="Auracare" class="h-6 mb-6 brightness-0 invert" />
+				<nav class="flex flex-col gap-3">
+					<a href="/#howitworks" class="text-white hover:opacity-80 transition-opacity text-sm"
+						>Features</a
+					>
+					<a href="/about" class="text-white hover:opacity-80 transition-opacity text-sm"
+						>About Us</a
+					>
+					<a href="/join-us" class="text-white hover:opacity-80 transition-opacity text-sm"
+						>Join Our Mission</a
+					>
+					<button
+						onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+						class="text-white hover:opacity-80 transition-opacity text-sm text-left"
+					>
+						Back To Top
+					</button>
+				</nav>
+			</div>
+
+			<!-- Right: Newsletter -->
+			<div>
+				<h3 class="text-white font-semibold mb-4">Stay in the loop with our latest updates</h3>
+				<form
+					class="flex gap-2"
+					onsubmit={(e) => {
+						e.preventDefault();
+						const form = e.currentTarget;
+						const formData = new FormData(form);
+						const email = formData.get('email');
+						window.location.href = `mailto:hinlun@auracare.org.uk?subject=Newsletter Signup&body=Please add ${email} to the mailing list.`;
+					}}
+				>
+					<input
+						type="email"
+						name="email"
+						placeholder="Enter your email"
+						required
+						class="flex-1 px-4 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:border-white/50"
+					/>
+					<button
+						type="submit"
+						class="btn bg-white text-primary-600 hover:bg-white/90 px-4 py-2 rounded-lg"
+						aria-label="Subscribe"
+					>
+						<svg
+							class="w-5 h-5"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+						</svg>
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- Bottom -->
+		<div class="border-t border-white/20 pt-6 flex flex-wrap justify-between gap-4 text-sm">
+			<p class="text-white/60">&copy; {new Date().getFullYear()} Auracare.</p>
+			<div class="flex gap-4 text-white">
+				<a href="/privacy" class="hover:opacity-80 transition-opacity">Privacy policy</a>
+				<a href="/terms" class="hover:opacity-80 transition-opacity">Terms of service</a>
+				<a href="/#contact" class="hover:opacity-80 transition-opacity">Contact information</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<style>
+	.footer-gradient {
+		background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-600) 100%);
+	}
+</style>

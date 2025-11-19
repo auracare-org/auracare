@@ -1,61 +1,72 @@
 @import 'tailwindcss';
 
 @theme {
+	/* Figma Design Tokens - Primary Colors */
 	--color-primary-50: #eff2ff;
 	--color-primary-100: #dce2ff;
 	--color-primary-200: #c0cdff;
 	--color-primary-300: #94abff;
 	--color-primary-400: #6180ff;
-	--color-primary-500: #2f4ec0;
+	--color-primary-500: #387ff5;
 	--color-primary-600: #2f4ec0;
 	--color-primary-700: #2640a7;
 	--color-primary-800: #203385;
 	--color-primary-900: #1d2d6e;
 
-	--color-healthcare-50: #f0f4ff;
-	--color-healthcare-100: #e5e7ff;
-	--color-healthcare-200: #d0d2ff;
-	--color-healthcare-300: #aca4ff;
-	--color-healthcare-400: #8958fe;
-	--color-healthcare-500: #8958fe;
-	--color-healthcare-600: #7947e6;
-	--color-healthcare-700: #6836cd;
-	--color-healthcare-800: #5525b4;
-	--color-healthcare-900: #42149b;
-
-	--color-accent-50: #ecfaff;
-	--color-accent-100: #d1f2ff;
-	--color-accent-200: #a3e4ff;
-	--color-accent-300: #74d6ff;
-	--color-accent-400: #46b8ff;
-	--color-accent-500: #46b8ff;
-	--color-accent-600: #3da3e6;
-	--color-accent-700: #348ecc;
-	--color-accent-800: #2b79b3;
-	--color-accent-900: #22649a;
-
-	--color-success-50: #f0fdf4;
-	--color-success-100: #dcfce7;
-	--color-success-200: #bbf7d0;
-	--color-success-300: #86efac;
-	--color-success-400: #4ade80;
-	--color-success-500: #22c55e;
-	--color-success-600: #16a34a;
-	--color-success-700: #15803d;
-	--color-success-800: #166534;
-	--color-success-900: #14532d;
-
+	/* Neutral Colors from Figma */
+	--color-neutral-0: #ffffff;
 	--color-neutral-50: #fafafa;
 	--color-neutral-100: #f4f4f5;
 	--color-neutral-200: #e4e4e7;
-	--color-neutral-300: #d4d4d8;
-	--color-neutral-400: #a1a1aa;
+	--color-neutral-300: #d2d5e2;
+	--color-neutral-400: #b6bccd;
 	--color-neutral-500: #71717a;
 	--color-neutral-600: #52525b;
 	--color-neutral-700: #3f3f46;
-	--color-neutral-800: #27272a;
-	--color-neutral-900: #18181b;
+	--color-neutral-800: #4b5162;
+	--color-neutral-900: #343844;
+	--color-neutral-1000: #1c1f25;
 
+	/* Text Colors from Figma */
+	--color-text-header-primary: #2f4ec0;
+	--color-text-header-secondary: #212529;
+	--color-text-body-primary: #343a40;
+	--color-text-body-secondary: #6c757d;
+	--color-text-button-primary: #ffffff;
+	--color-text-button-secondary: #2f4ec0;
+
+	/* Background Colors from Figma */
+	--color-bg-surface-default: #fafafa;
+	--color-bg-surface-raised: #ffffff;
+	--color-bg-button-primary: #2f4ec0;
+	--color-bg-button-secondary: #d5dcf2;
+
+	/* Alpha Colors */
+	--color-primary-alpha-10: rgba(56, 127, 245, 0.1);
+	--color-neutral-alpha-invert-05: rgba(44, 58, 114, 0.05);
+	--color-neutral-alpha-invert-10: rgba(58, 76, 146, 0.1);
+	--color-neutral-alpha-invert-20: rgba(50, 68, 139, 0.2);
+	--color-dark-overlay-40: rgba(255, 255, 255, 0.4);
+	--color-dark-overlay-60: rgba(255, 255, 255, 0.6);
+
+	/* Spacing from Figma */
+	--spacing-0: 0px;
+	--spacing-1: 4px;
+	--spacing-xs: 8px;
+	--spacing-s: 12px;
+	--spacing-md: 16px;
+	--spacing-lg: 24px;
+	--spacing-xl: 32px;
+	--spacing-xxxl: 48px;
+	--spacing-section-xl: 80px;
+
+	/* Border Radius from Figma */
+	--radius-md: 16px;
+	--radius-2xl: 20px;
+	--radius-4xl: 32px;
+
+	/* Typography */
+	--font-family-heading: 'DM Sans', system-ui, sans-serif;
 	--font-family-sans: 'Poppins', system-ui, sans-serif;
 }
 
@@ -76,27 +87,41 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-semibold text-neutral-900 leading-tight;
+		font-family: var(--font-family-heading);
+		@apply font-bold leading-tight;
+		color: var(--color-text-header-secondary);
 	}
 
 	h1 {
-		@apply text-4xl md:text-5xl lg:text-6xl;
+		font-size: 48px;
+		line-height: 1.16;
+		@apply font-bold;
 	}
 
 	h2 {
-		@apply text-3xl md:text-4xl lg:text-5xl;
+		font-size: 64px;
+		line-height: 1.25;
+		@apply font-bold;
 	}
 
 	h3 {
-		@apply text-2xl md:text-3xl;
+		font-size: 30px;
+		line-height: 1.2;
+		@apply font-bold;
 	}
 
 	h4 {
-		@apply text-xl md:text-2xl;
+		font-size: 24px;
+		line-height: 1.33;
+		@apply font-bold;
 	}
 
 	p {
-		@apply text-neutral-600 leading-relaxed;
+		font-family: var(--font-family-sans);
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.56;
+		@apply text-neutral-600;
 	}
 
 	a {
@@ -121,52 +146,53 @@
 }
 
 @utility btn-primary {
-	background: #6366f1;
-	color: white;
+	background: var(--color-bg-button-primary);
+	color: var(--color-text-button-primary);
 	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 	font-weight: 600;
+	border-radius: 8px;
 	&:hover {
-		background: #4f46e5;
+		background: #2640a7;
 		box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 		transform: translateY(-2px);
 	}
 	&:focus {
-		ring-color: #6366f1;
-		outline: 2px solid #6366f1;
+		ring-color: var(--color-bg-button-primary);
+		outline: 2px solid var(--color-bg-button-primary);
 		outline-offset: 2px;
 	}
 }
 
 @utility btn-secondary {
-	background: white;
-	color: #6366f1;
-	border: 2px solid #6366f1;
+	background: var(--color-bg-button-secondary);
+	color: var(--color-text-button-secondary);
+	border: none;
 	font-weight: 500;
+	border-radius: 8px;
 	&:hover {
-		background: #f8fafc;
-		border-color: #4f46e5;
-		color: #4f46e5;
+		background: #c5cce8;
+		color: #2640a7;
 	}
 	&:focus {
-		ring-color: #6366f1;
-		outline: 2px solid #6366f1;
+		ring-color: var(--color-bg-button-primary);
+		outline: 2px solid var(--color-bg-button-primary);
 		outline-offset: 2px;
 	}
 }
 
 @utility btn-healthcare {
-	background: linear-gradient(to right, #7c3aed, #6366f1);
+	background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
 	color: white;
 	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 	font-weight: 600;
 	&:hover {
-		background: linear-gradient(to right, #6d28d9, #4f46e5);
+		background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-700));
 		box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 		transform: translateY(-2px);
 	}
 	&:focus {
-		ring-color: #7c3aed;
-		outline: 2px solid #7c3aed;
+		ring-color: var(--color-primary-500);
+		outline: 2px solid var(--color-primary-500);
 		outline-offset: 2px;
 	}
 }
@@ -178,7 +204,7 @@
 
 @utility card {
 	background: white;
-	border-radius: 0.75rem;
+	border-radius: var(--radius-md);
 	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 	transition: box-shadow 0.3s;
 	border: 1px solid theme(colors.neutral.100);
@@ -199,21 +225,32 @@
 }
 
 @utility gradient-healthcare {
-	background: linear-gradient(to right, theme(colors.healthcare.500), theme(colors.healthcare.600));
+	background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
 }
 
 @utility gradient-bg {
 	background: linear-gradient(to bottom right, #ffffff, #f8faff);
 }
 
-@utility fade-in {
-	opacity: 0;
-	transform: translateY(2rem);
-	transition: all 0.7s ease-out;
-	&.visible {
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(1.5rem);
+	}
+	to {
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+@utility fade-in {
+	opacity: 0;
+	transform: translateY(1.5rem);
+	animation-name: fadeInUp;
+	animation-duration: 0.6s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	animation-delay: var(--fade-delay, 0s);
 }
 
 @utility slide-in-left {
@@ -237,7 +274,7 @@
 }
 
 @utility section {
-	padding: 5rem 0 6rem;
+	padding: var(--spacing-section-xl) 0;
 }
 
 @utility section-alt {
@@ -271,11 +308,11 @@
 }
 
 @utility healthcare-accent {
-	color: theme(colors.healthcare.600);
+	color: var(--color-primary-600);
 }
 
 @utility healthcare-bg {
-	background: theme(colors.healthcare.50);
+	background: var(--color-primary-alpha-10);
 }
 
 @utility medical-icon {
@@ -286,7 +323,7 @@
 
 @utility feature-card {
 	background: white;
-	border-radius: 0.75rem;
+	border-radius: var(--radius-md);
 	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 	transition: all 0.3s;
 	border: 1px solid theme(colors.neutral.100);
@@ -298,9 +335,22 @@
 	}
 }
 
+@utility why-now-card {
+	background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-600) 100%);
+	border-radius: var(--radius-md);
+	padding: var(--spacing-xl);
+	min-height: 240px;
+	transition: all 0.3s;
+	box-shadow: 0 4px 6px -1px rgba(47, 78, 192, 0.2);
+	&:hover {
+		box-shadow: 0 10px 15px -3px rgba(47, 78, 192, 0.3);
+		transform: translateY(-4px);
+	}
+}
+
 @utility team-card {
 	background: white;
-	border-radius: 0.75rem;
+	border-radius: var(--radius-md);
 	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 	transition: all 0.3s;
 	border: 1px solid theme(colors.neutral.100);
@@ -343,7 +393,9 @@
 	transform: translateY(-50%) scaleX(0);
 	transform-origin: left;
 	opacity: 0;
-	transition: transform 1s ease-out, opacity 0.6s ease-out;
+	transition:
+		transform 1s ease-out,
+		opacity 0.6s ease-out;
 	z-index: 1;
 	&.visible {
 		transform: translateY(-50%) scaleX(1);
@@ -365,25 +417,23 @@
 
 @utility roadmap-card {
 	background: white;
-	border-radius: 0.75rem;
+	border-radius: var(--radius-md);
 	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 	transition: all 0.3s;
 	border: 1px solid theme(colors.neutral.100);
-	padding: 1.5rem;
+	padding: 2rem;
 	text-align: center;
 	position: relative;
 	width: 100%;
 	/* uniform vertical positions using grid rows */
 	--roadmap-quarter-h: 40px; /* pill row height */
-	--roadmap-title-h: 44px;  /* title row height */
+	--roadmap-title-h: 44px; /* title row height */
 	display: grid;
 	grid-template-rows: var(--roadmap-quarter-h) var(--roadmap-title-h) 1fr;
 	row-gap: 0.75rem;
 	justify-items: center;
 	align-content: start;
-	@media (min-width: 768px) {
-		height: 240px; /* equal card height on md+ */
-	}
+	min-height: 240px;
 	&:hover {
 		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 		transform: translateY(-4px);
@@ -420,36 +470,36 @@
 }
 
 @utility use-case-card {
-    background: white;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    transition: all 0.3s;
-    border: 1px solid theme(colors.neutral.100);
-    &:hover {
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-    }
+	background: white;
+	border-radius: var(--radius-md);
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+	transition: all 0.3s;
+	border: 1px solid theme(colors.neutral.100);
+	&:hover {
+		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+	}
 }
 
 @utility use-case-trigger {
-    /* remove any default focus rings/borders */
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    background: transparent;
-    transition: background 0.2s ease;
-    &:hover {
-        background: rgba(0, 0, 0, 0.02);
-    }
-    &:focus-visible {
-        /* subtle, non-purple focus style for accessibility */
-        box-shadow: 0 0 0 2px rgba(0,0,0,0.08) inset !important;
-        border-radius: 0.5rem;
-    }
+	/* remove any default focus rings/borders */
+	outline: none !important;
+	box-shadow: none !important;
+	border: none !important;
+	background: transparent;
+	transition: background 0.2s ease;
+	&:hover {
+		background: rgba(0, 0, 0, 0.02);
+	}
+	&:focus-visible {
+		/* subtle, non-purple focus style for accessibility */
+		box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08) inset !important;
+		border-radius: 0.5rem;
+	}
 }
 
 @utility trust-card {
 	background: white;
-	border-radius: 0.75rem;
+	border-radius: var(--radius-md);
 	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 	transition: all 0.3s;
 	border: 1px solid theme(colors.neutral.100);
@@ -470,7 +520,7 @@
 
 @utility faq-item {
 	background: white;
-	border-radius: 0.75rem;
+	border-radius: var(--radius-md);
 	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 	border: 1px solid theme(colors.neutral.100);
 	padding: 2rem;
@@ -543,7 +593,7 @@
 }
 
 @utility hero-btn-secondary {
-	background: rgba(255, 255, 255, 0.10);
+	background: rgba(255, 255, 255, 0.1);
 	color: white;
 	border: none !important;
 	backdrop-filter: blur(10px);
@@ -581,7 +631,7 @@
 }
 
 @utility hero-title-secondary {
-	color: #e5e7eb;
+	color: #c0cdff;
 	font-weight: 700;
 }
 
@@ -605,7 +655,7 @@
 @utility floating-circle {
 	position: absolute;
 	border-radius: 50%;
-	background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
 	animation: float 6s ease-in-out infinite;
 }
 
@@ -633,25 +683,42 @@
 	animation-delay: 4s;
 }
 
-/* Slide in up animation */
-@utility slide-in-up {
-	opacity: 0;
-	transform: translateY(3rem);
-	transition: all 0.8s ease-out;
-	&.visible {
+@keyframes slideInUp {
+	from {
+		opacity: 0;
+		transform: translateY(3rem);
+	}
+	to {
 		opacity: 1;
 		transform: translateY(0);
 	}
 }
 
+/* Slide in up animation */
+@utility slide-in-up {
+	opacity: 0;
+	transform: translateY(3rem);
+	animation-name: slideInUp;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: forwards;
+	animation-delay: var(--slide-delay, 0s);
+}
+
 /* Utility Classes */
 @layer utilities {
 	.text-gradient {
-		@apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-healthcare-500;
+		background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
 	}
 
 	.healthcare-gradient {
-		@apply bg-clip-text text-transparent bg-gradient-to-r from-healthcare-600 to-primary-600;
+		background: linear-gradient(to right, var(--color-primary-600), var(--color-primary-700));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
 	}
 
 	.animation-delay-200 {
@@ -683,5 +750,17 @@
 	}
 	50% {
 		transform: translateY(-20px) rotate(5deg);
+	}
+}
+
+@keyframes pulse {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.7;
+		transform: scale(1.05);
 	}
 }
