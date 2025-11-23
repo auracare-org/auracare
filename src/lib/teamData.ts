@@ -36,7 +36,8 @@ export const teamMembers: TeamMember[] = [
     name: 'Ahnaf Kabir',
     img: '/AhnafKabir.jpg',
     role: 'VP, Engineering',
-    linkedin: 'https://www.linkedin.com/in/ahnaf-kabir/'
+    linkedin: 'https://www.linkedin.com/in/akn101',
+    website: 'https://akn.me.uk'
   },
   {
     name: 'Mini Han Wang',
