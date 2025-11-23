@@ -1,0 +1,25 @@
+/**
+ * Spacing Design Tokens
+ * Generated from import.json — do not edit manually
+ */
+
+:root {
+	--spacing-xxs: 4px;
+	--spacing-xs: 8px;
+	--spacing-s: 12px;
+	--spacing-md: 16px;
+	--spacing-lg: 24px;
+	--spacing-xl: 32px;
+	--spacing-xxl: 40px;
+	--spacing-xxxl: 48px;
+
+	--border-radius-xxs: 4px;
+	--border-radius-xs: 8px;
+	--border-radius-s: 12px;
+	--border-radius-md: 16px;
+	--border-radius-lg: 24px;
+	--border-radius-xl: 32px;
+	--border-radius-xxl: 40px;
+	--border-radius-xxxl: 48px;
+}
+
