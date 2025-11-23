@@ -151,7 +151,7 @@
 		font-weight: 400;
 		font-size: 48px;
 		line-height: 48px;
-		color: #2f4ec0;
+		color: var(--color-text-header-primary);
 		text-align: center;
 		white-space: nowrap;
 		left: 50%;
@@ -260,7 +260,7 @@
 	}
 
 	.form-input:focus {
-		outline: 2px solid #2f4ec0;
+		outline: 2px solid var(--color-border-focus);
 		outline-offset: 0;
 	}
 
@@ -287,7 +287,7 @@
 	}
 
 	.form-textarea:focus {
-		outline: 2px solid #2f4ec0;
+		outline: 2px solid var(--color-border-focus);
 		outline-offset: 0;
 	}
 
@@ -318,7 +318,7 @@
 	}
 
 	.form-btn-primary {
-		background: #2f4ec0;
+		background: var(--color-bg-button-primary-default);
 	}
 
 	.form-btn-primary:hover {
@@ -357,7 +357,7 @@
 	}
 
 	.form-btn-secondary .btn-text {
-		color: #2f4ec0;
+		color: var(--color-text-header-primary);
 	}
 
 	.form-required {

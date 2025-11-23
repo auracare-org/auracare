@@ -92,7 +92,7 @@
 		font-weight: 400;
 		font-size: 48px;
 		line-height: 48px;
-		color: #2f4ec0;
+		color: var(--color-text-header-primary);
 		text-align: center;
 		white-space: nowrap;
 		left: 50%;
@@ -128,7 +128,7 @@
 		border-radius: 16px;
 		width: 80px;
 		height: 80px;
-		background: #2f4ec0;
+		background: var(--color-bg-button-primary-default);
 		margin: 0 auto 16px;
 	}
 
@@ -154,7 +154,7 @@
 		font-weight: 700;
 		font-size: 20px;
 		line-height: 28px;
-		color: #2f4ec0;
+		color: var(--color-text-header-primary);
 		text-align: center;
 		margin: 0;
 		min-height: 1px;
@@ -186,7 +186,7 @@
 	}
 
 	.trust-link:hover {
-		color: #2f4ec0;
+		color: var(--color-text-header-primary);
 	}
 
 	/* Responsive */

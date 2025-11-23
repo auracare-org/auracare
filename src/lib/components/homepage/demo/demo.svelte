@@ -50,7 +50,7 @@
 				aria-label="Watch demo video"
 			>
 				<div class="demo-play-icon">
-					<IconPlayerPlayFilled size={28} style="color: #387ff5; margin-left: 3px;" />
+					<IconPlayerPlayFilled size={28} class="play-icon" />
 				</div>
 				<div class="demo-text">
 					<p class="demo-title">Watch the demo</p>
@@ -72,7 +72,7 @@
 	}
 
 	.demo-container {
-		background: #2f4ec0;
+		background: var(--color-bg-button-primary-default);
 		border-radius: 24px;
 		height: 480px;
 		position: relative;
@@ -100,7 +100,7 @@
 		content: '';
 		position: absolute;
 		inset: 0;
-		background: #387ff5;
+		background: var(--color-primary-500);
 		opacity: 0.1;
 		mix-blend-mode: color-burn;
 		pointer-events: none;
@@ -150,6 +150,11 @@
 		align-items: center;
 		justify-content: center;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.demo-play-icon :global(.play-icon) {
+		color: var(--color-primary-500);
+		margin-left: 3px;
 	}
 
 	.demo-text {

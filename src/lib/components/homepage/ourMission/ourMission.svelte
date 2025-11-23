@@ -56,7 +56,7 @@
 
 <style>
 	.mission-section {
-		background: #2f4ec0;
+		background: var(--color-bg-button-primary-default);
 		padding: 120px 72.5px;
 		position: relative;
 		overflow: hidden;

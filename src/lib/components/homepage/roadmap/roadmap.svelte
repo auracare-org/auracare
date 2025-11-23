@@ -98,7 +98,7 @@
 		font-weight: 400;
 		font-size: 48px;
 		line-height: 64px;
-		color: #2f4ec0;
+		color: var(--color-text-header-primary);
 		margin: 0;
 		text-align: center;
 	}
@@ -161,7 +161,7 @@
 
 	.roadmap-btn-secondary {
 		background: #d5dcf2;
-		color: #2f4ec0;
+		color: var(--color-text-header-primary);
 	}
 
 	.roadmap-btn-secondary:hover {
@@ -170,7 +170,7 @@
 	}
 
 	.roadmap-btn-primary {
-		background: #2f4ec0;
+		background: var(--color-bg-button-primary-default);
 		color: #ffffff;
 	}
 
