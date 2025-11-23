@@ -202,13 +202,13 @@
 				<a
 					href="/#contact"
 					class="btn transition-all"
-					style="background: #d5dcf2; color: #2f4ec0; border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 12px; display: inline-flex; align-items: center; min-width: 80px; justify-content: center;"
+					style="background: var(--color-bg-button-secondary-default); color: var(--color-text-button-secondary-default); border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 12px; display: inline-flex; align-items: center; min-width: 80px; justify-content: center;"
 					>Contact Us</a
 				>
 				<a
 					href="https://pathways.auracarehealth.com/"
 					class="btn transition-all"
-					style="background: #2f4ec0; color: #ffffff; border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 12px; display: inline-flex; align-items: center; min-width: 80px; justify-content: center;"
+					style="background: var(--color-bg-button-primary-default); color: var(--color-text-button-primary-default); border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 12px; display: inline-flex; align-items: center; min-width: 80px; justify-content: center;"
 					>Try for free</a
 				>
 			</div>
@@ -280,7 +280,7 @@
 						<a
 							href="/#contact"
 							class="btn text-center transition-all"
-							style="background: #d5dcf2; color: #2f4ec0; border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 16px; display: inline-flex; align-items: center; justify-content: center;"
+							style="background: var(--color-bg-button-secondary-default); color: var(--color-text-button-secondary-default); border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 16px; display: inline-flex; align-items: center; justify-content: center;"
 							onclick={closeMobileMenu}
 						>
 							Contact Us
@@ -288,7 +288,7 @@
 						<a
 							href="https://pathways.auracarehealth.com/"
 							class="btn text-center transition-all"
-							style="background: #2f4ec0; color: #ffffff; border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 16px; display: inline-flex; align-items: center; justify-content: center;"
+							style="background: var(--color-bg-button-primary-default); color: var(--color-text-button-primary-default); border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 16px; display: inline-flex; align-items: center; justify-content: center;"
 							onclick={closeMobileMenu}
 						>
 							Try for free
@@ -384,7 +384,7 @@
 		align-items: flex-start;
 		padding: 48px 96.5px 0px;
 		gap: 48px;
-		background: #2f4ec0;
+		background: var(--color-bg-button-primary-default);
 	}
 
 	.footer-container {
@@ -521,7 +521,7 @@
 	.submit-icon {
 		width: 27px;
 		height: 27px;
-		color: #2f4ec0;
+		color: var(--color-text-header-primary);
 	}
 
 	.footer-bottom {

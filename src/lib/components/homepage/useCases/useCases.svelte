@@ -102,7 +102,7 @@
 
 <style>
 	.use-cases-section {
-		background: linear-gradient(180deg, #2f4ec0 0%, #1a2d72 100%);
+		background: linear-gradient(180deg, var(--color-bg-button-primary-default) 0%, var(--color-bg-button-primary-active) 100%);
 		color: white;
 		width: 100vw;
 		left: 50%;

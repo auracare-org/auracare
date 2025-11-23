@@ -71,7 +71,7 @@
 	}
 
 	.meet-section {
-		background: #2f4ec0;
+		background: var(--color-bg-button-primary-default);
 		padding: 60px;
 		position: relative;
 		overflow: hidden;

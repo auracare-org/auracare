@@ -54,7 +54,7 @@
 	}
 
 	.icon-container {
-		background: linear-gradient(135deg, #4f6fed, #7c8bff);
+		background: linear-gradient(135deg, var(--color-primary-500), var(--color-bg-button-primary-hover));
 		border-radius: var(--radius-md);
 		padding: 1.25rem;
 		display: flex;
@@ -83,7 +83,7 @@
 	}
 
 	.workflow-link {
-		color: #4f6fed;
+		color: var(--color-primary-500);
 		font-weight: 600;
 		text-decoration: underline;
 		text-decoration-color: rgba(79, 111, 237, 0.3);

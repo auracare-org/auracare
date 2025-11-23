@@ -121,7 +121,7 @@
 				<div class="space-y-8">
 					<div class="fade-in animation-delay-200 flex gap-6">
 						<div class="flex-shrink-0">
-							<div class="w-3 h-3 rounded-full mt-2" style="background: #4f6fed;"></div>
+							<div class="w-3 h-3 rounded-full mt-2" style="background: var(--color-primary-500);"></div>
 						</div>
 						<div>
 							<h3 class="text-lg font-bold mb-2" style="color: #1f2937;">2025 Early Summer</h3>
@@ -134,7 +134,7 @@
 
 					<div class="fade-in animation-delay-400 flex gap-6">
 						<div class="flex-shrink-0">
-							<div class="w-3 h-3 rounded-full mt-2" style="background: #4f6fed;"></div>
+							<div class="w-3 h-3 rounded-full mt-2" style="background: var(--color-primary-500);"></div>
 						</div>
 						<div>
 							<h3 class="text-lg font-bold mb-2" style="color: #1f2937;">2025 Late Summer</h3>
@@ -148,7 +148,7 @@
 
 					<div class="fade-in animation-delay-600 flex gap-6">
 						<div class="flex-shrink-0">
-							<div class="w-3 h-3 rounded-full mt-2" style="background: #4f6fed;"></div>
+							<div class="w-3 h-3 rounded-full mt-2" style="background: var(--color-primary-500);"></div>
 						</div>
 						<div>
 							<h3 class="text-lg font-bold mb-2" style="color: #1f2937;">2025 Fall</h3>
@@ -160,7 +160,7 @@
 
 					<div class="fade-in animation-delay-800 flex gap-6">
 						<div class="flex-shrink-0">
-							<div class="w-3 h-3 rounded-full mt-2" style="background: #4f6fed;"></div>
+							<div class="w-3 h-3 rounded-full mt-2" style="background: var(--color-primary-500);"></div>
 						</div>
 						<div>
 							<h3 class="text-lg font-bold mb-2" style="color: #1f2937;">2025 Winter</h3>
@@ -188,7 +188,7 @@
 				<a
 					href="/join-us"
 					class="btn btn-lg"
-					style="background: #4f6fed; color: white; padding: 0.875rem 2rem; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 12px rgba(79, 111, 237, 0.3);"
+					style="background: var(--color-primary-500); color: white; padding: 0.875rem 2rem; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 12px rgba(79, 111, 237, 0.3);"
 					>See Positions</a
 				>
 			</div>
