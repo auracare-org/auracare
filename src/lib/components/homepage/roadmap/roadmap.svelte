@@ -12,97 +12,199 @@
 	const items: RoadmapItem[] = roadmapData;
 </script>
 
-<section class="section">
-	<div class="container">
-		<div class="text-center mb-12 slide-in-up">
-			<h2
-				class="text-4xl md:text-5xl font-bold mb-4"
-				style="color: var(--color-text-header-primary);"
-			>
-				Roadmap
-			</h2>
-			<p class="text-xl roadmap-subtitle" style="color: var(--color-text-body-secondary);">
-				Our plan to transform primary care
-			</p>
+<section class="roadmap-section">
+	<div class="roadmap-container">
+		<div class="roadmap-header-section">
+			<div class="roadmap-header-title">
+				<p class="roadmap-title">Roadmap</p>
+			</div>
+			<p class="roadmap-subtitle">Our plan to transform primary care</p>
 		</div>
 
-		<div class="roadmap-grid">
-			{#each items as item}
-				<RoadmapItem
-					quarter={item.quarter}
-					title={item.title}
-					description={item.description}
-					icon={item.icon}
-				/>
-			{/each}
+		<div class="roadmap-cards-wrapper">
+			<!-- Top row: 2 cards -->
+			<div class="roadmap-row">
+				{#each items.slice(0, 2) as item, index}
+					<RoadmapItem
+						quarter={item.quarter}
+						title={item.title}
+						description={item.description}
+						icon={item.icon}
+						isTopRow={true}
+						index={index}
+					/>
+				{/each}
+			</div>
+
+			<!-- Bottom row: 2 cards -->
+			<div class="roadmap-row">
+				{#each items.slice(2, 4) as item, index}
+					<RoadmapItem
+						quarter={item.quarter}
+						title={item.title}
+						description={item.description}
+						icon={item.icon}
+						isTopRow={false}
+						index={index}
+					/>
+				{/each}
+			</div>
 		</div>
 
-		<div class="buttons">
-			<a href="/about#our-story" class="btn btn-secondary">Our Story</a>
-			<a href="mailto:hinlun@auracare.org.uk?subject=Join%20Pilot%20Program" class="btn btn-primary"
-				>Join our pilot program</a
-			>
+		<div class="roadmap-buttons">
+			<a href="/about#our-story" class="roadmap-btn roadmap-btn-secondary">Hear our story</a>
+			<a href="mailto:hinlun@auracare.org.uk?subject=Join%20Pilot%20Program" class="roadmap-btn roadmap-btn-primary">Join our pilot program</a>
 		</div>
 	</div>
 </section>
 
 <style>
-	.roadmap-subtitle {
-		font-size: 1.25rem;
-		line-height: 1.75;
-	}
-
-	.roadmap-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 2rem;
-		margin-bottom: 3rem;
-	}
-
-	@media (min-width: 768px) {
-		.roadmap-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	.buttons {
+	.roadmap-section {
+		background: #ffffff;
+		box-sizing: border-box;
 		display: flex;
-		gap: 1.5rem;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
-		flex-wrap: wrap;
+		padding: 120px 72.5px;
+		width: 100%;
 	}
 
-	.btn {
-		padding: 1rem 2rem;
-		border-radius: 0.5rem;
-		font-weight: 600;
-		font-size: 1rem;
+	.roadmap-container {
+		display: flex;
+		flex-direction: column;
+		gap: 48px;
+		align-items: center;
+		justify-content: center;
+		max-width: 1160px;
+		width: 100%;
+	}
+
+	.roadmap-header-section {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		align-items: center;
+		width: 100%;
+	}
+
+	.roadmap-header-title {
+		width: 100%;
+		text-align: center;
+	}
+
+	.roadmap-title {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 64px;
+		color: #2f4ec0;
+		margin: 0;
+		text-align: center;
+	}
+
+	.roadmap-subtitle {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 28px;
+		color: #6c757d;
+		opacity: 0.8;
+		margin: 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	.roadmap-cards-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		align-items: center;
+		width: 100%;
+	}
+
+	.roadmap-row {
+		display: flex;
+		gap: 32px;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		max-width: 1160px;
+	}
+
+	.roadmap-buttons {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.roadmap-btn {
+		box-sizing: border-box;
+		display: flex;
+		gap: 4px;
+		align-items: center;
+		justify-content: center;
+		min-width: 80px;
+		overflow: clip;
+		padding: 16px;
+		border-radius: 6px;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 28px;
 		text-decoration: none;
-		transition: all 0.2s;
-		display: inline-block;
-		box-shadow: 0 18px 35px rgba(15, 23, 42, 0.1);
-		border: 1px solid transparent;
+		transition: all 0.2s ease;
+		white-space: nowrap;
 	}
 
-	.btn-primary {
-		background: linear-gradient(120deg, #4f6fed, #6e7dff);
-		color: white;
+	.roadmap-btn-secondary {
+		background: #d5dcf2;
+		color: #2f4ec0;
 	}
 
-	.btn-primary:hover {
-		background: linear-gradient(120deg, #4b66e0, #6573ff);
+	.roadmap-btn-secondary:hover {
+		background: #c5ccf0;
 		transform: translateY(-2px);
 	}
 
-	.btn-secondary {
-		background-color: rgba(255, 255, 255, 0.85);
-		color: var(--color-text-button-secondary);
-		border-color: rgba(79, 111, 237, 0.2);
-		backdrop-filter: blur(10px);
+	.roadmap-btn-primary {
+		background: #2f4ec0;
+		color: #ffffff;
 	}
 
-	.btn-secondary:hover {
-		background-color: rgba(255, 255, 255, 0.95);
+	.roadmap-btn-primary:hover {
+		background: #2642a8;
 		transform: translateY(-2px);
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.roadmap-section {
+			padding: 60px 24px;
+		}
+
+		.roadmap-title {
+			font-size: 36px;
+			line-height: 48px;
+		}
+
+		.roadmap-subtitle {
+			font-size: 18px;
+		}
+
+		.roadmap-row {
+			flex-direction: column;
+		}
+
+		.roadmap-buttons {
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.roadmap-btn {
+			width: 100%;
+		}
 	}
 </style>

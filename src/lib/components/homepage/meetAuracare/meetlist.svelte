@@ -12,10 +12,10 @@
 
 	<!-- Content -->
 	<div class="content">
-		<h4 class="font-bold mb-1" style="font-size: 20px; line-height: 30px; color: white;">
+		<h4 class="card-title">
 			{title}
 		</h4>
-		<p style="font-size: 18px; line-height: 26px; color: rgba(255, 255, 255, 0.7);">
+		<p class="card-description">
 			{description}
 		</p>
 	</div>
@@ -25,8 +25,8 @@
 	.meet-card {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		text-align: center;
+		align-items: flex-start;
+		text-align: left;
 		gap: 1rem;
 		width: 100%;
 		backdrop-filter: blur(10px);
@@ -69,5 +69,29 @@
 
 	.content {
 		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: left;
+	}
+
+	.card-title {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 30px;
+		color: white;
+		margin: 0 0 4px 0;
+		text-align: left;
+	}
+
+	.card-description {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 26px;
+		color: rgba(255, 255, 255, 0.7);
+		margin: 0;
+		text-align: left;
 	}
 </style>

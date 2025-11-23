@@ -5,7 +5,7 @@
 	"type": "module",
 	"packageManager": "yarn@1.22.22",
 	"engines": {
-		"node": "^20.19 || ^22.12 || >=24"
+		"node": "^20.19 || ^22.12 || ^23.0.0 || >=24"
 	},
 	"scripts": {
 		"dev": "vite dev",

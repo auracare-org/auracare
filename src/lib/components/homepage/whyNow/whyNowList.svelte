@@ -16,16 +16,50 @@
 	<img
 		src={icons[iconIndex]}
 		alt=""
-		class="absolute bottom-0 right-0 w-32 h-32 opacity-30 pointer-events-none"
-		style="max-width: none;"
+		class="decorative-icon"
 	/>
 
 	<div class="relative z-10">
-		<h3 class="text-2xl font-bold mb-3 text-white">
+		<h3 class="card-title">
 			{title}
 		</h3>
-		<p class="text-base text-white opacity-80 leading-8">
+		<p class="card-description">
 			{description}
 		</p>
 	</div>
 </div>
+
+<style>
+	.decorative-icon {
+		position: absolute;
+		bottom: -25px;
+		right: -2.5px;
+		width: 120px;
+		height: 120px;
+		opacity: 0.4;
+		pointer-events: none;
+		max-width: none;
+		object-fit: contain;
+	}
+
+	.card-title {
+		font-family: 'Poppins', sans-serif;
+		font-size: 26px;
+		font-weight: 700;
+		line-height: 31px;
+		color: white;
+		margin-bottom: 8px;
+		position: relative;
+		z-index: 10;
+	}
+
+	.card-description {
+		font-family: 'Poppins', sans-serif;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 24px;
+		color: rgba(255, 255, 255, 0.8);
+		position: relative;
+		z-index: 10;
+	}
+</style>

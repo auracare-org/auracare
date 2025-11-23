@@ -1,17 +1,16 @@
 <script lang="ts">
 	import { IconFlask, IconCalendar, IconFileText, IconAward } from '@tabler/icons-svelte';
 
-	let {
-		quarter,
-		title,
-		description,
-		icon
-	}: {
+	interface Props {
 		quarter: string;
 		title: string;
 		description: string;
 		icon: string;
-	} = $props();
+		isTopRow: boolean;
+		index: number;
+	}
+
+	let { quarter, title, description, icon, isTopRow, index }: Props = $props();
 
 	const iconMap = {
 		IconFlask,
@@ -21,76 +20,114 @@
 	};
 
 	const IconComponent = iconMap[icon as keyof typeof iconMap];
+
+	// Determine height based on position (first card in top row is taller)
+	const cardHeight = isTopRow && index === 0 ? '248px' : '224px';
 </script>
 
-<div class="roadmap-item">
-	<div class="icon-container">
-		<IconComponent size={48} stroke={1.5} />
+<div class="roadmap-card" style="height: {cardHeight};">
+	<div class="icon-wrapper">
+		<div class="icon-inner">
+			<IconComponent size={32} stroke={2} />
+		</div>
 	</div>
-	<p class="quarter">{quarter}</p>
-	<h3>{title}</h3>
-	<p class="description">{description}</p>
+	<div class="card-content">
+		<p class="card-quarter">{quarter}</p>
+		<p class="card-title">{title}</p>
+		<p class="card-description">{description}</p>
+	</div>
 </div>
 
 <style>
-	.roadmap-item {
-		background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-400) 100%);
-		border-radius: var(--radius-md);
-		padding: 2rem;
-		color: white;
+	.roadmap-card {
+		box-sizing: border-box;
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
-		min-height: 280px;
-		box-shadow:
-			var(--shadow-glass-glow),
-			0 0 0 1px rgba(255, 255, 255, 0.1) inset;
-		transition: all 0.3s ease;
-		backdrop-filter: blur(4px);
-		-webkit-backdrop-filter: blur(4px);
+		gap: 16px;
+		flex: 1 1 0%;
+		align-items: flex-start;
+		min-width: 292px;
+		padding: 32px;
+		background: linear-gradient(134.89deg, #4b6ef3 3.42%, #6380f7 92.96%);
+		border-radius: 16px;
 	}
 
-	.roadmap-item:hover {
-		box-shadow:
-			var(--shadow-glass-glow-strong),
-			0 0 0 1px rgba(255, 255, 255, 0.2) inset;
-		transform: translateY(-4px);
-	}
-
-	.icon-container {
-		background: rgba(255, 255, 255, 0.25);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
+	.icon-wrapper {
+		backdrop-filter: blur(6px);
+		-webkit-backdrop-filter: blur(6px);
+		background: rgba(255, 255, 255, 0.1);
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		align-items: center;
+		padding: 12px;
 		border-radius: 12px;
-		padding: 1rem;
-		width: fit-content;
+		width: 56px;
+		height: 56px;
+		flex-shrink: 0;
+	}
+
+	.icon-inner {
+		width: 32px;
+		height: 32px;
+		color: white;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		box-shadow: var(--shadow-glass-glow);
+		flex-shrink: 0;
 	}
 
-	.quarter {
-		font-size: 1.125rem;
-		font-weight: 600;
+	.card-content {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		align-items: flex-start;
+		width: 100%;
+	}
+
+	.card-quarter {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 28px;
+		color: #ffffff;
 		margin: 0;
-		color: white;
-		opacity: 0.9;
+		height: 28px;
+		width: 100%;
+		text-align: left;
 	}
 
-	h3 {
-		font-size: 1.75rem;
+	.card-title {
+		font-family: 'Poppins', sans-serif;
 		font-weight: 700;
+		font-size: 18px;
+		line-height: 28px;
+		color: #ffffff;
 		margin: 0;
-		line-height: 1.3;
-		color: white;
+		width: 100%;
+		text-align: left;
 	}
 
-	.description {
-		font-size: 1.125rem;
+	.card-description {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		color: #ffffff;
+		opacity: 0.8;
 		margin: 0;
-		color: white;
-		opacity: 0.95;
-		line-height: 1.6;
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-align: left;
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.roadmap-card {
+			min-width: auto;
+			height: auto !important;
+		}
 	}
 </style>

@@ -201,14 +201,14 @@
 			<div class="hidden md:flex items-center gap-3">
 				<a
 					href="/#contact"
-					class="btn py-2 px-4 text-sm"
-					style="background: #e0e7ff; color: #4f6fed; border-radius: 8px; font-weight: 600;"
+					class="btn transition-all"
+					style="background: #d5dcf2; color: #2f4ec0; border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 12px; display: inline-flex; align-items: center; min-width: 80px; justify-content: center;"
 					>Contact Us</a
 				>
 				<a
 					href="https://pathways.auracarehealth.com/"
-					class="btn py-2 px-4 text-sm"
-					style="background: #4f6fed; color: white; border-radius: 8px; font-weight: 600;"
+					class="btn transition-all"
+					style="background: #2f4ec0; color: #ffffff; border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 12px; display: inline-flex; align-items: center; min-width: 80px; justify-content: center;"
 					>Try for free</a
 				>
 			</div>
@@ -279,16 +279,16 @@
 					<div class="flex flex-col gap-2 mt-2 pt-3 border-t border-neutral-200">
 						<a
 							href="/#contact"
-							class="btn py-2 px-4 text-sm text-center"
-							style="background: #e0e7ff; color: #4f6fed; border-radius: 8px; font-weight: 600;"
+							class="btn text-center transition-all"
+							style="background: #d5dcf2; color: #2f4ec0; border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 16px; display: inline-flex; align-items: center; justify-content: center;"
 							onclick={closeMobileMenu}
 						>
 							Contact Us
 						</a>
 						<a
 							href="https://pathways.auracarehealth.com/"
-							class="btn py-2 px-4 text-sm text-center"
-							style="background: #4f6fed; color: white; border-radius: 8px; font-weight: 600;"
+							class="btn text-center transition-all"
+							style="background: #2f4ec0; color: #ffffff; border-radius: 6px; font-weight: 500; font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 24px; padding: 8px 16px; display: inline-flex; align-items: center; justify-content: center;"
 							onclick={closeMobileMenu}
 						>
 							Try for free
@@ -305,85 +305,294 @@
 </main>
 
 <!-- Footer -->
-<footer class="footer-gradient py-12">
-	<div class="container">
-		<div class="grid md:grid-cols-2 gap-8 mb-8">
-			<!-- Left: Logo and Links -->
-			<div>
-				<img src="/SVG/Asset 5.svg" alt="Auracare" class="h-6 mb-6 brightness-0 invert" />
-				<nav class="flex flex-col gap-3">
-					<a href="/#howitworks" class="text-white hover:opacity-80 transition-opacity text-sm"
-						>Features</a
-					>
-					<a href="/about" class="text-white hover:opacity-80 transition-opacity text-sm"
-						>About Us</a
-					>
-					<a href="/join-us" class="text-white hover:opacity-80 transition-opacity text-sm"
-						>Join Our Mission</a
-					>
-					<button
-						onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-						class="text-white hover:opacity-80 transition-opacity text-sm text-left"
-					>
-						Back To Top
-					</button>
-				</nav>
+<footer class="footer">
+	<div class="footer-container">
+		<!-- Left: Logo and Links -->
+		<div class="footer-left">
+			<div class="footer-logo">
+				<img src="/SVG/Asset 5.svg" alt="Auracare" class="logo-img" />
 			</div>
-
-			<!-- Right: Newsletter -->
-			<div>
-				<h3 class="text-white font-semibold mb-4">Stay in the loop with our latest updates</h3>
-				<form
-					class="flex gap-2"
-					onsubmit={(e) => {
-						e.preventDefault();
-						const form = e.currentTarget;
-						const formData = new FormData(form);
-						const email = formData.get('email');
-						window.location.href = `mailto:hinlun@auracare.org.uk?subject=Newsletter Signup&body=Please add ${email} to the mailing list.`;
-					}}
+			<nav class="footer-nav">
+				<a href="/#howitworks" class="footer-link">Features</a>
+				<a href="/about" class="footer-link">About Us</a>
+				<a href="/join-us" class="footer-link">Join Our Mission</a>
+				<button
+					onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+					class="footer-link footer-button"
 				>
-					<input
-						type="email"
-						name="email"
-						placeholder="Enter your email"
-						required
-						class="flex-1 px-4 py-2 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:border-white/50"
-					/>
-					<button
-						type="submit"
-						class="btn bg-white text-primary-600 hover:bg-white/90 px-4 py-2 rounded-lg"
-						aria-label="Subscribe"
-					>
-						<svg
-							class="w-5 h-5"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							stroke-width="2"
-						>
-							<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-						</svg>
-					</button>
-				</form>
-			</div>
+					Back To Top
+				</button>
+			</nav>
 		</div>
 
-		<!-- Bottom -->
-		<div class="border-t border-white/20 pt-6 flex flex-wrap justify-between gap-4 text-sm">
-			<p class="text-white/60">&copy; {new Date().getFullYear()} Auracarehealth LTD</p>
-			<div class="flex gap-4 text-white">
-				<!--  
-				<a href="/privacy" class="hover:opacity-80 transition-opacity">Privacy policy</a>
-				<a href="/terms" class="hover:opacity-80 transition-opacity">Terms of service</a> -->
-				<a href="/#contact" class="hover:opacity-80 transition-opacity">Contact information</a>
+		<!-- Right: Newsletter -->
+		<div class="footer-right">
+			<h3 class="footer-newsletter-title">Stay in the loop with our latest updates</h3>
+			<form
+				class="footer-newsletter-form"
+				onsubmit={(e) => {
+					e.preventDefault();
+					const form = e.currentTarget;
+					const formData = new FormData(form);
+					const email = formData.get('email');
+					window.location.href = `mailto:hinlun@auracare.org.uk?subject=Newsletter Signup&body=Please add ${email} to the mailing list.`;
+				}}
+			>
+				<input
+					type="email"
+					name="email"
+					placeholder="Enter your email"
+					required
+					class="newsletter-input"
+				/>
+				<button
+					type="submit"
+					class="newsletter-submit"
+					aria-label="Subscribe"
+				>
+					<svg
+						class="submit-icon"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="3"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+					</svg>
+				</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Bottom -->
+	<div class="footer-bottom">
+		<div class="footer-bottom-container">
+			<div class="footer-bottom-left">
+				<p class="footer-copyright">&copy; {new Date().getFullYear()} Auracare.</p>
+				<a href="/#privacy" class="footer-bottom-link">Privacy policy</a>
+				<a href="/#terms" class="footer-bottom-link">Terms of service</a>
+				<a href="/#contact" class="footer-bottom-link">Contact information</a>
 			</div>
 		</div>
 	</div>
 </footer>
 
 <style>
-	.footer-gradient {
-		background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-600) 100%);
+	.footer {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 48px 96.5px 0px;
+		gap: 48px;
+		background: #2f4ec0;
+	}
+
+	.footer-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 48px;
+		width: 100%;
+		max-width: 1247px;
+		margin: 0 auto;
+	}
+
+	.footer-left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+		max-width: 599.5px;
+	}
+
+	.footer-logo {
+		height: 32px;
+	}
+
+	.logo-img {
+		height: 18.14px;
+		width: 139.1px;
+		filter: brightness(0) invert(1);
+	}
+
+	.footer-nav {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 12px;
+	}
+
+	.footer-link {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		color: rgba(255, 255, 255, 0.9);
+		text-decoration: none;
+		transition: opacity 0.2s ease;
+		border: none;
+		background: none;
+		cursor: pointer;
+		padding: 0;
+		text-align: left;
+	}
+
+	.footer-link:hover {
+		opacity: 0.8;
+	}
+
+	.footer-button {
+		width: auto;
+	}
+
+	.footer-right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 24px;
+		max-width: 599.5px;
+	}
+
+	.footer-newsletter-title {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 32px;
+		color: #ffffff;
+		margin: 0;
+	}
+
+	.footer-newsletter-form {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 8px;
+		width: 100%;
+	}
+
+	.newsletter-input {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding: 4px 12px;
+		flex: 1;
+		height: 48px;
+		background: rgba(229, 229, 229, 0.3);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 6.8px;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		color: rgba(255, 255, 255, 0.6);
+	}
+
+	.newsletter-input::placeholder {
+		color: rgba(255, 255, 255, 0.6);
+	}
+
+	.newsletter-input:focus {
+		outline: none;
+		border-color: rgba(255, 255, 255, 0.5);
+		color: #ffffff;
+	}
+
+	.newsletter-submit {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 0px;
+		width: 48px;
+		height: 48px;
+		background: #ffffff;
+		border-radius: 6.8px;
+		border: none;
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.newsletter-submit:hover {
+		background: rgba(255, 255, 255, 0.9);
+	}
+
+	.submit-icon {
+		width: 27px;
+		height: 27px;
+		color: #2f4ec0;
+	}
+
+	.footer-bottom {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 33px 0px 0px;
+		width: 100%;
+		border-top: 1px solid rgba(255, 255, 255, 0.2);
+		padding-bottom: 33px;
+	}
+
+	.footer-bottom-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 1247px;
+		margin: 0 auto;
+	}
+
+	.footer-bottom-left {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.footer-copyright {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 26px;
+		color: rgba(255, 255, 255, 0.8);
+		margin: 0;
+	}
+
+	.footer-bottom-link {
+		font-family: 'Poppins', sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+		transition: opacity 0.2s ease;
+	}
+
+	.footer-bottom-link:hover {
+		opacity: 0.8;
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.footer {
+			padding: 40px 24px;
+		}
+
+		.footer-container {
+			flex-direction: column;
+			gap: 32px;
+		}
+
+		.footer-left,
+		.footer-right {
+			max-width: 100%;
+		}
+
+		.footer-bottom-left {
+			flex-wrap: wrap;
+		}
 	}
 </style>
