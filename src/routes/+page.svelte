@@ -18,7 +18,7 @@
 <Hero />
 <MeetAuracare />
 <HowItWorks />
-<Demo />
+<!-- <Demo /> -->
 <OurMission />
 <WhyNow />
 <Trust />
