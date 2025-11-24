@@ -3,7 +3,14 @@
 </script>
 
 <section class="section mission-section">
-	<div class="container">
+	<!-- Animated bubbles -->
+	<span class="bubble mission-bubble mission-bubble-1" style="--bubble-size: 180px; top: 10%; right: 15%;"></span>
+	<span class="bubble mission-bubble mission-bubble-2" style="--bubble-size: 120px; top: 25%; right: 8%;"></span>
+	<span class="bubble mission-bubble mission-bubble-3" style="--bubble-size: 250px; bottom: 15%; left: 10%;"></span>
+	<span class="bubble mission-bubble mission-bubble-4" style="--bubble-size: 90px; bottom: 35%; left: 25%;"></span>
+	<span class="bubble mission-bubble mission-bubble-5" style="--bubble-size: 140px; top: 60%; right: 25%;"></span>
+	
+	<div class="container relative z-10">
 		<div class="grid md:grid-cols-2 gap-12 items-center">
 			<!-- Left side: Illustration -->
 			<div class="slide-in-left flex items-center justify-center illustration-shell">
@@ -49,6 +56,7 @@
 		right: 50%;
 		margin-left: -50vw;
 		margin-right: -50vw;
+		overflow: hidden;
 	}
 
 	.mission-text {
@@ -75,5 +83,73 @@
 	.illustration {
 		max-width: 560px;
 		filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.2));
+	}
+
+	.mission-bubble {
+		background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
+		backdrop-filter: blur(4px);
+		border: 1px solid rgba(255, 255, 255, 0.15);
+	}
+
+	@keyframes mission-float {
+		0%, 100% {
+			transform: translateY(0) translateX(0);
+		}
+		25% {
+			transform: translateY(-12px) translateX(6px);
+		}
+		50% {
+			transform: translateY(-5px) translateX(-4px);
+		}
+		75% {
+			transform: translateY(-18px) translateX(-6px);
+		}
+	}
+
+	@keyframes mission-drift {
+		0%, 100% {
+			transform: translateY(0) translateX(0) scale(1);
+		}
+		33% {
+			transform: translateY(8px) translateX(-12px) scale(1.05);
+		}
+		66% {
+			transform: translateY(-6px) translateX(10px) scale(0.95);
+		}
+	}
+
+	@keyframes mission-pulse {
+		0%, 100% {
+			transform: scale(1) translateY(0);
+			opacity: 0.8;
+		}
+		50% {
+			transform: scale(1.08) translateY(-8px);
+			opacity: 0.6;
+		}
+	}
+
+	.mission-bubble-1 {
+		animation: mission-float 22s ease-in-out infinite;
+	}
+
+	.mission-bubble-2 {
+		animation: mission-drift 18s ease-in-out infinite;
+		animation-delay: -3s;
+	}
+
+	.mission-bubble-3 {
+		animation: mission-pulse 20s ease-in-out infinite;
+		animation-delay: -8s;
+	}
+
+	.mission-bubble-4 {
+		animation: mission-drift 25s ease-in-out infinite;
+		animation-delay: -12s;
+	}
+
+	.mission-bubble-5 {
+		animation: mission-float 16s ease-in-out infinite;
+		animation-delay: -5s;
 	}
 </style>

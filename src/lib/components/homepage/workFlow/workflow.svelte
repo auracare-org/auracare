@@ -41,15 +41,31 @@
 <style>
 	.workflow-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 3rem;
-		max-width: 1200px;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 2rem;
+		max-width: 1400px;
 		margin: 0 auto;
+		padding: 0 1rem;
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 640px) {
+		.workflow-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2.5rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
 		.workflow-grid {
 			grid-template-columns: repeat(4, 1fr);
+			gap: 3rem;
+		}
+	}
+
+	@media (min-width: 1280px) {
+		.workflow-grid {
+			gap: 4rem;
+			padding: 0;
 		}
 	}
 </style>

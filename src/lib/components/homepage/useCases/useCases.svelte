@@ -91,13 +91,35 @@
 
 <style>
 	.use-cases-section {
-		background: linear-gradient(135deg, #3b63f0 0%, #1f4abc 100%);
+		position: relative;
+		background: #2a4bc8;
+		background-image: 
+			linear-gradient(180deg, rgba(15, 30, 80, 0.4) 0%, rgba(42, 75, 200, 0) 70%),
+			linear-gradient(135deg, #3b63f0 0%, #1f4abc 100%);
 		color: white;
 		width: 100vw;
 		left: 50%;
 		right: 50%;
 		margin-left: -50vw;
 		margin-right: -50vw;
+		overflow: hidden;
+	}
+
+	.use-cases-section::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: 
+			linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+		background-size: 50px 50px;
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	.use-cases-section > .container {
+		position: relative;
+		z-index: 2;
 	}
 
 	.use-case-glass-card {

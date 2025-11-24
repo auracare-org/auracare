@@ -11,13 +11,13 @@
 
 <section class="hero-section hero-surface">
 	<div aria-hidden="true" class="hero-surface__glow"></div>
-	<span class="bubble hero-bubble" style="--bubble-size: 520px; top: -180px; right: -160px;"></span>
+	<span class="bubble hero-bubble bubble-float-1" style="--bubble-size: 520px; top: -180px; right: -160px;"></span>
 	<span
-		class="bubble hero-bubble"
+		class="bubble hero-bubble bubble-float-2"
 		style="--bubble-size: 320px; --bubble-color: rgba(111, 134, 255, 0.35); bottom: -140px; left: 5%; --bubble-blur: 10px;"
 	></span>
 	<span
-		class="bubble hero-bubble"
+		class="bubble hero-bubble bubble-float-3"
 		style="--bubble-size: 200px; --bubble-color: rgba(255, 255, 255, 0.5); top: 30%; left: 12%; --bubble-opacity: 0.7;"
 	></span>
 
@@ -159,5 +159,55 @@
 
 	.hero-cta-secondary:hover {
 		transform: translateY(-2px);
+	}
+
+	@keyframes bubble-float {
+		0%, 100% {
+			transform: translateY(0) translateX(0) scale(1);
+		}
+		25% {
+			transform: translateY(-15px) translateX(5px) scale(1.02);
+		}
+		50% {
+			transform: translateY(-8px) translateX(-3px) scale(0.98);
+		}
+		75% {
+			transform: translateY(-20px) translateX(-8px) scale(1.01);
+		}
+	}
+
+	@keyframes bubble-drift {
+		0%, 100% {
+			transform: translateY(0) translateX(0) rotate(0deg);
+		}
+		33% {
+			transform: translateY(12px) translateX(-10px) rotate(1deg);
+		}
+		66% {
+			transform: translateY(-10px) translateX(8px) rotate(-1deg);
+		}
+	}
+
+	@keyframes bubble-pulse {
+		0%, 100% {
+			transform: scale(1) translateY(0);
+		}
+		50% {
+			transform: scale(1.05) translateY(-5px);
+		}
+	}
+
+	.bubble-float-1 {
+		animation: bubble-float 20s ease-in-out infinite;
+	}
+
+	.bubble-float-2 {
+		animation: bubble-drift 18s ease-in-out infinite;
+		animation-delay: -5s;
+	}
+
+	.bubble-float-3 {
+		animation: bubble-pulse 15s ease-in-out infinite;
+		animation-delay: -10s;
 	}
 </style>
