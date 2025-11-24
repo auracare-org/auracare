@@ -135,7 +135,7 @@
 <!-- Navigation Header -->
 <header
 	class="fixed top-0 left-0 right-0 z-50"
-	style="background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); border-bottom: 1px solid #e5e7eb;"
+	style="background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border-default);"
 >
 	<nav class="container py-4">
 		<div class="flex items-center justify-between">
@@ -202,13 +202,13 @@
 				<a
 					href="/#contact"
 					class="btn py-2 px-4 text-sm"
-					style="background: #e0e7ff; color: #4f6fed; border-radius: 8px; font-weight: 600;"
+					style="background: var(--color-bg-button-secondary-default); color: var(--color-text-button-secondary-default); border-radius: 8px; font-weight: 600;"
 					>Contact Us</a
 				>
 				<a
 					href="https://pathways.auracarehealth.com/"
 					class="btn py-2 px-4 text-sm"
-					style="background: #4f6fed; color: white; border-radius: 8px; font-weight: 600;"
+					style="background: var(--color-bg-button-primary-default); color: white; border-radius: 8px; font-weight: 600;"
 					>Try for free</a
 				>
 			</div>
@@ -280,7 +280,7 @@
 						<a
 							href="/#contact"
 							class="btn py-2 px-4 text-sm text-center"
-							style="background: #e0e7ff; color: #4f6fed; border-radius: 8px; font-weight: 600;"
+							style="background: var(--color-bg-button-secondary-default); color: var(--color-text-button-secondary-default); border-radius: 8px; font-weight: 600;"
 							onclick={closeMobileMenu}
 						>
 							Contact Us
@@ -288,7 +288,7 @@
 						<a
 							href="https://pathways.auracarehealth.com/"
 							class="btn py-2 px-4 text-sm text-center"
-							style="background: #4f6fed; color: white; border-radius: 8px; font-weight: 600;"
+							style="background: var(--color-bg-button-primary-default); color: white; border-radius: 8px; font-weight: 600;"
 							onclick={closeMobileMenu}
 						>
 							Try for free

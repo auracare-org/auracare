@@ -32,14 +32,43 @@
 	--color-text-header-secondary: #212529;
 	--color-text-body-primary: #343a40;
 	--color-text-body-secondary: #6c757d;
-	--color-text-button-primary: #ffffff;
-	--color-text-button-secondary: #2f4ec0;
+	--color-text-button-primary-default: #ffffff;
+	--color-text-button-primary-hover: #ffffff;
+	--color-text-button-primary-active: #ffffff;
+	--color-text-button-primary-disabled: #828c95;
+	--color-text-button-secondary-default: #2f4ec0;
+	--color-text-button-secondary-hover: #2f4ec0;
+	--color-text-button-secondary-active: #2f4ec0;
+	--color-text-button-secondary-disabled: #828c95;
 
 	/* Background Colors from Figma */
 	--color-bg-surface-default: #fafafa;
 	--color-bg-surface-raised: #ffffff;
-	--color-bg-button-primary: #2f4ec0;
-	--color-bg-button-secondary: #d5dcf2;
+	--color-bg-surface-scrim: rgba(0, 11, 52, 0.45);
+	--color-bg-button-primary-default: #2f4ec0;
+	--color-bg-button-primary-hover: #5971cd;
+	--color-bg-button-primary-active: #23398c;
+	--color-bg-button-primary-disabled: #ced4da;
+	--color-bg-button-secondary-default: #d5dcf2;
+	--color-bg-button-secondary-hover: #acb8e6;
+	--color-bg-button-secondary-active: #8295d9;
+	--color-bg-button-secondary-disabled: #ced4da;
+
+	/* Border Colors from Figma */
+	--color-border-default: #dee2e6;
+	--color-border-hover: #acb8e6;
+	--color-border-focus: #2f4ec0;
+	--color-border-error: #ef4444;
+
+	/* Icon Colors from Figma */
+	--color-icon-white: #ffffff;
+	--color-icon-primary: #2f4ec0;
+	--color-icon-secondary: #acb8e6;
+	--color-icon-error: #ef4444;
+	--color-icon-disabled: #828c95;
+
+	/* Additional Colors */
+	--color-success: #34d399;
 
 	/* Alpha Colors */
 	--color-primary-alpha-10: rgba(56, 127, 245, 0.1);
@@ -48,6 +77,11 @@
 	--color-neutral-alpha-invert-20: rgba(50, 68, 139, 0.2);
 	--color-dark-overlay-40: rgba(255, 255, 255, 0.4);
 	--color-dark-overlay-60: rgba(255, 255, 255, 0.6);
+	--color-white-alpha-10: rgba(255, 255, 255, 0.1);
+	--color-white-alpha-15: rgba(255, 255, 255, 0.15);
+	--color-white-alpha-20: rgba(255, 255, 255, 0.2);
+	--color-white-alpha-70: rgba(255, 255, 255, 0.7);
+	--color-white-alpha-80: rgba(255, 255, 255, 0.8);
 
 	/* Spacing from Figma */
 	--spacing-0: 0px;
@@ -172,36 +206,57 @@
 }
 
 @utility btn-primary {
-	background: var(--color-bg-button-primary);
-	color: var(--color-text-button-primary);
+	background: var(--color-bg-button-primary-default);
+	color: var(--color-text-button-primary-default);
 	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 	font-weight: 600;
 	border-radius: 8px;
 	&:hover {
-		background: #2640a7;
+		background: var(--color-bg-button-primary-hover);
+		color: var(--color-text-button-primary-hover);
 		box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
 		transform: translateY(-2px);
 	}
+	&:active {
+		background: var(--color-bg-button-primary-active);
+		color: var(--color-text-button-primary-active);
+	}
+	&:disabled {
+		background: var(--color-bg-button-primary-disabled);
+		color: var(--color-text-button-primary-disabled);
+		cursor: not-allowed;
+		transform: none;
+		box-shadow: none;
+	}
 	&:focus {
-		ring-color: var(--color-bg-button-primary);
-		outline: 2px solid var(--color-bg-button-primary);
+		ring-color: var(--color-border-focus);
+		outline: 2px solid var(--color-border-focus);
 		outline-offset: 2px;
 	}
 }
 
 @utility btn-secondary {
-	background: var(--color-bg-button-secondary);
-	color: var(--color-text-button-secondary);
+	background: var(--color-bg-button-secondary-default);
+	color: var(--color-text-button-secondary-default);
 	border: none;
 	font-weight: 500;
 	border-radius: 8px;
 	&:hover {
-		background: #c5cce8;
-		color: #2640a7;
+		background: var(--color-bg-button-secondary-hover);
+		color: var(--color-text-button-secondary-hover);
+	}
+	&:active {
+		background: var(--color-bg-button-secondary-active);
+		color: var(--color-text-button-secondary-active);
+	}
+	&:disabled {
+		background: var(--color-bg-button-secondary-disabled);
+		color: var(--color-text-button-secondary-disabled);
+		cursor: not-allowed;
 	}
 	&:focus {
-		ring-color: var(--color-bg-button-primary);
-		outline: 2px solid var(--color-bg-button-primary);
+		ring-color: var(--color-border-focus);
+		outline: 2px solid var(--color-border-focus);
 		outline-offset: 2px;
 	}
 }
@@ -346,7 +401,7 @@
 @utility medical-icon {
 	width: 3rem;
 	height: 3rem;
-	color: #6366f1;
+	color: var(--color-primary-500);
 }
 
 @utility feature-card {
@@ -364,13 +419,13 @@
 }
 
 @utility why-now-card {
-	background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-600) 100%);
+	background: var(--color-bg-button-primary-default);
 	border-radius: var(--radius-md);
 	padding: var(--spacing-xl);
 	min-height: 240px;
 	transition: all 0.3s;
 	box-shadow: var(--shadow-glass-glow);
-	border: 1px solid rgba(255, 255, 255, 0.16);
+	border: 1px solid var(--color-white-alpha-15);
 	position: relative;
 	overflow: hidden;
 	&:hover {
@@ -381,7 +436,11 @@
 		content: '';
 		position: absolute;
 		inset: 0;
-		background: radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.25), transparent 45%);
+		background: radial-gradient(
+			circle at 80% 0%,
+			var(--color-white-alpha-15),
+			transparent 45%
+		);
 		pointer-events: none;
 	}
 }
@@ -426,7 +485,7 @@
 	left: 0;
 	right: 0;
 	height: 2px;
-	background: linear-gradient(to right, #c7d2fe, #a5b4fc, #818cf8);
+	background: linear-gradient(to right, var(--color-primary-200), var(--color-primary-300), var(--color-primary-400));
 	/* animate reveal left -> right */
 	transform: translateY(-50%) scaleX(0);
 	transform-origin: left;
@@ -475,12 +534,12 @@
 	&:hover {
 		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 		transform: translateY(-4px);
-		border-color: #6366f1;
+		border-color: var(--color-primary-500);
 	}
 }
 
 @utility roadmap-quarter {
-	background: linear-gradient(135deg, #6366f1, #818cf8);
+	background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-400));
 	color: white;
 	font-weight: 600;
 	font-size: 0.875rem;
@@ -491,7 +550,7 @@
 	height: var(--roadmap-quarter-h);
 	padding: 0 1rem; /* horizontal only */
 	margin: 0; /* spacing handled by grid gap */
-	box-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
+	box-shadow: 0 2px 4px rgba(56, 127, 245, 0.2);
 }
 
 /* Title and body alignment helpers for uniform start positions */
@@ -552,7 +611,7 @@
 @utility trust-icon {
 	width: 3rem;
 	height: 3rem;
-	color: #6366f1;
+	color: var(--color-primary-500);
 	margin: 0 auto;
 }
 
@@ -595,12 +654,12 @@
 }
 
 @utility hero-bg-pattern {
-	background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+	background: linear-gradient(135deg, var(--color-primary-400) 0%, var(--color-primary-300) 100%);
 	opacity: 1;
 }
 
 @utility hero-gradient-overlay {
-	background: linear-gradient(135deg, rgba(129, 140, 248, 0.85) 0%, rgba(167, 139, 250, 0.8) 100%);
+	background: linear-gradient(135deg, rgba(97, 128, 255, 0.85) 0%, var(--color-primary-300) 100%);
 	backdrop-filter: blur(1px);
 }
 
@@ -619,12 +678,12 @@
 
 @utility hero-btn {
 	background: white;
-	color: #6366f1;
+	color: var(--color-primary-500);
 	border: 2px solid white;
 	box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2);
 	font-weight: 600;
 	&:hover {
-		background: #f9fafb;
+		background: var(--color-neutral-50);
 		transform: translateY(-4px);
 		box-shadow: 0 25px 35px -5px rgb(0 0 0 / 0.3);
 	}
@@ -659,7 +718,7 @@
 @utility hero-benefit-icon {
 	width: 4rem;
 	height: 4rem;
-	color: #6366f1;
+	color: var(--color-primary-500);
 }
 
 /* Hero Text Colors */
@@ -669,12 +728,12 @@
 }
 
 @utility hero-title-secondary {
-	color: #c0cdff;
+	color: var(--color-primary-200);
 	font-weight: 700;
 }
 
 @utility hero-subtitle {
-	color: #f3f4f6;
+	color: var(--color-neutral-100);
 }
 
 /* Decorative bubble/particle helpers for hero & section backgrounds */
@@ -719,7 +778,7 @@
 }
 
 .section-surface--blue {
-	background: linear-gradient(135deg, #3a5de6, #5b7cfa);
+	background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-500));
 	color: white;
 	border: none;
 }
@@ -731,15 +790,15 @@
 	color: inherit;
 }
 @utility hero-description {
-	color: #e5e7eb;
+	color: var(--color-neutral-200);
 }
 
 @utility hero-benefit-title {
-	color: #1f2937;
+	color: var(--color-text-header-secondary);
 }
 
 @utility hero-benefit-text {
-	color: #4b5563;
+	color: var(--color-text-body-primary);
 }
 
 /* Floating Background Elements */

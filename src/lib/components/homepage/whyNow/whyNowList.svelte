@@ -21,11 +21,22 @@
 	/>
 
 	<div class="relative z-10">
-		<h3 class="text-2xl font-bold mb-3 text-white">
+		<h3 class="text-2xl font-bold mb-3 card-title">
 			{title}
 		</h3>
-		<p class="text-base text-white opacity-80 leading-8">
+		<p class="text-base leading-6 card-text">
 			{description}
 		</p>
 	</div>
 </div>
+
+<style>
+	.card-title {
+		color: var(--color-text-button-primary-default);
+	}
+
+	.card-text {
+		color: var(--color-text-button-primary-default);
+		opacity: 0.8;
+	}
+</style>

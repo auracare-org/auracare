@@ -14,16 +14,16 @@
 <section class="page-hero" style="padding-top: 9rem; padding-bottom: 4rem;">
 	<span
 		class="bubble"
-		style="--bubble-size: 400px; --bubble-color: rgba(111, 134, 255, 0.25); top: -120px; right: -80px;"
+		style="--bubble-size: 400px; --bubble-color: rgba(97, 128, 255, 0.25); top: -120px; right: -80px;"
 	></span>
 	<span
 		class="bubble"
-		style="--bubble-size: 260px; --bubble-color: rgba(255, 255, 255, 0.7); bottom: -120px; left: 10%;"
+		style="--bubble-size: 260px; --bubble-color: var(--color-white-alpha-70); bottom: -120px; left: 10%;"
 	></span>
 	<div class="container">
 		<div class="text-center max-w-4xl mx-auto">
-			<h1 class="fade-in mb-6" style="color: #1f2937;">About Auracare</h1>
-			<p class="fade-in animation-delay-200 text-xl max-w-3xl mx-auto" style="color: #6b7280;">
+			<h1 class="fade-in mb-6" style="color: var(--color-text-header-secondary);">About Auracare</h1>
+			<p class="fade-in animation-delay-200 text-xl max-w-3xl mx-auto" style="color: var(--color-text-body-secondary);">
 				We're building the future of primary care through AI-powered triage and diagnostics, making
 				quality healthcare accessible in community spaces.
 			</p>
@@ -36,7 +36,7 @@
 	<div class="container">
 		<div class="section-surface">
 			<div class="text-center mb-12">
-				<h2 class="fade-in mb-6" style="color: #1f2937;">Our team</h2>
+				<h2 class="fade-in mb-6" style="color: var(--color-text-header-secondary);">Our team</h2>
 				<p class="fade-in animation-delay-200 text-lg text-neutral-600 max-w-3xl mx-auto">
 					Meet the team building the future of healthcare triage
 				</p>
@@ -59,7 +59,7 @@
 								{getInitials(member.name)}
 							</div>
 						{/if}
-						<h3 class="text-base font-semibold mb-1" style="color: #1f2937;">{member.name}</h3>
+						<h3 class="text-base font-semibold mb-1" style="color: var(--color-text-header-secondary);">{member.name}</h3>
 						<p class="text-neutral-600 text-sm mb-2">{member.role}</p>
 						<div class="flex items-center justify-center gap-3">
 							{#if member.linkedin}
@@ -110,10 +110,10 @@
 	<div class="container">
 		<div class="section-surface">
 			<div class="max-w-4xl mx-auto">
-				<h2 class="fade-in mb-8 text-center" style="color: #1f2937;">Our journey</h2>
+				<h2 class="fade-in mb-8 text-center" style="color: var(--color-text-header-secondary);">Our journey</h2>
 				<p
 					class="fade-in animation-delay-200 text-center text-lg mb-12"
-					style="color: #6b7280; line-height: 1.75;"
+					style="color: var(--color-text-body-secondary); line-height: 1.75;"
 				>
 					From idea to impact: Building the future of community healthcare
 				</p>
@@ -121,11 +121,11 @@
 				<div class="space-y-8">
 					<div class="fade-in animation-delay-200 flex gap-6">
 						<div class="flex-shrink-0">
-							<div class="w-3 h-3 rounded-full mt-2" style="background: #4f6fed;"></div>
+							<div class="w-3 h-3 rounded-full mt-2" style="background: var(--color-bg-button-primary-default);"></div>
 						</div>
 						<div>
-							<h3 class="text-lg font-bold mb-2" style="color: #1f2937;">2025 Early Summer</h3>
-							<p style="color: #6c757d; line-height: 1.75;">
+							<h3 class="text-lg font-bold mb-2" style="color: var(--color-text-header-secondary);">2025 Early Summer</h3>
+							<p style="color: var(--color-text-body-secondary); line-height: 1.75;">
 								Stephen and Hinlun were connected through a mutual friend and decided to apply their
 								skills for the benefit of public health systems.
 							</p>
@@ -134,11 +134,11 @@
 
 					<div class="fade-in animation-delay-400 flex gap-6">
 						<div class="flex-shrink-0">
-							<div class="w-3 h-3 rounded-full mt-2" style="background: #4f6fed;"></div>
+							<div class="w-3 h-3 rounded-full mt-2" style="background: var(--color-bg-button-primary-default);"></div>
 						</div>
 						<div>
-							<h3 class="text-lg font-bold mb-2" style="color: #1f2937;">2025 Late Summer</h3>
-							<p style="color: #6c757d; line-height: 1.75;">
+							<h3 class="text-lg font-bold mb-2" style="color: var(--color-text-header-secondary);">2025 Late Summer</h3>
+							<p style="color: var(--color-text-body-secondary); line-height: 1.75;">
 								Found issues and opportunities in the software and hardware of the Pharmacy First
 								pathways. Brought on core members Nicholas (AI/ML) and Linus (Business and
 								Partnerships).
@@ -148,11 +148,11 @@
 
 					<div class="fade-in animation-delay-600 flex gap-6">
 						<div class="flex-shrink-0">
-							<div class="w-3 h-3 rounded-full mt-2" style="background: #4f6fed;"></div>
+							<div class="w-3 h-3 rounded-full mt-2" style="background: var(--color-bg-button-primary-default);"></div>
 						</div>
 						<div>
-							<h3 class="text-lg font-bold mb-2" style="color: #1f2937;">2025 Fall</h3>
-							<p style="color: #6c757d; line-height: 1.75;">
+							<h3 class="text-lg font-bold mb-2" style="color: var(--color-text-header-secondary);">2025 Fall</h3>
+							<p style="color: var(--color-text-body-secondary); line-height: 1.75;">
 								Demo software and hardware completed and began piloting in pharmacies in the UK.
 							</p>
 						</div>
@@ -160,11 +160,11 @@
 
 					<div class="fade-in animation-delay-800 flex gap-6">
 						<div class="flex-shrink-0">
-							<div class="w-3 h-3 rounded-full mt-2" style="background: #4f6fed;"></div>
+							<div class="w-3 h-3 rounded-full mt-2" style="background: var(--color-bg-button-primary-default);"></div>
 						</div>
 						<div>
-							<h3 class="text-lg font-bold mb-2" style="color: #1f2937;">2025 Winter</h3>
-							<p style="color: #6c757d; line-height: 1.75;">
+							<h3 class="text-lg font-bold mb-2" style="color: var(--color-text-header-secondary);">2025 Winter</h3>
+							<p style="color: var(--color-text-body-secondary); line-height: 1.75;">
 								Expanding hiring, began planning for B2C telehealth integration and certification.
 								Implemented NHS integration and applied for grants and incubators.
 							</p>
@@ -177,18 +177,18 @@
 </section>
 
 <!-- CTA Section -->
-<section class="section" style="background: #fafafa;">
+<section class="section" style="background: var(--color-bg-surface-default);">
 	<div class="container">
 		<div class="text-center max-w-3xl mx-auto">
-			<h2 class="fade-in mb-6" style="color: #1f2937;">Join us on our mission</h2>
-			<p class="fade-in animation-delay-200 text-lg mb-8" style="color: #6b7280;">
+			<h2 class="fade-in mb-6" style="color: var(--color-text-header-secondary);">Join us on our mission</h2>
+			<p class="fade-in animation-delay-200 text-lg mb-8" style="color: var(--color-text-body-secondary);">
 				Interested in partnering with Auracare or joining our team? We'd love to hear from you.
 			</p>
 			<div class="fade-in animation-delay-400 flex flex-col sm:flex-row gap-4 justify-center">
 				<a
 					href="/join-us"
 					class="btn btn-lg"
-					style="background: #4f6fed; color: white; padding: 0.875rem 2rem; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 12px rgba(79, 111, 237, 0.3);"
+					style="background: var(--color-bg-button-primary-default); color: white; padding: 0.875rem 2rem; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 12px rgba(47, 78, 192, 0.3);"
 					>See Positions</a
 				>
 			</div>

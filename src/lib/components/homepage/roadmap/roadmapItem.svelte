@@ -25,7 +25,7 @@
 
 <div class="roadmap-item">
 	<div class="icon-container">
-		<IconComponent size={48} stroke={1.5} />
+		<IconComponent size={32} stroke={2} />
 	</div>
 	<p class="quarter">{quarter}</p>
 	<h3>{title}</h3>
@@ -34,63 +34,51 @@
 
 <style>
 	.roadmap-item {
-		background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-400) 100%);
+		background: linear-gradient(135deg, var(--color-primary-700) 0%, var(--color-primary-400) 100%);
 		border-radius: var(--radius-md);
-		padding: 2rem;
+		padding: var(--spacing-xl);
 		color: white;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-		min-height: 280px;
-		box-shadow:
-			var(--shadow-glass-glow),
-			0 0 0 1px rgba(255, 255, 255, 0.1) inset;
-		transition: all 0.3s ease;
-		backdrop-filter: blur(4px);
-		-webkit-backdrop-filter: blur(4px);
-	}
-
-	.roadmap-item:hover {
-		box-shadow:
-			var(--shadow-glass-glow-strong),
-			0 0 0 1px rgba(255, 255, 255, 0.2) inset;
-		transform: translateY(-4px);
+		min-height: 248px;
 	}
 
 	.icon-container {
-		background: rgba(255, 255, 255, 0.25);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
+		background: var(--color-white-alpha-10);
+		backdrop-filter: blur(6px);
+		-webkit-backdrop-filter: blur(6px);
 		border-radius: 12px;
-		padding: 1rem;
-		width: fit-content;
+		padding: 12px;
+		width: 56px;
+		height: 56px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		box-shadow: var(--shadow-glass-glow);
 	}
 
 	.quarter {
-		font-size: 1.125rem;
-		font-weight: 600;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 400;
 		margin: 0;
-		color: white;
-		opacity: 0.9;
+		color: var(--color-text-button-primary-default);
 	}
 
 	h3 {
-		font-size: 1.75rem;
+		font-size: 18px;
+		line-height: 28px;
 		font-weight: 700;
 		margin: 0;
-		line-height: 1.3;
-		color: white;
+		color: var(--color-text-button-primary-default);
 	}
 
 	.description {
-		font-size: 1.125rem;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 500;
 		margin: 0;
-		color: white;
-		opacity: 0.95;
-		line-height: 1.6;
+		color: var(--color-text-button-primary-default);
+		opacity: 0.8;
 	}
 </style>

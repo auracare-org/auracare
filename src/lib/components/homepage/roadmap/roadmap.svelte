@@ -38,7 +38,7 @@
 		</div>
 
 		<div class="buttons">
-			<a href="/about#our-story" class="btn btn-secondary">Our Story</a>
+			<a href="/about#our-story" class="btn btn-secondary">Our story</a>
 			<a href="mailto:hinlun@auracare.org.uk?subject=Join%20Pilot%20Program" class="btn btn-primary"
 				>Join our pilot program</a
 			>
@@ -85,24 +85,26 @@
 	}
 
 	.btn-primary {
-		background: linear-gradient(120deg, #4f6fed, #6e7dff);
-		color: white;
+		background: var(--color-bg-button-primary-default);
+		color: var(--color-text-button-primary-default);
 	}
 
 	.btn-primary:hover {
-		background: linear-gradient(120deg, #4b66e0, #6573ff);
+		background: var(--color-bg-button-primary-hover);
+		color: var(--color-text-button-primary-hover);
 		transform: translateY(-2px);
 	}
 
 	.btn-secondary {
-		background-color: rgba(255, 255, 255, 0.85);
-		color: var(--color-text-button-secondary);
-		border-color: rgba(79, 111, 237, 0.2);
+		background-color: var(--color-bg-button-secondary-default);
+		color: var(--color-text-button-secondary-default);
+		border-color: var(--color-border-default);
 		backdrop-filter: blur(10px);
 	}
 
 	.btn-secondary:hover {
-		background-color: rgba(255, 255, 255, 0.95);
+		background-color: var(--color-bg-button-secondary-hover);
+		color: var(--color-text-button-secondary-hover);
 		transform: translateY(-2px);
 	}
 </style>

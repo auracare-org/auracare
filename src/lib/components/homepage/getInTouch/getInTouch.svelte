@@ -124,13 +124,13 @@
 	input:focus,
 	textarea:focus {
 		outline: none;
-		border-color: #4f6fed;
-		box-shadow: 0 0 0 3px rgba(79, 111, 237, 0.2);
+		border-color: var(--color-border-focus);
+		box-shadow: 0 0 0 3px rgba(47, 78, 192, 0.2);
 	}
 
 	.contact-submit {
 		border-radius: 14px;
-		box-shadow: 0 25px 45px rgba(79, 111, 237, 0.35);
+		box-shadow: 0 25px 45px rgba(47, 78, 192, 0.35);
 		border: none;
 	}
 </style>

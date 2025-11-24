@@ -19,10 +19,10 @@
 
 			<!-- Right side: Text content -->
 			<div class="slide-in-right">
-				<h2 class="text-4xl md:text-5xl font-bold mb-6" style="color: white;">Our mission</h2>
+				<h2 class="text-4xl md:text-5xl font-bold mb-6 mission-title">Our mission</h2>
 
 				<div class="space-y-6 mission-text">
-					<p style="color: white;">
+					<p>
 						Auracare's mission is to help healthcare workers and systems where they are needed. We
 						shift
 						<strong>fast, accurate primary care</strong>
@@ -30,13 +30,13 @@
 						<strong>local community spaces.</strong>
 					</p>
 
-					<p style="color: white;">
+					<p>
 						We achieve this by equipping these locations - be it a local pharmacy, a school nurse
 						office, or a care home - with the tools needed to
 						<strong>diagnose, triage and refer patients to the wider healthcare systems.</strong>
 					</p>
 
-					<p style="color: white;">
+					<p>
 						We don't replace doctors. We support their work by ensuring the patients reach them,
 						reducing waiting times and unnecessary appointments.
 					</p>
@@ -49,7 +49,7 @@
 <style>
 	.mission-section {
 		position: relative;
-		background: linear-gradient(135deg, #3a5de6 0%, #4d6ff7 35%, #6280ff 100%);
+		background: var(--color-bg-button-primary-default);
 		color: white;
 		width: 100vw;
 		left: 50%;
@@ -59,13 +59,20 @@
 		overflow: hidden;
 	}
 
+	.mission-title {
+		color: var(--color-bg-surface-default);
+	}
+
 	.mission-text {
-		font-size: 1.25rem;
-		line-height: 1.75;
+		font-size: 20px;
+		line-height: 28px;
 	}
 
 	.mission-text p {
-		font-size: 1.25rem;
+		font-size: 20px;
+		line-height: 28px;
+		color: var(--color-text-button-primary-default);
+		opacity: 0.8;
 	}
 
 	.illustration-shell {
@@ -77,7 +84,7 @@
 		position: absolute;
 		inset: 12%;
 		border-radius: 100%;
-		border: 1px solid rgba(255, 255, 255, 0.2);
+		border: 1px solid var(--color-white-alpha-20);
 	}
 
 	.illustration {
@@ -86,9 +93,13 @@
 	}
 
 	.mission-bubble {
-		background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
+		background: radial-gradient(
+			circle at 30% 30%,
+			rgba(255, 255, 255, 0.25),
+			rgba(255, 255, 255, 0.05)
+		);
 		backdrop-filter: blur(4px);
-		border: 1px solid rgba(255, 255, 255, 0.15);
+		border: 1px solid var(--color-white-alpha-15);
 	}
 
 	@keyframes mission-float {

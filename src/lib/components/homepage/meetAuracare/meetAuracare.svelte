@@ -31,14 +31,14 @@
 
 <section class="section meet-section">
 	<SineWave />
-	<div class="container relative z-10">
+	<div class="container relative" style="z-index: 10;">
 		<div class="grid md:grid-cols-2 gap-10 items-center">
 			<div class="slide-in-left">
 				<div class="flex items-center gap-3 mb-4">
-					<h2 class="text-5xl font-semibold" style="color: white;">Meet</h2>
+					<h2 class="text-5xl font-semibold" style="color: var(--color-text-button-primary-default);">Meet</h2>
 					<img src={auracareLogoWhite} alt="Auracare" class="h-8" />
 				</div>
-				<p class="text-xl meet-text" style="color: rgba(255, 255, 255, 0.8);">{subText}</p>
+				<p class="text-xl meet-text meet-subtext">{subText}</p>
 			</div>
 			<div class="grid gap-5 slide-in-right">
 				{#each features as feature}
@@ -52,7 +52,7 @@
 <style>
 	.meet-section {
 		position: relative;
-		background: linear-gradient(135deg, #2f4ec0, #4b6ef3);
+		background: var(--color-bg-button-primary-default);
 		color: white;
 		width: 100vw;
 		left: 50%;
@@ -66,14 +66,32 @@
 		content: '';
 		position: absolute;
 		inset: 0;
-		background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15), transparent 45%);
+		background: radial-gradient(
+			circle at 80% 20%,
+			var(--color-white-alpha-15),
+			transparent 45%
+		);
 		opacity: 0.6;
 		pointer-events: none;
 		z-index: 0;
 	}
 
+	.meet-section::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: var(--color-primary-alpha-10);
+		mix-blend-mode: color-burn;
+		pointer-events: none;
+		z-index: 1;
+	}
+
 	.meet-text {
 		font-size: 1.25rem;
 		line-height: 1.75;
+	}
+
+	.meet-subtext {
+		color: var(--color-white-alpha-80);
 	}
 </style>

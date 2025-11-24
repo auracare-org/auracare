@@ -32,7 +32,7 @@
 			>
 				{header}
 			</h2>
-			<p style="font-size: 20px; line-height: 28px; opacity: 0.8; color: #4a5565;">
+			<p class="subheader-text">
 				{subheader}
 			</p>
 		</div>
@@ -44,3 +44,12 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	.subheader-text {
+		font-size: 20px;
+		line-height: 28px;
+		opacity: 0.8;
+		color: var(--color-text-body-secondary);
+	}
+</style>

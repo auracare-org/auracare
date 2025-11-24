@@ -92,10 +92,10 @@
 <style>
 	.use-cases-section {
 		position: relative;
-		background: #2a4bc8;
-		background-image: 
+		background: var(--color-bg-button-primary-default);
+		background-image:
 			linear-gradient(180deg, rgba(15, 30, 80, 0.4) 0%, rgba(42, 75, 200, 0) 70%),
-			linear-gradient(135deg, #3b63f0 0%, #1f4abc 100%);
+			linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%);
 		color: white;
 		width: 100vw;
 		left: 50%;
@@ -123,23 +123,23 @@
 	}
 
 	.use-case-glass-card {
-		background: rgba(255, 255, 255, 0.1);
+		background: var(--color-white-alpha-10);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		border-radius: var(--radius-md);
-		border: 1px solid rgba(255, 255, 255, 0.2);
+		border: 1px solid var(--color-white-alpha-20);
 		transition: all 0.3s ease;
 		box-shadow: var(--shadow-glass-glow);
 		overflow: hidden;
 	}
 
 	.use-case-glass-card:hover {
-		background: rgba(255, 255, 255, 0.15);
+		background: var(--color-white-alpha-15);
 		box-shadow: var(--shadow-glass-glow-strong);
 	}
 
 	.use-case-icon {
-		background: rgba(255, 255, 255, 0.2);
+		background: var(--color-white-alpha-20);
 		border-radius: 12px;
 		padding: 12px;
 		display: flex;

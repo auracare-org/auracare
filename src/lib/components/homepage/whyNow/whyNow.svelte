@@ -37,7 +37,7 @@
 			>
 				{title}
 			</h2>
-			<p class="text-lg" style="color: var(--color-text-body-secondary);">
+			<p class="subtitle-text">
 				{subtitle}
 			</p>
 		</div>
@@ -50,3 +50,12 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	.subtitle-text {
+		font-size: 20px;
+		line-height: 28px;
+		color: var(--color-text-body-secondary);
+		opacity: 0.8;
+	}
+</style>

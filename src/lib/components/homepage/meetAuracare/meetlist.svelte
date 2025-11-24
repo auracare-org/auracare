@@ -7,15 +7,15 @@
 <div class="meet-card">
 	<!-- Icon container with stronger glassmorphism -->
 	<div class="icon-container">
-		<svelte:component this={icon} size={24} stroke={1.5} style="color: white;" />
+		<svelte:component this={icon} size={24} stroke={1.5} class="icon" />
 	</div>
 
 	<!-- Content -->
 	<div class="content">
-		<h4 class="font-bold mb-1" style="font-size: 20px; line-height: 30px; color: white;">
+		<h4 class="font-bold mb-1 card-title">
 			{title}
 		</h4>
-		<p style="font-size: 18px; line-height: 26px; color: rgba(255, 255, 255, 0.7);">
+		<p class="card-description">
 			{description}
 		</p>
 	</div>
@@ -31,9 +31,9 @@
 		width: 100%;
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
-		background: rgba(255, 255, 255, 0.1);
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		border-radius: 16px;
+		background: var(--color-white-alpha-10);
+		border: 1px solid var(--color-white-alpha-20);
+		border-radius: var(--radius-md);
 		padding: 1.5rem;
 		box-shadow: var(--shadow-glass-glow);
 	}
@@ -54,7 +54,7 @@
 		justify-content: center;
 		backdrop-filter: blur(6px);
 		-webkit-backdrop-filter: blur(6px);
-		background: rgba(255, 255, 255, 0.15);
+		background: var(--color-white-alpha-10);
 		border-radius: 12px;
 		padding: 12px;
 		min-width: 48px;
@@ -69,5 +69,21 @@
 
 	.content {
 		flex: 1;
+	}
+
+	:global(.icon) {
+		color: var(--color-icon-white);
+	}
+
+	.card-title {
+		font-size: 18px;
+		line-height: 28px;
+		color: var(--color-text-button-primary-default);
+	}
+
+	.card-description {
+		font-size: 16px;
+		line-height: 24px;
+		color: var(--color-white-alpha-70);
 	}
 </style>

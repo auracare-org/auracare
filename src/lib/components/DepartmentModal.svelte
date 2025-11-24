@@ -139,7 +139,7 @@
 	<div class="space-y-3">
 		{#each items as item}
 			<div
-				class="bg-white rounded-xl border border-neutral-200 shadow-[0_1px_0_#e4e4e7] overflow-hidden"
+				class="bg-white rounded-xl border border-neutral-200 shadow-[0_1px_0_var(--color-neutral-200)] overflow-hidden"
 			>
 				<button
 					class="w-full px-4 py-3 text-left flex items-start justify-between gap-4"

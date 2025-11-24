@@ -14,8 +14,8 @@
 </script>
 
 <section class="section">
-	<div class="container">
-		<div class="text-center mb-12 slide-in-up">
+	<div class="workflow-container">
+		<div class="text-center mb-16 slide-in-up">
 			<h2
 				class="text-4xl md:text-5xl font-bold mb-4"
 				style="color: var(--color-text-header-primary);"
@@ -39,33 +39,30 @@
 </section>
 
 <style>
+	.workflow-container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
 	.workflow-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		gap: 2rem;
-		max-width: 1400px;
+		max-width: 1024px;
 		margin: 0 auto;
-		padding: 0 1rem;
 	}
 
 	@media (min-width: 640px) {
 		.workflow-grid {
 			grid-template-columns: repeat(2, 1fr);
-			gap: 2.5rem;
 		}
 	}
 
 	@media (min-width: 1024px) {
 		.workflow-grid {
 			grid-template-columns: repeat(4, 1fr);
-			gap: 3rem;
-		}
-	}
-
-	@media (min-width: 1280px) {
-		.workflow-grid {
-			gap: 4rem;
-			padding: 0;
+			gap: 2rem;
 		}
 	}
 </style>

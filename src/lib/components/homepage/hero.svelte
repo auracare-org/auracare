@@ -88,21 +88,21 @@
 
 	.hero-title__muted {
 		display: block;
-		color: #0f172a;
+		color: var(--color-text-header-secondary);
 	}
 
 	.hero-title__accent {
 		display: block;
-		background: linear-gradient(120deg, #4f6fed 0%, #7c8bff 35%, #9aa6ff 100%);
+		background: linear-gradient(120deg, var(--color-primary-600) 0%, var(--color-primary-400) 35%, var(--color-primary-300) 100%);
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		color: transparent;
-		text-shadow: 0 10px 35px rgba(79, 111, 237, 0.25);
+		text-shadow: 0 10px 35px rgba(47, 78, 192, 0.25);
 	}
 
 	.hero-subhead {
-		color: #4b5563;
+		color: var(--color-text-body-primary);
 		font-size: clamp(1rem, 2vw, 1.375rem);
 		max-width: 720px;
 		margin: 0 auto;
@@ -116,11 +116,11 @@
 		margin: 0 auto 1.5rem auto;
 		padding: 0.4rem 1rem;
 		border-radius: 999px;
-		background: rgba(79, 111, 237, 0.12);
-		color: #1e1b4b;
+		background: rgba(47, 78, 192, 0.12);
+		color: var(--color-neutral-900);
 		font-weight: 600;
 		font-size: 0.95rem;
-		border: 1px solid rgba(255, 255, 255, 0.5);
+		border: 1px solid var(--color-white-alpha-70);
 		backdrop-filter: blur(10px);
 	}
 
@@ -128,17 +128,17 @@
 		width: 10px;
 		height: 10px;
 		border-radius: 999px;
-		background: #34d399;
+		background: var(--color-success);
 		box-shadow: 0 0 0 6px rgba(52, 211, 153, 0.2);
 	}
 
 	.hero-cta-primary {
-		background: linear-gradient(120deg, #4f6fed, #6c7dff);
+		background: linear-gradient(120deg, var(--color-bg-button-primary-default), var(--color-bg-button-primary-hover));
 		color: white;
 		border-radius: 999px;
 		font-weight: 600;
 		padding: 0.875rem 2.5rem;
-		box-shadow: 0 30px 60px rgba(79, 111, 237, 0.35);
+		box-shadow: 0 30px 60px rgba(47, 78, 192, 0.35);
 		border: none;
 	}
 
@@ -147,9 +147,9 @@
 	}
 
 	.hero-cta-secondary {
-		background: rgba(255, 255, 255, 0.7);
-		border: 1px solid rgba(79, 111, 237, 0.2);
-		color: #1f2a55;
+		background: var(--color-white-alpha-70);
+		border: 1px solid rgba(47, 78, 192, 0.2);
+		color: var(--color-text-header-secondary);
 		border-radius: 999px;
 		font-weight: 600;
 		padding: 0.875rem 2.5rem;
