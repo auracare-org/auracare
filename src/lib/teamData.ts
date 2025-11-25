@@ -52,12 +52,6 @@ export const teamMembers: TeamMember[] = [
     linkedin: 'https://www.linkedin.com/in/juliuschu/'
   },
   {
-    name: 'Daryna Nykyforiv',
-    img: '/DarynaNykyforiv.jpg',
-    role: 'Partnerships Intern',
-    linkedin: 'https://www.linkedin.com/in/daryna-nykyforiv-55b352364/'
-  },
-  {
     name: 'Ayza Zainal',
     img: '/AyzaZainal.jpg',
     role: 'Freelance UI/UX Designer',
