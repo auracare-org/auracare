@@ -9,51 +9,51 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     name: 'Hin Lun Chen',
-    img: '/hinlinchen.jpg',
+    img: '/JPG/hinlinchen.jpg',
     role: 'Co-Founder, CEO & CFO',
     linkedin: 'https://www.linkedin.com/in/hin-lun-chen/'
   },
   {
     name: 'Stephen Okita',
-    img: '/stephenokita.jpg',
+    img: '/JPG/stephenokita.jpg',
     role: 'Co-Founder & CTO',
     linkedin: 'https://www.linkedin.com/in/stephen-okita/',
     website: 'https://stephenokita.com'
   },
   {
     name: 'Nicholas Chae',
-    img: '/nicholasche.jpg',
+    img: '/JPG/nicholasche.jpg',
     role: 'Head of ML',
     linkedin: 'https://www.linkedin.com/in/nicholas-chae/'
   },
   {
     name: 'Linus Alpsten',
-    img: '/linusalpsten.jpg',
+    img: '/JPG/linusalpsten.jpg',
     role: 'Head of Partnerships & Research',
     linkedin: 'https://www.linkedin.com/in/linus-alpsten-665b551b0/'
   },
   {
     name: 'Ahnaf Kabir',
-    img: '/AhnafKabir.jpg',
+    img: '/JPG/AhnafKabir.jpg',
     role: 'VP, Engineering',
     linkedin: 'https://www.linkedin.com/in/akn101',
     website: 'https://akn.me.uk'
   },
   {
     name: 'Mini Han Wang',
-    img: '/minhanwang.jpg',
+    img: '/JPG/minhanwang.jpg',
     role: 'Medical Data Science Advisor',
     linkedin: 'https://www.linkedin.com/in/han-wang-mini/'
   },
   {
     name: 'Julius Chu',
-    img: '/juliuschu.jpg',
+    img: '/JPG/juliuschu.jpg',
     role: 'Product & Marketing Advisor',
     linkedin: 'https://www.linkedin.com/in/juliuschu/'
   },
   {
     name: 'Ayza Zainal',
-    img: '/AyzaZainal.jpg',
+    img: '/JPG/AyzaZainal.jpg',
     role: 'Freelance UI/UX Designer',
     linkedin: 'https://www.linkedin.com/in/ayzazainal/'
   },
