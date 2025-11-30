@@ -66,7 +66,7 @@
 		<div class="section-surface section-surface--blue text-center max-w-3xl mx-auto">
 			<h2 class="fade-in mb-6">Ready to make an impact?</h2>
 			<p class="fade-in animation-delay-200 text-lg mb-8" style="color: var(--color-white-alpha-80);">
-				Whether you're interested in full-time roles, part-time contributions, or advisory
+				Whether you're interested in full-time roles, part-time gigs, or advisory
 				positions, we'd love to hear from you.
 			</p>
 			<div class="fade-in animation-delay-400">
