@@ -178,13 +178,8 @@
 							>
 							<a
 								href="/about#journey"
-								class="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-primary-600 transition-colors"
-								>Our Journey</a
-							>
-							<a
-								href="/about#values"
 								class="block px-4 py-2 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-primary-600 transition-colors last:rounded-b-lg"
-								>Our Values</a
+								>Our Journey</a
 							>
 						</div>
 					</div>
@@ -261,13 +256,6 @@
 						onclick={closeMobileMenu}
 					>
 						Our Journey
-					</a>
-					<a
-						href="/about#values"
-						class="text-neutral-900 hover:text-primary-600 transition-colors text-sm font-medium py-2"
-						onclick={closeMobileMenu}
-					>
-						Our Values
 					</a>
 					<a
 						href="/join-us"
