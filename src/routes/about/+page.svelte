@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { teamMembers, getInitials } from '$lib/teamData';
+	import { teamList, getInitials } from '$lib/data/team';
+	import { openPersonModal } from '$lib/stores/personModal';
 </script>
 
 <svelte:head>
@@ -43,8 +44,12 @@
 			</div>
 
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-				{#each teamMembers as member, index}
-					<div class="team-card fade-in" style="animation-delay: {index * 50}ms">
+				{#each teamList as member, index}
+					<button
+						class="team-card fade-in cursor-pointer hover:shadow-lg hover:-translate-y-1 hover:border-primary-300 transition-all duration-200 text-center"
+						style="animation-delay: {index * 50}ms"
+						onclick={() => openPersonModal(member.id)}
+					>
 						{#if member.img}
 							<img
 								src={member.img}
@@ -63,28 +68,21 @@
 						<p class="text-neutral-600 text-sm mb-2">{member.role}</p>
 						<div class="flex items-center justify-center gap-3">
 							{#if member.linkedin}
-								<a
-									href={member.linkedin}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="inline-flex items-center gap-1 text-xs text-primary-600 hover:text-primary-700 transition-colors"
-									aria-label="LinkedIn profile for {member.name}"
+								<span
+									class="inline-flex items-center gap-1 text-xs text-primary-600"
+									aria-label="Has LinkedIn profile"
 								>
 									<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
 										<path
 											d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
 										/>
 									</svg>
-									LinkedIn
-								</a>
+								</span>
 							{/if}
 							{#if member.website}
-								<a
-									href={member.website}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="inline-flex items-center gap-1 text-xs text-primary-600 hover:text-primary-700 transition-colors"
-									aria-label="Website for {member.name}"
+								<span
+									class="inline-flex items-center gap-1 text-xs text-primary-600"
+									aria-label="Has website"
 								>
 									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path
@@ -94,11 +92,10 @@
 											d="M12 3a9 9 0 110 18 9 9 0 010-18zm0 0c2.5 2.25 2.5 12.75 0 15m0-15C9.5 5.25 9.5 15.75 12 18m-7.8-6h15.6m-14-4h12.4m-12.4 8h12.4"
 										/>
 									</svg>
-									Website
-								</a>
+								</span>
 							{/if}
 						</div>
-					</div>
+					</button>
 				{/each}
 			</div>
 		</div>

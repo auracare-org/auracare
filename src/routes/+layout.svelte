@@ -5,6 +5,8 @@
 	import { dev } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { slide } from 'svelte/transition';
+	import PersonModal from '$lib/components/PersonModal.svelte';
+	import { activePersonId, closePersonModal } from '$lib/stores/personModal';
 
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
@@ -291,6 +293,11 @@
 <main class="site-content">
 	{@render children?.()}
 </main>
+
+<!-- Person Modal (global) -->
+{#if $activePersonId}
+	<PersonModal memberId={$activePersonId} on:close={closePersonModal} />
+{/if}
 
 <!-- Footer -->
 <footer class="footer-gradient py-12">
