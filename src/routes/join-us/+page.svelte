@@ -4,8 +4,8 @@
 	import DepartmentModal from '$lib/components/DepartmentModal.svelte';
 	import type { Department } from '$lib/data/departments';
 
-	const applyUrl =
-		'https://contentcreationcollective.notion.site/2aceb3c2267a80a49e7af52153278654?pvs=105';
+	// TODO: Add your application form URL here
+	const applyUrl = '#';
 
 	let activeDept: Department | null = null;
 </script>

@@ -8,10 +8,10 @@ export interface Department {
 
 export const departments: Department[] = [
   {
-    name: 'Software and Web Dev',
+    name: 'Software Development',
     lead: 'stephen-okita',
-    description: 'Web, mobile and platform engineering and operations.',
-    subassignees: ['hin-lun-chen', 'ayza-zainal', 'ahnaf-kabir'],
+    description: 'Software development and engineering.',
+    subassignees: [],
     subdepartments: [
       {
         name: 'Web development',
@@ -46,8 +46,8 @@ export const departments: Department[] = [
       {
         name: 'UI/UX design',
         lead: 'ayza-zainal',
-        description: 'Product design, UX flows and interface systems.',
-        subassignees: ['hin-lun-chen', 'stephen-okita']
+        description: 'User interface and user experience design.',
+        subassignees: ['hinlin-chen', 'stephen-okita']
       },
       {
         name: 'Server and Hosting',
@@ -78,16 +78,22 @@ export const departments: Department[] = [
       },
       {
         name: 'Training data collection',
-        lead: ['hin-lun-chen', 'stephen-okita', 'nicholas-chae'],
-        description: 'Sourcing, labeling and governance of training datasets.',
+        lead: ['hinlin-chen', 'stephen-okita', 'nicholas-chae'],
+        description: 'Collecting training data for AI models.',
         subassignees: []
+      },
+      {
+        name: 'AI Infrastructure',
+        lead: ['stephen-okita', 'nicholas-chae'],
+        description: 'AI infrastructure and platform development.',
+        subassignees: ['ahnaf-kabir']
       }
     ]
   },
   {
     name: 'Marketing',
-    lead: ['julius-chu', 'stephen-okita'],
-    description: 'Go-to-market, brand, creative and demand generation.',
+    lead: 'julius-chu',
+    description: 'Marketing strategy and campaigns.',
     subassignees: [],
     subdepartments: [
       {
@@ -110,73 +116,73 @@ export const departments: Department[] = [
       },
       {
         name: 'Funnel design',
-        lead: 'hin-lun-chen',
-        description: 'End-to-end funnel mapping, attribution and conversion paths.',
+        lead: 'hinlin-chen',
+        description: 'Designing customer acquisition and conversion funnels.',
         subassignees: []
       },
       {
         name: 'Press',
         lead: 'linus-alpsten',
         description: 'Press relations and media outreach.',
-        subassignees: ['hin-lun-chen', 'stephen-okita']
+        subassignees: ['hinlin-chen']
       }
     ]
   },
   {
     name: 'Hardware Dev',
-    lead: 'hin-lun-chen',
-    description: 'Hardware design, prototyping, manufacturing and quality.',
+    lead: 'hinlin-chen',
+    description: 'Hardware development and engineering.',
     subassignees: [],
     subdepartments: [
       {
         name: 'Visual Design',
-        lead: 'hin-lun-chen',
-        description: 'Industrial design and product aesthetics for hardware.',
-        subassignees: ['stephen-okita', 'julius-chu']
+        lead: 'hinlin-chen',
+        description: 'Visual design for branding and communications.',
+        subassignees: ['stephen-okita', 'sara-villaveces-latorre']
       },
       {
-        name: 'Prototyping and specs',
-        lead: 'hin-lun-chen',
-        description: 'Hardware specifications and prototype iterations.',
-        subassignees: []
+        name: 'Prototyping and sourcing',
+        lead: 'hinlin-chen',
+        description: 'Hardware prototyping and component sourcing.',
+        subassignees: ['sara-villaveces-latorre']
       },
       {
         name: 'Logistics',
         lead: 'ahnaf-kabir',
-        description: 'Supply chain, inventory and distribution logistics.',
+        description: 'Supply chain and logistics operations.',
         subassignees: []
       },
       {
         name: 'Manufacturing',
-        lead: 'hin-lun-chen',
-        description: 'Production planning and vendor coordination.',
+        lead: 'hinlin-chen',
+        description: 'Manufacturing operations and production.',
         subassignees: []
       },
       {
         name: 'Quality Assurance',
-        lead: 'hin-lun-chen',
-        description: 'Hardware verification, validation and testing.',
-        subassignees: []
+        lead: 'hinlin-chen',
+        description: 'Quality assurance and testing.',
+        subassignees: ['sara-villaveces-latorre']
       },
       {
         name: 'User Testing',
-        lead: 'hin-lun-chen',
-        description: 'Hardware usability studies and feedback loops.',
-        subassignees: []
+        lead: 'hinlin-chen',
+        description: 'User testing and feedback collection.',
+        subassignees: ['sara-villaveces-latorre']
       }
     ]
   },
   {
     name: 'Customer Experience',
-    lead: 'hin-lun-chen',
-    description: 'Customer-facing operations from partnerships to support and service quality.',
-    subassignees: ['ahnaf-kabir'],
+    lead: 'hinlin-chen',
+    description: 'Customer experience strategy and improvement.',
+    subassignees: [],
     subdepartments: [
       {
         name: 'Pharmacy relationship management',
-        lead: 'hin-lun-chen',
-        description: 'Build and maintain pharmacy partnerships and pilots.',
-        subassignees: []
+        lead: 'hinlin-chen',
+        description: 'Managing relationships with pharmacy partners.',
+        subassignees: ['linus-alpsten']
       },
       {
         name: 'Customer service',
@@ -189,32 +195,32 @@ export const departments: Department[] = [
   {
     name: 'Business Dev',
     lead: 'linus-alpsten',
-    description: 'Strategic partnerships, financing, accelerators and market expansion.',
-    subassignees: ['nicholas-chae', 'julius-chu', 'stephen-okita', 'hin-lun-chen'],
+    description: 'Business development, partnerships, and growth initiatives.',
+    subassignees: [],
     subdepartments: [
       {
         name: 'Company Strategy',
-        lead: 'hin-lun-chen',
-        description: 'Company objectives, priorities and strategic planning.',
+        lead: 'hinlin-chen',
+        description: 'Overall strategic planning and direction for the company.',
         subassignees: []
       },
       {
         name: 'Non-dilutive financing',
         lead: 'linus-alpsten',
         description: 'Grants and programs to fund growth without equity.',
-        subassignees: ['hin-lun-chen'],
+        subassignees: ['hinlin-chen'],
         subdepartments: [
           {
             name: 'Grants Research',
             lead: 'linus-alpsten',
-            description: 'Sourcing and assessing relevant grant opportunities.',
-            subassignees: []
+            description: 'Researching grant opportunities and requirements.',
+            subassignees: ['tanush-pandey']
           },
           {
             name: 'Application writing',
-            lead: 'hin-lun-chen',
-            description: 'Drafting and submitting non-dilutive funding applications.',
-            subassignees: []
+            lead: 'tanush-pandey',
+            description: 'Writing grant applications.',
+            subassignees: ['linus-alpsten', 'hinlin-chen', 'stella-goeschl']
           }
         ]
       },
@@ -222,7 +228,7 @@ export const departments: Department[] = [
         name: 'Accelerators and programs',
         lead: 'linus-alpsten',
         description: 'Evaluation and participation in accelerator programs.',
-        subassignees: ['hin-lun-chen'],
+        subassignees: ['hinlin-chen'],
         subdepartments: [
           {
             name: 'Accelerator research',
@@ -232,8 +238,8 @@ export const departments: Department[] = [
           },
           {
             name: 'Application writing',
-            lead: ['hin-lun-chen', 'linus-alpsten'],
-            description: 'End-to-end application prep for accelerator cohorts.',
+            lead: ['hinlin-chen', 'linus-alpsten'],
+            description: 'Application writing and proposal development.',
             subassignees: []
           }
         ]
@@ -263,10 +269,10 @@ export const departments: Department[] = [
             subassignees: []
           },
           {
-            name: 'Research',
-            lead: 'hin-lun-chen',
-            description: 'Market and competitive insights for financing.',
-            subassignees: []
+            name: 'Financing Research',
+            lead: 'linus-alpsten',
+            description: 'Researching financing opportunities and strategies.',
+            subassignees: ['hinlin-chen']
           }
         ]
       },
@@ -277,75 +283,69 @@ export const departments: Department[] = [
         subassignees: [],
         subdepartments: [
           {
-            name: 'German Market',
+            name: 'Germany (Wishlist)',
             lead: 'linus-alpsten',
-            description: 'Germany-focused partner and go-to-market development.',
+            description: 'Germany market operations and partnerships (potential future market).',
             subassignees: []
           },
           {
-            name: 'Canadian Market',
-            lead: 'hin-lun-chen',
-            description: 'Canada-focused partner and go-to-market development.',
+            name: 'Canada',
+            lead: 'hinlin-chen',
+            description: 'Canada market operations and partnerships.',
             subassignees: []
           },
           {
-            name: 'US Market',
+            name: 'US (Wishlist)',
             lead: 'stephen-okita',
-            description: 'United States partner and go-to-market development.',
-            subassignees: ['nicholas-chae']
+            description: 'US market operations and partnerships (potential future market).',
+            subassignees: []
           },
           {
-            name: 'HK Market',
-            lead: 'hin-lun-chen',
-            description: 'Hong Kong partner and go-to-market development.',
+            name: 'HK',
+            lead: 'hinlin-chen',
+            description: 'Hong Kong market operations and partnerships.',
             subassignees: ['julius-chu', 'stephen-okita']
           },
           {
-            name: 'Cyprus Market',
+            name: 'Cyprus',
             lead: 'linus-alpsten',
-            description: 'Cyprus partner and go-to-market development.',
+            description: 'Cyprus market operations and partnerships.',
             subassignees: []
           },
           {
-            name: 'England Market',
+            name: 'England',
             lead: 'linus-alpsten',
-            description: 'England partner and go-to-market development.',
-            subassignees: ['hin-lun-chen', 'julius-chu']
+            description: 'England market operations and partnerships.',
+            subassignees: ['hinlin-chen']
           },
           {
-            name: 'Northern Ireland and Ireland',
+            name: 'Northern Ireland (Wishlist)',
             lead: 'linus-alpsten',
-            description: 'Northern Ireland and Ireland partner development.',
+            description: 'Northern Ireland market operations and partnerships (potential future market).',
             subassignees: ['stephen-okita']
           },
           {
-            name: 'Scotland Market',
-            lead: 'hin-lun-chen',
-            description: 'Scotland partner and go-to-market development.',
+            name: 'Scotland',
+            lead: 'hinlin-chen',
+            description: 'Scotland market operations and partnerships.',
             subassignees: []
           },
           {
-            name: 'UAE Market',
-            lead: 'hin-lun-chen',
-            description: 'United Arab Emirates partner and go-to-market development.',
+            name: 'UAE',
+            lead: 'hinlin-chen',
+            description: 'UAE market operations and partnerships.',
             subassignees: []
           },
           {
-            name: 'France Market',
+            name: 'Macau',
+            lead: 'hinlin-chen',
+            description: 'Macau market operations and partnerships.',
+            subassignees: []
+          },
+          {
+            name: 'New Zealand (wishlist)',
             lead: 'stephen-okita',
-            description: 'France partner and go-to-market development.',
-            subassignees: []
-          },
-          {
-            name: 'Macau Market',
-            lead: 'hin-lun-chen',
-            description: 'Macau partner and go-to-market development.',
-            subassignees: []
-          },
-          {
-            name: 'New Zealand Market',
-            lead: 'stephen-okita',
-            description: 'New Zealand partner and go-to-market development.',
+            description: 'New Zealand market operations and partnerships (potential future market).',
             subassignees: []
           }
         ]
@@ -355,107 +355,145 @@ export const departments: Department[] = [
   {
     name: 'Research and Data',
     lead: 'linus-alpsten',
-    description: 'Primary and secondary research, study design and insight synthesis.',
+    description: 'Research operations and data management.',
     subassignees: [],
     subdepartments: [
       {
         name: 'Primary market research',
-        lead: 'hin-lun-chen',
-        description: 'Interviews, surveys and fieldwork to validate needs.',
+        lead: 'hinlin-chen',
+        description: 'Primary market research and customer insights.',
         subassignees: ['stephen-okita', 'linus-alpsten']
       },
       {
         name: 'Secondary market research',
-        lead: 'stephen-okita',
-        description: 'Desk research on markets, competitors and regulations.',
-        subassignees: ['hin-lun-chen', 'linus-alpsten']
+        lead: 'linus-alpsten',
+        description: 'Secondary market research and competitive analysis.',
+        subassignees: ['stephen-okita', 'hinlin-chen']
       },
       {
         name: 'Study design',
-        lead: 'linus-alpsten',
-        description: 'Clinical and product study methodology and protocols.',
-        subassignees: ['hin-lun-chen']
+        lead: 'tanush-pandey',
+        description: 'Clinical study design and protocols.',
+        subassignees: ['hinlin-chen', 'linus-alpsten']
+      },
+      {
+        name: 'Medical research',
+        lead: 'tanush-pandey',
+        description: 'Medical and clinical research.',
+        subassignees: ['stella-goeschl']
       }
     ]
   },
   {
     name: 'HRLF',
-    lead: 'hin-lun-chen',
-    description: 'Top-level corporate functions hub covering HR, legal, finance and governance.',
+    lead: 'hinlin-chen',
+    description: 'Human resources, legal, and finance functions.',
     subassignees: ['stephen-okita', 'linus-alpsten'],
     subdepartments: [
       {
         name: 'Accounting',
-        lead: 'hin-lun-chen',
-        description: 'Cashflow, payroll, bookkeeping and financial reporting.',
-        subassignees: []
-      },
-      {
-        name: 'Legal',
-        lead: 'hin-lun-chen',
-        description: 'Contracts, compliance, IP and regulatory affairs.',
+        lead: 'hinlin-chen',
+        description: 'Accounting operations and financial management.',
         subassignees: [],
         subdepartments: [
           {
-            name: 'External Contracts',
-            lead: 'linus-alpsten',
-            description: 'Vendor, partner and client agreements negotiated and maintained.',
+            name: 'Tax Returns',
+            lead: 'hinlin-chen',
+            description: 'Tax return preparation and filing.',
             subassignees: []
           },
           {
-            name: 'Internal Contracts',
-            lead: 'hin-lun-chen',
-            description: 'Employment, NDAs and internal policy documentation.',
+            name: 'Payroll',
+            lead: 'hinlin-chen',
+            description: 'Payroll processing and salary administration.',
             subassignees: []
           },
           {
-            name: 'General Compliance',
-            lead: 'hin-lun-chen',
-            description: 'Company-wide compliance processes and record-keeping.',
-            subassignees: []
-          },
-          {
-            name: 'Medical Devices',
-            lead: 'stephen-okita',
-            description: 'Medical device-related legal considerations and documentation.',
-            subassignees: []
-          },
-          {
-            name: 'IP + Patents',
-            lead: 'hin-lun-chen',
-            description: 'Intellectual property strategy, filings and portfolio oversight.',
+            name: 'Cashflow analysis',
+            lead: 'hinlin-chen',
+            description: 'Cashflow analysis and financial planning.',
             subassignees: []
           }
         ]
       },
       {
+        name: 'Legal',
+        lead: 'hinlin-chen',
+        description: 'Legal affairs and contract management.',
+        subassignees: [],
+        subdepartments: [
+          {
+            name: 'External Contracts',
+            lead: 'linus-alpsten',
+            description: 'External contracts and vendor agreements.',
+            subassignees: []
+          },
+          {
+            name: 'Internal Contracts',
+            lead: 'hinlin-chen',
+            description: 'Internal contracts and employment agreements.',
+            subassignees: []
+          },
+          {
+            name: 'General Compliance',
+            lead: 'hinlin-chen',
+            description: 'General regulatory compliance and legal requirements.',
+            subassignees: []
+          },
+          {
+            name: 'Medical Devices',
+            lead: 'stephen-okita',
+            description: 'Medical device development and compliance.',
+            subassignees: []
+          },
+          {
+            name: 'IP + Patents',
+            lead: 'hinlin-chen',
+            description: 'Intellectual property and patent management.',
+            subassignees: []
+          },
+          {
+            name: 'GDPR and Privacy',
+            lead: 'tanush-pandey',
+            description: 'GDPR compliance and data privacy management.',
+            subassignees: ['stephen-okita']
+          }
+        ]
+      },
+      {
         name: 'HR',
-        lead: 'hin-lun-chen',
-        description: 'People operations across hiring, onboarding, policies and incentives.',
+        lead: 'hinlin-chen',
+        description: 'Human resources management and operations.',
         subassignees: [],
         subdepartments: [
           {
             name: 'Terms of Work',
-            lead: 'hin-lun-chen',
-            description: 'Role definitions, working terms and policy updates.',
+            lead: 'hinlin-chen',
+            description: 'Employment terms and work agreements.',
             subassignees: ['stephen-okita']
           },
           {
             name: 'Incentive Alignment',
-            lead: 'hin-lun-chen',
-            description: 'Compensation structures and performance incentives.',
+            lead: 'hinlin-chen',
+            description: 'Aligning team incentives and compensation.',
+            subassignees: ['stephen-okita']
+          },
+          {
+            name: 'Relationship Management',
+            lead: 'linus-alpsten',
+            description: 'Building and maintaining key relationships.',
             subassignees: ['stephen-okita']
           },
           {
             name: 'Recruitment (Onboarding)',
-            lead: 'linus-alpsten',
-            description: 'Onboarding processes and new joiner experience.',
+            lead: 'hinlin-chen',
+            description: 'Recruitment and onboarding of new team members.',
             subassignees: []
           },
           {
-            name: 'Recruitment (Offboarding)',
-            lead: 'hin-lun-chen',
-            description: 'Offboarding procedures and knowledge transfer.',
+            name: 'Offboarding',
+            lead: 'hinlin-chen',
+            description: 'Offboarding processes and exit procedures.',
             subassignees: []
           }
         ]
