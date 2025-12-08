@@ -4,8 +4,8 @@
 	import DepartmentModal from '$lib/components/DepartmentModal.svelte';
 	import type { Department } from '$lib/data/departments';
 
-	// TODO: Add your application form URL here
-	const applyUrl = '#';
+	const applyUrl =
+		'https://contentcreationcollective.notion.site/2aceb3c2267a80a49e7af52153278654?pvs=105';
 
 	let activeDept: Department | null = null;
 </script>
@@ -65,9 +65,12 @@
 	<div class="container">
 		<div class="section-surface section-surface--blue text-center max-w-3xl mx-auto">
 			<h2 class="fade-in mb-6">Ready to make an impact?</h2>
-			<p class="fade-in animation-delay-200 text-lg mb-8" style="color: var(--color-white-alpha-80);">
-				Whether you're interested in full-time roles, part-time gigs, or advisory
-				positions, we'd love to hear from you.
+			<p
+				class="fade-in animation-delay-200 text-lg mb-8"
+				style="color: var(--color-white-alpha-80);"
+			>
+				Whether you're interested in full-time roles, part-time gigs, or advisory positions, we'd
+				love to hear from you.
 			</p>
 			<div class="fade-in animation-delay-400">
 				<a
