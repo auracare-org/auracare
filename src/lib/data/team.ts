@@ -42,7 +42,7 @@ export const team: Record<string, TeamMember> = {
     id: 'ahnaf-kabir',
     name: 'Ahnaf Kabir',
     img: '/JPG/ahnaf-kabir.jpg',
-    role: 'Full Stack Developer & Head of IT',
+    role: 'VP, Engineering',
     linkedin: 'https://www.linkedin.com/in/akn101',
     website: 'https://akn.me.uk/'
   },
