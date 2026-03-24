@@ -27,7 +27,7 @@ export const team: Record<string, TeamMember> = {
   'tanush-pandey': {
     id: 'tanush-pandey',
     name: 'Tanush Pandey',
-    img: '/JPG/tanush-pandey.jpg',
+    img: '/JPG/tanush-pandey-new.jpg',
     role: 'Co-Founder & CMO',
     linkedin: 'https://www.linkedin.com/in/tanush-pandey-767a60260/'
   },
