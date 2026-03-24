@@ -24,12 +24,12 @@ export const team: Record<string, TeamMember> = {
     linkedin: 'https://www.linkedin.com/in/stephen-okita/',
     website: 'https://stephenokita.com/'
   },
-  'nicholas-chae': {
-    id: 'nicholas-chae',
-    name: 'Nicholas Chae',
-    img: '/JPG/nicholas-che.jpg',
-    role: 'Head of Machine Learning (ML)',
-    linkedin: 'https://www.linkedin.com/in/nicholas-chae/'
+  'tanush-pandey': {
+    id: 'tanush-pandey',
+    name: 'Tanush Pandey',
+    img: '/JPG/tanush-pandey.jpg',
+    role: 'Chief Medical Officer',
+    linkedin: 'https://www.linkedin.com/in/tanush-pandey-767a60260/'
   },
   'linus-alpsten': {
     id: 'linus-alpsten',
@@ -61,24 +61,10 @@ export const team: Record<string, TeamMember> = {
     role: 'Marketing Advisor',
     linkedin: 'https://www.linkedin.com/in/juliuschu/'
   },
-  'ayza-zainal': {
-    id: 'ayza-zainal',
-    name: 'Ayza Zainal',
-    img: '/JPG/ayza-zainal.jpg',
-    role: 'Freelance UI/UX Designer',
-    linkedin: 'https://www.linkedin.com/in/ayzazainal/'
-  },
   'lu': {
     id: 'lu',
     name: 'Lu',
     role: 'Hardware Engineering Lead'
-  },
-  'tanush-pandey': {
-    id: 'tanush-pandey',
-    name: 'Tanush Pandey',
-    img: '/JPG/tanush-pandey.jpg',
-    role: 'Medical Partnerships Intern',
-    linkedin: 'https://www.linkedin.com/in/tanush-pandey-767a60260/'
   },
   'stella-goeschl': {
     id: 'stella-goeschl',
