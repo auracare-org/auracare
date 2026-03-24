@@ -45,46 +45,46 @@ export const departments: Department[] = [
       },
       {
         name: 'UI/UX design',
-        lead: 'ayza-zainal',
+        lead: 'stephen-okita',
         description: 'User interface and user experience design.',
-        subassignees: ['hinlin-chen', 'stephen-okita']
+        subassignees: ['hinlin-chen']
       },
       {
         name: 'Server and Hosting',
         lead: 'stephen-okita',
         description: 'Infra, deployments, monitoring and reliability.',
-        subassignees: ['ahnaf-kabir', 'nicholas-chae']
+        subassignees: ['ahnaf-kabir']
       }
     ]
   },
 
   {
     name: 'AI Dev',
-    lead: 'nicholas-chae',
+    lead: 'stephen-okita',
     description: 'AI research and development from data to model deployment.',
-    subassignees: ['stephen-okita'],
+    subassignees: [],
     subdepartments: [
       {
         name: 'Model architecture',
-        lead: ['nicholas-chae', 'stephen-okita'],
+        lead: 'stephen-okita',
         description: 'Design and evaluation of model architectures and baselines.',
         subassignees: []
       },
       {
         name: 'Model training',
-        lead: 'nicholas-chae',
+        lead: 'stephen-okita',
         description: 'Training, validation and optimization of models.',
-        subassignees: ['stephen-okita']
+        subassignees: []
       },
       {
         name: 'Training data collection',
-        lead: ['hinlin-chen', 'stephen-okita', 'nicholas-chae'],
+        lead: ['hinlin-chen', 'stephen-okita'],
         description: 'Collecting training data for AI models.',
         subassignees: []
       },
       {
         name: 'AI Infrastructure',
-        lead: ['stephen-okita', 'nicholas-chae'],
+        lead: 'stephen-okita',
         description: 'AI infrastructure and platform development.',
         subassignees: ['ahnaf-kabir']
       }
@@ -106,7 +106,7 @@ export const departments: Department[] = [
         name: 'Organic',
         lead: 'stephen-okita',
         description: 'Content, SEO and community-led awareness.',
-        subassignees: ['nicholas-chae', 'julius-chu']
+        subassignees: ['julius-chu']
       },
       {
         name: 'Creative design',
