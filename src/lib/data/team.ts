@@ -63,7 +63,7 @@ export const team: Record<string, TeamMember> = {
   },
   'lu': {
     id: 'lu',
-    name: 'Lu',
+    name: 'Haifeng Lu',
     role: 'Hardware Engineering Lead'
   },
   'stella-goeschl': {
