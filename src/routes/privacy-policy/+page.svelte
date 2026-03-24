@@ -2,7 +2,7 @@
 	<title>Privacy Policy — Auracare</title>
 	<meta
 		name="description"
-		content="Privacy Policy for the AuraCare Clinical Platform — how we collect, use, and protect your data."
+		content="Privacy Policy for the Auracare Clinical Platform — how we collect, use, and protect your data."
 	/>
 </svelte:head>
 
@@ -16,7 +16,7 @@
 		<div class="text-center max-w-3xl mx-auto">
 			<h1 class="fade-in mb-4" style="color: var(--color-text-header-secondary);">Privacy Policy</h1>
 			<p class="fade-in animation-delay-200" style="color: var(--color-text-body-secondary);">
-				AuraCare Clinical Platform · Last updated: 17 March 2026
+				Auracare Clinical Platform · Last updated: 17 March 2026
 			</p>
 		</div>
 	</div>
@@ -30,7 +30,7 @@
 			<div class="prerelease-banner fade-in mb-10">
 				<span class="prerelease-badge">Pre-release</span>
 				<p>
-					AuraCare is currently in pre-release. This privacy policy is provided for transparency and
+					Auracare is currently in pre-release. This privacy policy is provided for transparency and
 					to support app store review processes. It is subject to change before general availability.
 					Material updates will be communicated via the app or by email.
 				</p>
@@ -40,15 +40,15 @@
 
 				<h2>1. Who We Are</h2>
 				<p>
-					AuraCare Clinical Platform ("AuraCare", "we", "us") is operated by Auracare Health Ltd, a
-					company registered in England and Wales. AuraCare is a clinical decision-support platform
+					Auracare Clinical Platform ("Auracare", "we", "us") is operated by Auracare Health Ltd, a
+					company registered in England and Wales. Auracare is a clinical decision-support platform
 					designed exclusively for registered pharmacists practising in the United Kingdom.
 				</p>
 				<p>Contact: <a href="mailto:clinical@auracare.org.uk">clinical@auracare.org.uk</a></p>
 
 				<h2>2. Scope of This Policy</h2>
 				<p>
-					This policy explains how we collect, use, store, and protect data when you use the AuraCare
+					This policy explains how we collect, use, store, and protect data when you use the Auracare
 					mobile application (Android / iOS), desktop application, or web platform (collectively "the
 					App").
 				</p>
@@ -188,7 +188,7 @@
 					</li>
 					<li>
 						<strong>Microsoft Graph API</strong> — outbound email for referral letters sent from a shared
-						AuraCare mailbox
+						Auracare mailbox
 					</li>
 				</ul>
 				<p>
@@ -198,7 +198,7 @@
 
 				<h2>11. Children</h2>
 				<p>
-					AuraCare is intended solely for use by registered pharmacists. The App is not directed at
+					Auracare is intended solely for use by registered pharmacists. The App is not directed at
 					children under 18 and we do not knowingly collect data from minors.
 				</p>
 
