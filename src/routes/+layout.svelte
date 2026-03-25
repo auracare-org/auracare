@@ -70,27 +70,27 @@
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://auracare.com/" />
+	<meta property="og:url" content="https://auracare.org.uk/" />
 	<meta property="og:title" content="Auracare - AI-Powered Triage for Primary Care Providers" />
 	<meta
 		property="og:description"
 		content="AI-enabled triage tools helping medical professionals diagnose common illnesses. Smarter triage. Faster care. Better outcomes."
 	/>
-	<meta property="og:image" content="https://auracare.com/og-image.png" />
-	<meta property="og:site_name" content="Auracare" />
+	<meta property="og:image" content="https://auracare.org.uk/og-image.png" />
+	<meta property="og:site_name" content="auracare.org.uk" />
 
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content="https://auracare.com/" />
+	<meta name="twitter:url" content="https://auracare.org.uk/" />
 	<meta name="twitter:title" content="Auracare - AI-Powered Triage for Primary Care Providers" />
 	<meta
 		name="twitter:description"
 		content="AI-enabled triage tools helping medical professionals diagnose common illnesses. Smarter triage. Faster care. Better outcomes."
 	/>
-	<meta name="twitter:image" content="https://auracare.com/twitter-image.png" />
+	<meta name="twitter:image" content="https://auracare.org.uk/twitter-image.png" />
 
 	<!-- Canonical URL -->
-	<link rel="canonical" href="https://auracare.com/" />
+	<link rel="canonical" href="https://auracare.org.uk/" />
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -111,8 +111,8 @@
 			"@type": "Organization",
 			"name": "Auracare Health LTD",
 			"description": "AI-powered triage for primary care providers. Building tools to help medical professionals diagnose common illnesses safely and efficiently.",
-			"url": "https://auracare.com",
-			"logo": "https://auracare.com/SVG/Asset 5.svg",
+			"url": "https://auracare.org.uk",
+			"logo": "https://auracare.org.uk/SVG/Asset 5.svg",
 			"foundingDate": "2025",
 			"founder": [
 				{
@@ -129,7 +129,7 @@
 				"email": "hinlin@auracare.com",
 				"contactType": "Customer Service"
 			},
-			"sameAs": ["https://github.com/auracare-org/auracare"]
+			"sameAs": ["https://github.com/auracare-org/auracare.org.uk"]
 		}
 	</script>
 </svelte:head>

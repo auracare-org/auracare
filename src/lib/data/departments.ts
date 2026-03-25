@@ -51,9 +51,9 @@ export const departments: Department[] = [
       },
       {
         name: 'Server and Hosting',
-        lead: 'stephen-okita',
+        lead: 'ahnaf-kabir',
         description: 'Infra, deployments, monitoring and reliability.',
-        subassignees: ['ahnaf-kabir']
+        subassignees: []
       }
     ]
   },
