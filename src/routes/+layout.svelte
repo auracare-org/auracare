@@ -7,8 +7,34 @@
 	import { slide } from 'svelte/transition';
 	import PersonModal from '$lib/components/PersonModal.svelte';
 	import { activePersonId, closePersonModal } from '$lib/stores/personModal';
+	import CookieBanner from '$lib/components/CookieBanner.svelte';
+	import { cookieConsent } from '$lib/stores/cookieConsent';
+	import { PUBLIC_GA4_ID } from '$env/static/public';
 
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
+
+	// Inject GA4 when user consents; remove if they later reject
+	$effect(() => {
+		const GA4_SCRIPT_ID = 'ga4-script';
+		if ($cookieConsent === 'accepted' && PUBLIC_GA4_ID) {
+			if (!document.getElementById(GA4_SCRIPT_ID)) {
+				const script = document.createElement('script');
+				script.id = GA4_SCRIPT_ID;
+				script.async = true;
+				script.src = `https://www.googletagmanager.com/gtag/js?id=${PUBLIC_GA4_ID}`;
+				document.head.appendChild(script);
+
+				(window as any).dataLayer = (window as any).dataLayer || [];
+				(window as any).gtag = function (...args: any[]) {
+					(window as any).dataLayer.push(args);
+				};
+				(window as any).gtag('js', new Date());
+				(window as any).gtag('config', PUBLIC_GA4_ID);
+			}
+		} else {
+			document.getElementById(GA4_SCRIPT_ID)?.remove();
+		}
+	});
 
 	let { children } = $props();
 	let mobileMenuOpen = $state(false);
@@ -368,14 +394,14 @@
 		<div class="border-t border-white/20 pt-6 flex flex-wrap justify-between gap-4 text-sm">
 			<p class="text-white/60">&copy; {new Date().getFullYear()} Auracarehealth LTD</p>
 			<div class="flex gap-4 text-white">
-				<!--  
-				<a href="/privacy" class="hover:opacity-80 transition-opacity">Privacy policy</a>
-				<a href="/terms" class="hover:opacity-80 transition-opacity">Terms of service</a> -->
+				<a href="/privacy-policy" class="hover:opacity-80 transition-opacity">Privacy policy</a>
 				<a href="/#contact" class="hover:opacity-80 transition-opacity">Contact information</a>
 			</div>
 		</div>
 	</div>
 </footer>
+
+<CookieBanner />
 
 <style>
 	.footer-gradient {
